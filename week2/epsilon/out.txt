@@ -1,0 +1,8 @@
+The machine epsilon with double is = 2.22044604925031E-16
+The machine epsilon with float is = 1.192093E-07
+Dimitry says the machince epsilon should be around = 2.22044604925031E-16
+The sum going up becomes = 15.40368
+The sum going down becomes = 18.80792
+The sum going up becomes = 20.9661659719623
+The sum going down becomes = 20.9661659733582
+The truth value is False
