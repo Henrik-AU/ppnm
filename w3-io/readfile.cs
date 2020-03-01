@@ -19,7 +19,7 @@ class readfile{
 	// We write an initial line to the output file specifying the content of the columns
 	streamout.WriteLine("x \t sin(x) \t cos(x)");
 
-	// We know do a loop to go through all the input values, calculating the corresponding
+	// We now do a loop to go through all the input values, calculating the corresponding
 	// sine and cosine
 	do{
 		string line = streamin.ReadLine();
@@ -30,7 +30,7 @@ class readfile{
 		// assuming that they are sepatated by normal spaces if more that one number per		// line is provided.
 		string[] numbers = line.Split(' ');
 		foreach(var number in numbers){
-			// We convert each number from string to double, and the write out the
+			// We convert each number from string to double, and then write out the
 			// number along with the sine and cosine
 			double x = double.Parse(number);
 			streamout.WriteLine("{0} {1} {2}", x, Math.Sin(x), Math.Cos(x));
