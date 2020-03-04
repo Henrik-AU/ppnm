@@ -1,0 +1,16 @@
+set term svg background rgb "white"
+set title "Gamma-function and table values"
+set tics out
+set key bottom right
+set xzeroaxis
+set yzeroaxis
+set xlabel "x"
+set ylabel "gamma(x)"
+set xrange[-5:5]
+set yrange[-5:5]
+set out "Gamma.svg"
+
+
+
+plot "gamma-data.txt" with lines lt rgb "black" title "gamma(x)"\
+,"gamma-tableval.txt" with points pt 7 ps 0.6 lt rgb "red" title "Table values"

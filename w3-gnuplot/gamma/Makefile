@@ -1,5 +1,7 @@
-all: gamma-data.txt gamma-tableval.txt
+all: gamma-data.txt gamma-tableval.txt Gamma.svg
 
+Gamma.svg: gamma.gpi gamma-data.txt gamma-tableval.txt
+	gnuplot $<
 
 gamma-data.txt: main.exe
 	mono $< > $@
@@ -15,6 +17,8 @@ clean:
 
 # We create a file with a few table values for the gamma function
 gamma-tableval.txt: Makefile
+	echo '-4.3\t-0.101981' >> $@
+	echo '-3.6\t0.246857' >> $@
 	echo '-2.7\t-0.931083' >> $@
 	echo '-1.7\t2.51392' >> $@
 	echo '-0.7\t-4.27367' >> $@

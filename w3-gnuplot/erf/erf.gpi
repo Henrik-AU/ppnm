@@ -1,0 +1,12 @@
+set term svg background rgb "white"
+set title "Error-function and table values"
+set tics out
+set key top left
+set xzeroaxis
+set yzeroaxis
+set xlabel "x"
+set ylabel "Erf(x)"
+set out "Erf.svg"
+
+plot "erf-data.txt" with lines lt rgb "black" title "Erf(x)"\
+,"erf-tableval.txt" with points pt 7 ps 0.6 lt rgb "red" title "Table values"
