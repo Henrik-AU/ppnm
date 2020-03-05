@@ -1,0 +1,14 @@
+set term svg background rgb "white"
+set title "Ln of gamma-function"
+set tics out
+set key bottom right
+set xzeroaxis
+set yzeroaxis
+set xlabel "x"
+set ylabel "Ln(gamma(x))"
+set xrange[-5:5]
+set yrange[-5:5]
+set out "Lngamma.svg"
+
+
+plot "lngamma-data.txt" with lines lt rgb "black" title "Ln(gamma(x))"
