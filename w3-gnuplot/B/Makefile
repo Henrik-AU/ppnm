@@ -13,4 +13,4 @@ math.dll: lngamma.cs
 	mcs $< -target:library -out:$@
 
 clean:
-	rm -f *.txt *.dll *.exe
+	rm -f *.txt *.dll *.exe *.svg

@@ -13,7 +13,7 @@ math.dll: erf.cs
 	mcs $< -target:library -out:$@
 
 clean:
-	rm -f *.exe *.txt *.dll
+	rm -f *.exe *.txt *.dll *.svg
 
 
 # We create a file with a few table values for the error function
