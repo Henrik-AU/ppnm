@@ -4,7 +4,7 @@ set tics out
 set ticslevel 0
 set xlabel "Re(z)"
 set ylabel "Im(z)"
-set zlabel "Gamma(z)" rotate parallel
+set zlabel "Gamma(z)" rotate parallel offset 3,0,0
 set key off
 set hidden3d
 set pm3d
