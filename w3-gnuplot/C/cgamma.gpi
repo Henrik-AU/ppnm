@@ -1,0 +1,20 @@
+set term png size 1280,960 font ,24 background rgb "white"
+set title "|gamma(z)|"
+set tics out
+set ticslevel 0
+set xlabel "Re(z)"
+set ylabel "Im(z)"
+set key off
+set hidden3d
+set pm3d
+set contour surface
+set border 127+256+512
+set border front
+set cntrlabel onecolor
+set linetype 1 linecolor rgb "black"
+set cntrparam levels incremental 0.0,0.5,6
+set view , 320
+set palette rgb -23,-28,-3 
+set out "ComplexGamma.png"
+cut(z)=z>6?6:z
+splot [-4.5:4.5][-4.5:4.5][0:6] "cgamma-out.txt" using 1:2:(cut($3)) with lines
