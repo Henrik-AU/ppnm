@@ -1,0 +1,24 @@
+Printing out exercise A:
+The integral from 0 to 1 of ln(x)/sqrt(x) gives -3.99976355149072
+The result of the integral should be -4
+
+The integral from -inf to inf of exp(-x^2) gives 1.77245411516459
+The integral should be equal to sqrt(pi) = 1.77245385090552
+
+The integral from 0 to 1 of ln(1/x)^p with p = 1 gives 1.00000061826311
+The integral from 0 to 1 of ln(1/x)^p with p = 2 gives 2.00000069663162
+The integral from 0 to 1 of ln(1/x)^p with p = 3 gives 6.0000103043667
+The integral from 0 to 1 of ln(1/x)^p with p = 4 gives 24.0002244918972
+The integral from 0 to 1 of ln(1/x)^p with p = 5 gives 120.004873578971
+The results of the integrals should be equal to gamma(p+1) = p!
+
+Printing out exercise B:
+The integral from 0 to inf of sqrt(x)*exp(-x) gives = 0.886226939229309
+According to Wikipedia the result should be sqrt(pi)/2 = 0.886226925452758
+
+The integral from 0 to inf of x^3/(exp(x)-1) gives = 6.48958880254537
+According to Wikipedia the result should be pi^4/15 = 6.49393940226683
+
+The integral from 0 to inf of sin^2(x)/x^2 gives = 1.57095183122813
+According to Wikipedia the result should be pi/2 = 1.5707963267949
+
