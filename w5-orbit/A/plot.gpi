@@ -1,0 +1,10 @@
+set term svg background rgb "white"
+set title "Plot of logistic differential equation"
+set tics out
+set key top left
+set xlabel "x"
+set ylabel "y"
+set out "Plot.svg"
+
+plot "out.txt" using 1:2 with lines lc rgb "black" title "Calculated by rk23"\
+, "out.txt" using 1:4 with points pt 7 ps 0.6 lc rgb "red" title "1/1+exp(-x)"
