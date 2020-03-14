@@ -1,0 +1,55 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Example document in \LaTeX{} about the square root function}
+\author{H. H. Kristensen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\noindent This is a quick document about the square root function. The square root function is the solution to the simple differential equation
+%
+\begin{equation}\label{eq:test}
+y' = \frac{1}{2y}.
+\end{equation}
+
+This differential equation can for example be solved by a numerical ordinary differential equation solver, like the \emph{Runge-Kutta method}. By doing that, one can obtain data points that can be used to create a plot of the function, like the one seen in figure~\ref{fig:sqrtplot}.
+
+
+\begin{figure}[h]
+\input{Sqrt.tex}
+\caption{Plot of the function $\sqrt{x}$. The plot has been created using Gnuplot.}
+\label{fig:sqrtplot}
+\end{figure}
+
+\section{Square roots of positive integers}
+The following paragraphs are taken directly from Wikipedia\cite{wiki}. A positive number has two square roots, one positive, and one negative, which are opposite to each other. So, when talking of the square root of a positive integer, this is the positive square root that is meant. 
+
+The square roots of an integer are algebraic integers and, more specifically, quadratic integers.
+
+The square root of a positive integer is the product of the roots of its prime factors, because the square root of a product is the product of the square roots of the factors. Since $\sqrt{p^{2k}}$ = $p^k$, only roots of those primes having an odd power in the factorization are necessary. More precisely, the square root of a prime factorization is 
+%
+\begin{multline}
+\sqrt{p_1^{2e_1 + 1} \dots p_k^{2e_k + 1} p_{k+1}^{2e_k+1} \dots p_n^{2e_n}} \\
+= p_1^{e_1} \dots p_n^{e_n} \sqrt{p_1 \dots p_k} .
+\end{multline}
+
+
+\section{Practical application of the square root}
+
+The square root is a very useful function. The function makes it easy to calculate for example the distance between two points in n-dimensional Euclidean space. This can be done as
+%
+\begin{equation}
+l = \sqrt{\Delta x_1^2 + \Delta x_2^2 \dots \Delta x_n^2}.
+\end{equation}
+
+
+\begin{thebibliography}{9}
+\bibitem{wiki} 
+Wikipedia,
+\\\texttt{https://en.wikipedia.org/wiki/Square\_root}
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,9 @@
+set term cairolatex input size 8.5cm,5cm
+set tics out
+set title "Square root function"
+set xlabel "$x$"
+set ylabel "$y$"
+set key top left
+set out "Sqrt.tex"
+
+plot "out.txt" using 1:2 with lines lc rgb "black" title "$\\sqrt{x}$"
