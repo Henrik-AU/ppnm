@@ -1,10 +1,16 @@
-all: out.txt Plot.svg
+all: out PlotBpartI.svg PlotBpartII.svg PlotBpartIII.svg
 
-Plot.svg: plot.gpi out.txt
+PlotBpartIII.svg: plotBpartIII.gpi outBpartIII.txt
 	gnuplot $<
 
-out.txt: main.exe
-	mono $< 1>$@ 2> log
+PlotBpartII.svg: plotBpartII.gpi outBpartII.txt
+	gnuplot $<
+
+PlotBpartI.svg: plotBpartI.gpi outBpartI.txt
+	gnuplot $<
+
+out: main.exe
+	mono $< 2> log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
@@ -13,4 +19,4 @@ math.dll: vector.cs ode.cs
 	mcs $^ -target:library -out:$@ 
 
 clean:
-	rm -f *.txt *.dll *.exe .*svg *log
+	rm -f *.txt *.dll *.exe *.svg *log

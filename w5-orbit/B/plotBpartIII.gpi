@@ -1,0 +1,5 @@
+set term svg background rgb 'white'
+set out "PlotBpartIII.svg"
+set title "Precession of orbit"
+
+plot "outBpartIII.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with lines notitle 
