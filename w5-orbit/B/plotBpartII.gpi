@@ -1,5 +1,7 @@
-set term svg background rgb "white"
+set term svg font ", 16" background rgb "white"
 set title "Elliptical orbit"
 set out "PlotBpartII.svg"
+set tics out
+set size square
 
 plot "outBpartII.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with lines notitle 

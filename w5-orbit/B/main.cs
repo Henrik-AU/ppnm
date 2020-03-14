@@ -11,7 +11,7 @@ class main{
 		vector ystart = new vector(1, 0);
 		double eps = 0;
 		double xa = 0;
-		double xb = 4*PI;
+		double xb = 2*PI;
 		string filepathI = "outBpartI.txt";
 
 		// To avoid code repetition we call a function orbitsolver for each set of parameters
@@ -42,11 +42,19 @@ class main{
 
 		List<double> xs = new List<double>();
 		List<vector> ys = new List<vector>();
+		
+		double stepsize = 0.001;
 
-		vector odeout = ode.rk23(planetmotion,xa,ystart,xb,xlist:xs,ylist:ys);
+
+		vector odeout = ode.rk23(planetmotion,xa,ystart,xb,xlist:xs,ylist:ys, h:stepsize);
+		
+		// Clean the txt file that we want to write to - otherwise the following streamwriter will
+		// append more data to it each time, potentially requiring a 'make clean' between each run
+		System.IO.File.Delete(filepath);
 
 		// Create a streamwriter connected to the wanted output file
 		var outfile = new System.IO.StreamWriter(filepath,append:true);
+		
 		
 		// Print out the data to the file (we don't need to print the first derivative)
 		for(int i=0; i<xs.Count; i++)

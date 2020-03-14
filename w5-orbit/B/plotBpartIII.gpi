@@ -1,5 +1,7 @@
-set term svg background rgb 'white'
+set term svg font ", 16" background rgb 'white'
 set out "PlotBpartIII.svg"
 set title "Precession of orbit"
+set tics out
+set size square
 
 plot "outBpartIII.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with lines notitle 
