@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white"
+set tics out
+set xlabel "x"
+set ylabel "y"
+set key top left
+set title "Integral value of f(x) = x^2 + x + 4 from x[0] to x"
+set out "Integralvalues.svg"
+plot "tabval.txt" using 1:3 with points pt 7 ps 0.6 lt rgb "red" title "Table values"\
+,"out.txt" using 1:3 with lines lt rgb "black" title "Integral of lin. int."

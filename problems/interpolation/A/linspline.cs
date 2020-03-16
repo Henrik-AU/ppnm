@@ -4,9 +4,9 @@ public class linspline{
 
 	double[] x, y, p; 
 
-	public static int binsearch(vector x, double z)
+	public static int binsearch(double[] x, double z)
 		{/* locates the interval for z by bisection */ 
-		int i=0, j=x.size-1;
+		int i=0, j=x.Length-1;
 		while(j-i>1){
 			int mid=(i+j)/2;
 			if(z>x[mid]) i=mid; else j=mid;
@@ -53,17 +53,13 @@ public class linspline{
 	public double integrate(double z){
 		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
-		double sum;
-		double dx;
+		double sum = 0;
 		// We integrate S_i between each set of points individually and add the results
 		for(int k=0; k<i; k++){
-			dx = x[k+1] - x[k];
-			sum+= dx*(y[k] + p[k]*dx/2 - p[k]*dx[k]);
+			sum+= p[k]*(x[k+1]*x[k+1] + x[k]*x[k])/2 + y[k]*(x[k+1] - x[k]) - p[k]*x[k+1]*x[k];
 		}
 		// At last we add the part from the interval which z lies in.
-		dx = z - x[i];	
-		sum+= dx*(y[i] + p[i]*dx/2 - p[i]*dx[i]);
-		
+		sum+= p[i]*(z*z + x[i]*x[i])/2 + y[i]*(z - x[i]) - p[i]*z*x[i];
 		return sum;
 	}
 
