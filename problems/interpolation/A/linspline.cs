@@ -1,7 +1,8 @@
 using System.Diagnostics;
 
-public class linispline{
+public class linspline{
 
+	double[] x, y, p; 
 
 	public static int binsearch(vector x, double z)
 		{/* locates the interval for z by bisection */ 
@@ -18,34 +19,34 @@ public class linispline{
 		int n = xs.Length;
 		// Check if the dimension of the x and y arrays are equal - otherwise display
 		// an error
-		Trace.Assert(ys.Length = n,"The dimension of the x and y arrays are not equal.");
+		Trace.Assert(ys.Length == n,"The dimension of the x and y arrays are not equal.");
 		
 		x = new double[n];
 		y = new double[n];
-		dx = new double[n-1];
 		p = new double[n-1];
+		var dx = new double[n-1];
 
 		for(int i=0; i<n; i++){
-			x[i] = xs.[i];
-			y[i] = ys.[i];
+			x[i] = xs[i];
+			y[i] = ys[i];
 		}
 	
-		for(int=0; i<n; i++){
+		for(int i=0; i<n-1; i++){
 			dx[i] = x[i+1] - x[i];
-			Trace.Assert(dx[i] > 0, "The x-array is not ordered from lowest to highest.")
+			Trace.Assert(dx[i] > 0, "The x-array is not ordered from lowest to highest.");
 		}
 
-		for(int=0; i<n; i++){
+		for(int i=0; i<n-1; i++){
 			p[i] = (y[i+1] - y[i])/dx[i];
 		}
-
+		
 
 	}
 
 	public double eval(double z){
 		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
-		dx = z - x[i];
+		double dx = z - x[i];
 		return y[i] + p[i]*dx;
 	}
 
