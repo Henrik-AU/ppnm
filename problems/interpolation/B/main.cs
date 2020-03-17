@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using static System.Console;
-using static linspline;
+using static quadspline;
 
 class main{
 	public static int Main(string[] args){
@@ -34,12 +34,13 @@ class main{
 		double xstart = xs[0];
 		double xend = xs[nlines-1];
 		double deltax = 0.02;
-		var linterp = new linspline(xs, ys);
+		var qspline = new quadspline(xs, ys);
 		for(double k=xstart; k<xend; k+=deltax){
-			double interpval = linterp.eval(k);
-			double integralval = linterp.integrate(k);
+			double interpval = qspline.eval(k);
+			double integralval = qspline.integrate(k);
+			double derivval = qspline.deriv(k);
 
-			WriteLine("{0,8:f4}\t{1,8:f4}\t{2,8:f4}", k, interpval, integralval);
+			WriteLine("{0,8:f4}\t{1,8:f4}\t{2,8:f4}\t{3,8:f4}", k, interpval, integralval, derivval);
 		}		
 		
 		return 0;

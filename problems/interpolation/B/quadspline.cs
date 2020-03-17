@@ -1,8 +1,8 @@
 using System.Diagnostics;
 
-public class linspline{
+public class quadspline{
 
-	double[] x, y, p; 
+	double[] x, y, b, c, p; 
 
 	public static int binsearch(double[] x, double z)
 		{/* locates the interval for z by bisection */ 
@@ -15,7 +15,7 @@ public class linspline{
 	}
 
 
-	public linspline(double[] xs, double[] ys){
+	public quadspline(double[] xs, double[] ys){
 		int n = xs.Length;
 		// Check if the dimension of the x and y arrays are equal - otherwise display
 		// an error
@@ -23,6 +23,8 @@ public class linspline{
 		
 		x = new double[n];
 		y = new double[n];
+		b = new double[n-1];
+		c = new double[n-1];
 		p = new double[n-1];
 		var dx = new double[n-1];
 
@@ -39,15 +41,29 @@ public class linspline{
 		for(int i=0; i<n-1; i++){
 			p[i] = (y[i+1] - y[i])/dx[i];
 		}
-		
+
+		// Forward recursion
+		c[0] = 0;
+		for(int i=0; i<n-2; i++){
+			c[i+1] = (p[i+1] - p[i] - c[i]*dx[i])/dx[i+1];
+		}
+		// Backward recursion starting from 1/2 * c[n-2]
+		c[n-2] = c[n-2]/2;
+		for(int i=n-3; i>=0; i--){
+			c[i] = (p[i+1] - p[i] - c[i+1]*dx[i+1])/dx[i];
+		}
+
+		// Calculation of the b-coefficients
+		for(int i=0; i<n-1; i++){
+			b[i] = p[i] - c[i]*dx[i];
+		}
 
 	}
 
 	public double eval(double z){
 		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
-		double dx = z - x[i];
-		return y[i] + p[i]*dx;
+		return y[i] + b[i]*(z - x[i]) + c[i]*(z - x[i])*(z - x[i]);
 	}
 
 	public double integrate(double z){
@@ -57,11 +73,22 @@ public class linspline{
 		// We integrate S_i between each set of points individually and add the results
 		for(int k=0; k<i; k++){
 			double dx = x[k+1] - x[k];
-			sum+=y[k]*dx + p[k]*dx*dx/2;
+			sum+= y[k]*dx + b[k]*dx*dx/2 + c[k]*dx*dx*dx/3;
 		}
 		// At last we add the part from the interval which z lies in.
-		sum+= y[i]*(z-x[i]) + p[i]*(z - x[i])*(z - x[i])/2;
+		double dxi = z - x[i];
+		sum+= y[i]*dxi + b[i]*dxi*dxi/2 + c[i]*dxi*dxi*dxi/3;
+		
 		return sum;
+	}
+
+
+	public double deriv(double z){
+		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		int i = binsearch(x, z);
+		double dx = z - x[i];
+		double deriv = b[i] + 2*c[i]*dx;
+		return deriv;
 	}
 
 }

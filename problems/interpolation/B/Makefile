@@ -1,14 +1,17 @@
-all: Linterp.svg Integralvalues.svg
+all: Qspline.svg Integralvalues.svg Deriv.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
 NDATA = 10
 XSTART = 0
 
+Deriv.svg: plotderivs.gpi $(OUT) $(TABVAL)
+	gnuplot $<
+
 Integralvalues.svg: plotintegrals.gpi $(OUT) $(TABVAL)
 	gnuplot $<
 
-Linterp.svg: plotlinterp.gpi $(OUT) $(TABVAL)
+Qspline.svg: plotqspline.gpi $(OUT) $(TABVAL)
 	gnuplot $<
 
 $(OUT): main.exe $(TABVAL)
@@ -23,7 +26,7 @@ $(TABVAL): createtabval.exe Makefile
 createtabval.exe: createtabval.cs
 	mcs $<
 
-math.dll: linspline.cs
+math.dll: quadspline.cs
 	mcs $< -target:library -out:$@
 
 clean:
