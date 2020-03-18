@@ -5,5 +5,5 @@ set ylabel "y"
 set key bottom right
 set title "Derivative of f(x) = x^2 + 2*x + 1 + 25*sin(x)"
 set out "Deriv.svg"
-plot "tabval.txt" using 1:4 with points pt 7 ps 0.6 lt rgb "red" title "Table values"\
+plot "exactfuncs.txt" using 1:4 with lines lt rgb "red" title "Exact derivative of f(x)"\
 ,"out.txt" using 1:4 with lines lt rgb "black" title "Derivative of qspline"

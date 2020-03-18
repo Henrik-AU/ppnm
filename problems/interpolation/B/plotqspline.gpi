@@ -5,5 +5,6 @@ set ylabel "y"
 set key top left
 set title "Qspline of data from f(x) = x^2 + 2*x + 1 + 25*sin(x)"
 set out "Qspline.svg"
-plot "tabval.txt" with points pt 7 ps 0.6 lt rgb "red" title "Table values"\
+plot "tabval.txt" with points pt 7 ps 0.6 lt rgb "blue" title "Table values"\
+,"exactfuncs.txt" using 1:2 with lines lt rgb "red" title "Exact f(x)"\
 ,"out.txt" using 1:2 with lines lt rgb "black" title "Qspline"

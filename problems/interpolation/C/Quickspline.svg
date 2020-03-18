@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" baseProfile="full" id="body" width="8in" height="8in" viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<title>SVG drawing</title>
+<desc>This was produced by version 4.4 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
+<rect id="background" x="0" y="0" width="1" height="1" stroke="none" fill="white"/>
+<g id="content" transform="translate(0,1) scale(1,-1) scale(0.00024414) " xml:space="preserve" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.433" stroke-dasharray="none" stroke-dashoffset="0" stroke-opacity="1" fill="none" fill-rule="evenodd" fill-opacity="1" font-style="normal" font-variant="normal" font-weight="normal" font-stretch="normal" font-size-adjust="none" letter-spacing="normal" word-spacing="normal" text-anchor="start">
+<rect x="819.2" y="819.2" width="2457.6" height="2457.6" stroke-width="4.8188" />
+<text transform="translate(783.33,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >0</text>
+<line x1="819.2" y1="3276.8" x2="819.2" y2="3227.6" stroke-width="4.8188" />
+<line x1="819.2" y1="819.2" x2="819.2" y2="868.35" stroke-width="4.8188" />
+<text transform="translate(1274.9,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >2</text>
+<line x1="1310.7" y1="3276.8" x2="1310.7" y2="3227.6" stroke-width="4.8188" />
+<line x1="1310.7" y1="819.2" x2="1310.7" y2="868.35" stroke-width="4.8188" />
+<text transform="translate(1766.4,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >4</text>
+<line x1="1802.2" y1="3276.8" x2="1802.2" y2="3227.6" stroke-width="4.8188" />
+<line x1="1802.2" y1="819.2" x2="1802.2" y2="868.35" stroke-width="4.8188" />
+<text transform="translate(2257.9,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >6</text>
+<line x1="2293.8" y1="3276.8" x2="2293.8" y2="3227.6" stroke-width="4.8188" />
+<line x1="2293.8" y1="819.2" x2="2293.8" y2="868.35" stroke-width="4.8188" />
+<text transform="translate(2749.4,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >8</text>
+<line x1="2785.3" y1="3276.8" x2="2785.3" y2="3227.6" stroke-width="4.8188" />
+<line x1="2785.3" y1="819.2" x2="2785.3" y2="868.35" stroke-width="4.8188" />
+<text transform="translate(3205.1,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >10</text>
+<line x1="3276.8" y1="3276.8" x2="3276.8" y2="3227.6" stroke-width="4.8188" />
+<line x1="3276.8" y1="819.2" x2="3276.8" y2="868.35" stroke-width="4.8188" />
+<line x1="819.2" y1="3276.8" x2="819.2" y2="3257.1" stroke-width="4.8188" />
+<line x1="819.2" y1="819.2" x2="819.2" y2="838.86" stroke-width="4.8188" />
+<line x1="1065" y1="3276.8" x2="1065" y2="3257.1" stroke-width="4.8188" />
+<line x1="1065" y1="819.2" x2="1065" y2="838.86" stroke-width="4.8188" />
+<line x1="1310.7" y1="3276.8" x2="1310.7" y2="3257.1" stroke-width="4.8188" />
+<line x1="1310.7" y1="819.2" x2="1310.7" y2="838.86" stroke-width="4.8188" />
+<line x1="1556.5" y1="3276.8" x2="1556.5" y2="3257.1" stroke-width="4.8188" />
+<line x1="1556.5" y1="819.2" x2="1556.5" y2="838.86" stroke-width="4.8188" />
+<line x1="1802.2" y1="3276.8" x2="1802.2" y2="3257.1" stroke-width="4.8188" />
+<line x1="1802.2" y1="819.2" x2="1802.2" y2="838.86" stroke-width="4.8188" />
+<line x1="2048" y1="3276.8" x2="2048" y2="3257.1" stroke-width="4.8188" />
+<line x1="2048" y1="819.2" x2="2048" y2="838.86" stroke-width="4.8188" />
+<line x1="2293.8" y1="3276.8" x2="2293.8" y2="3257.1" stroke-width="4.8188" />
+<line x1="2293.8" y1="819.2" x2="2293.8" y2="838.86" stroke-width="4.8188" />
+<line x1="2539.5" y1="3276.8" x2="2539.5" y2="3257.1" stroke-width="4.8188" />
+<line x1="2539.5" y1="819.2" x2="2539.5" y2="838.86" stroke-width="4.8188" />
+<line x1="2785.3" y1="3276.8" x2="2785.3" y2="3257.1" stroke-width="4.8188" />
+<line x1="2785.3" y1="819.2" x2="2785.3" y2="838.86" stroke-width="4.8188" />
+<line x1="3031" y1="3276.8" x2="3031" y2="3257.1" stroke-width="4.8188" />
+<line x1="3031" y1="819.2" x2="3031" y2="838.86" stroke-width="4.8188" />
+<line x1="3276.8" y1="3276.8" x2="3276.8" y2="3257.1" stroke-width="4.8188" />
+<line x1="3276.8" y1="819.2" x2="3276.8" y2="838.86" stroke-width="4.8188" />
+<text transform="translate(710.6,773.65) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >0</text>
+<line x1="3276.8" y1="819.2" x2="3227.6" y2="819.2" stroke-width="4.8188" />
+<line x1="819.2" y1="819.2" x2="868.35" y2="819.2" stroke-width="4.8188" />
+<text transform="translate(638.86,1183.3) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >20</text>
+<line x1="3276.8" y1="1228.8" x2="3227.6" y2="1228.8" stroke-width="4.8188" />
+<line x1="819.2" y1="1228.8" x2="868.35" y2="1228.8" stroke-width="4.8188" />
+<text transform="translate(638.86,1592.9) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >40</text>
+<line x1="3276.8" y1="1638.4" x2="3227.6" y2="1638.4" stroke-width="4.8188" />
+<line x1="819.2" y1="1638.4" x2="868.35" y2="1638.4" stroke-width="4.8188" />
+<text transform="translate(638.86,2002.5) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >60</text>
+<line x1="3276.8" y1="2048" x2="3227.6" y2="2048" stroke-width="4.8188" />
+<line x1="819.2" y1="2048" x2="868.35" y2="2048" stroke-width="4.8188" />
+<text transform="translate(638.86,2412.1) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >80</text>
+<line x1="3276.8" y1="2457.6" x2="3227.6" y2="2457.6" stroke-width="4.8188" />
+<line x1="819.2" y1="2457.6" x2="868.35" y2="2457.6" stroke-width="4.8188" />
+<text transform="translate(567.12,2821.7) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >100</text>
+<line x1="3276.8" y1="2867.2" x2="3227.6" y2="2867.2" stroke-width="4.8188" />
+<line x1="819.2" y1="2867.2" x2="868.35" y2="2867.2" stroke-width="4.8188" />
+<text transform="translate(567.12,3231.3) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >120</text>
+<line x1="3276.8" y1="3276.8" x2="3227.6" y2="3276.8" stroke-width="4.8188" />
+<line x1="819.2" y1="3276.8" x2="868.35" y2="3276.8" stroke-width="4.8188" />
+<line x1="3276.8" y1="819.2" x2="3257.1" y2="819.2" stroke-width="4.8188" />
+<line x1="819.2" y1="819.2" x2="838.86" y2="819.2" stroke-width="4.8188" />
+<line x1="3276.8" y1="1024" x2="3257.1" y2="1024" stroke-width="4.8188" />
+<line x1="819.2" y1="1024" x2="838.86" y2="1024" stroke-width="4.8188" />
+<line x1="3276.8" y1="1228.8" x2="3257.1" y2="1228.8" stroke-width="4.8188" />
+<line x1="819.2" y1="1228.8" x2="838.86" y2="1228.8" stroke-width="4.8188" />
+<line x1="3276.8" y1="1433.6" x2="3257.1" y2="1433.6" stroke-width="4.8188" />
+<line x1="819.2" y1="1433.6" x2="838.86" y2="1433.6" stroke-width="4.8188" />
+<line x1="3276.8" y1="1638.4" x2="3257.1" y2="1638.4" stroke-width="4.8188" />
+<line x1="819.2" y1="1638.4" x2="838.86" y2="1638.4" stroke-width="4.8188" />
+<line x1="3276.8" y1="1843.2" x2="3257.1" y2="1843.2" stroke-width="4.8188" />
+<line x1="819.2" y1="1843.2" x2="838.86" y2="1843.2" stroke-width="4.8188" />
+<line x1="3276.8" y1="2048" x2="3257.1" y2="2048" stroke-width="4.8188" />
+<line x1="819.2" y1="2048" x2="838.86" y2="2048" stroke-width="4.8188" />
+<line x1="3276.8" y1="2252.8" x2="3257.1" y2="2252.8" stroke-width="4.8188" />
+<line x1="819.2" y1="2252.8" x2="838.86" y2="2252.8" stroke-width="4.8188" />
+<line x1="3276.8" y1="2457.6" x2="3257.1" y2="2457.6" stroke-width="4.8188" />
+<line x1="819.2" y1="2457.6" x2="838.86" y2="2457.6" stroke-width="4.8188" />
+<line x1="3276.8" y1="2662.4" x2="3257.1" y2="2662.4" stroke-width="4.8188" />
+<line x1="819.2" y1="2662.4" x2="838.86" y2="2662.4" stroke-width="4.8188" />
+<line x1="3276.8" y1="2867.2" x2="3257.1" y2="2867.2" stroke-width="4.8188" />
+<line x1="819.2" y1="2867.2" x2="838.86" y2="2867.2" stroke-width="4.8188" />
+<line x1="3276.8" y1="3072" x2="3257.1" y2="3072" stroke-width="4.8188" />
+<line x1="819.2" y1="3072" x2="838.86" y2="3072" stroke-width="4.8188" />
+<line x1="3276.8" y1="3276.8" x2="3257.1" y2="3276.8" stroke-width="4.8188" />
+<line x1="819.2" y1="3276.8" x2="838.86" y2="3276.8" stroke-width="4.8188" />
+<polyline points="819.2,839.68 841.32,897.42 863.44,952.49 885.56,1004.9 907.67,1054.7 929.79,1101.8 951.91,1146.2 974.03,1188 996.15,1227.2 1018.3,1263.7 1040.4,1297.5 1062.5,1328.7 1084.6,1357.2 1106.7,1382.9 1128.9,1405.7 1151,1425.6 1173.1,1442.3 1195.2,1455.8 1217.3,1466 1239.4,1472.6 1261.6,1475.7 1283.7,1475.1 1305.8,1470.6 1327.9,1462.2 1350,1450.1 1372.2,1434.6 1394.3,1416.1 1416.4,1394.9 1438.5,1371.3 1460.6,1345.6 1482.8,1318.3 1504.9,1289.6 1527,1259.8 1549.1,1229.4 1571.2,1198.6 1593.3,1167.8 1615.5,1137.3 1637.6,1107.6 1659.7,1078.9 1681.8,1051.6 1703.9,1026.1 1726.1,1002.8 1748.2,981.95 1770.3,963.95 1792.4,949.16 1814.5,937.94 1836.6,930.48 1858.8,926.88 1880.9,927.21 1903,931.57 1925.1,940.03 1947.2,952.67 1969.4,969.58 1991.5,990.84 2013.6,1016.5 2035.7,1046.7 2057.8,1081.5 2079.9,1120.9 2102.1,1164.4 2124.2,1212 2146.3,1263.2 2168.4,1317.9 2190.5,1375.8 2212.7,1436.5 2234.8,1499.9 2256.9,1565.6 2279,1633.4 2301.1,1703 2323.3,1774.2 2345.4,1846.4 2367.5,1919.3 2389.6,1992.5 2411.7,2065.6 2433.8,2138.3 2456,2210 2478.1,2280.5 2500.2,2349.3 2522.3,2416.1 2544.4,2480.3 2566.6,2541.9 2588.7,2600.5 2610.8,2656.2 2632.9,2709 2655,2758.6 2677.1,2805.1 2699.3,2848.3 2721.4,2888.3 2743.5,2924.9 2765.6,2958.1 2787.7,2987.7 2809.9,3013.8 2832,3036.4 2854.1,3055.3 2876.2,3070.7 2898.3,3082.5 2920.4,3090.7 2942.6,3095.3 2964.7,3096.4 2986.8,3093.9 3008.9,3087.9 3031,3078.2 " stroke-width="4.8188" />
+</g>
+</svg>

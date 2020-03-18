@@ -2,22 +2,23 @@ all: Quickspline.svg Cspline.svg Integralvalues.svg Deriv.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
+EXACTFUNCS = exactfuncs.txt
 NDATA = 10
 XSTART = 0
 
 Quickspline.svg: quickspline.txt
 	graph --output-format svg < quickspline.txt > Quickspline.svg
 
-quickspline.txt: tabtest.txt
-	spline tabtest.txt > quickspline.txt
+quickspline.txt: $(TABVAL)
+	spline $(TABVAL) > quickspline.txt
 
-Deriv.svg: plotderivs.gpi $(OUT) $(TABVAL)
+Deriv.svg: plotderivs.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(TABVAL)
+Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Cspline.svg: plotcspline.gpi $(OUT) $(TABVAL)
+Cspline.svg: plotcspline.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)
 	gnuplot $<
 
 $(OUT): main.exe $(TABVAL)
@@ -26,8 +27,8 @@ $(OUT): main.exe $(TABVAL)
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-$(TABVAL): createtabval.exe Makefile
-	mono $< $(XSTART) $(NDATA) >$@
+$(TABVAL) $(EXACTFUNCS): createtabval.exe Makefile
+	mono $< $(TABVAL) $(EXACTFUNCS) $(XSTART) $(NDATA) 
 
 createtabval.exe: createtabval.cs
 	mcs $<

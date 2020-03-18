@@ -2,16 +2,17 @@ all: Qspline.svg Integralvalues.svg Deriv.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
+EXACTFUNCS = exactfuncs.txt
 NDATA = 10
 XSTART = 0
 
-Deriv.svg: plotderivs.gpi $(OUT) $(TABVAL)
+Deriv.svg: plotderivs.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(TABVAL)
+Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Qspline.svg: plotqspline.gpi $(OUT) $(TABVAL)
+Qspline.svg: plotqspline.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)
 	gnuplot $<
 
 $(OUT): main.exe $(TABVAL)
@@ -20,8 +21,8 @@ $(OUT): main.exe $(TABVAL)
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-$(TABVAL): createtabval.exe Makefile
-	mono $< $(XSTART) $(NDATA) >$@
+$(TABVAL) $(EXACTFUNCS): createtabval.exe Makefile
+	mono $< $(TABVAL) $(EXACTFUNCS) $(XSTART) $(NDATA) >$@
 
 createtabval.exe: createtabval.cs
 	mcs $<

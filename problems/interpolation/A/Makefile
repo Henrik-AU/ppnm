@@ -2,13 +2,14 @@ all: Linterp.svg Integralvalues.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
+EXACTFUNCS = exactfuncs.txt
 NDATA = 10
 XSTART = 0
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(TABVAL)
+Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Linterp.svg: plotlinterp.gpi $(OUT) $(TABVAL)
+Linterp.svg: plotlinterp.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)
 	gnuplot $<
 
 $(OUT): main.exe $(TABVAL)
@@ -17,8 +18,8 @@ $(OUT): main.exe $(TABVAL)
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-$(TABVAL): createtabval.exe Makefile
-	mono $< $(XSTART) $(NDATA) >$@
+$(TABVAL) $(EXACTFUNCS): createtabval.exe Makefile
+	mono $< $(TABVAL) $(EXACTFUNCS) $(XSTART) $(NDATA) >$@
 
 createtabval.exe: createtabval.cs
 	mcs $<
