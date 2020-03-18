@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white"
+set tics out
+set xlabel "x"
+set ylabel "y"
+set key top left
+set title "Cspline of data from f(x) = x^2 + 2*x + 1 + 25*sin(x)"
+set out "Cspline.svg"
+plot "tabval.txt" with points pt 7 ps 0.6 lt rgb "red" title "Table values"\
+,"out.txt" using 1:2 with lines lt rgb "black" title "Cspline"
