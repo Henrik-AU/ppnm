@@ -16,12 +16,15 @@ public class givens{
 			for(int p=q+1; p<n; p++){
 				double theta = Atan2(R[p,q], R[q,q]);
 				// Loop to recalculate the relevant entries in the matrix
+				// This runs over all columns in the two rows p and q, which are
+				// the only ones affected.
 				for(int k=q; k<m; k++){
 					double xq = R[q,k];
 					double xp = R[p,k];
 					R[q,k] = xq*Cos(theta) + xp*Sin(theta);
 					R[p,k] = -xq*Sin(theta) + xp*Cos(theta);
 				}
+				// Store the angle that made R[p,q] = 0 in the spot instead of zero
 				R[p,q] = theta;
 			}
 
