@@ -1,0 +1,28 @@
+Setting up a random system of linear equations, Ax=b:
+Printing random matrix A:
+
+    -0.623      0.701      -1.31     0.0884 
+      1.93      0.816      -1.81       1.35 
+    -0.578      -1.82     0.0646     -0.674 
+    -0.537       1.38      -1.31       1.78 
+
+Printing random vector b:
+      1.03      0.587     -0.451     -0.934 
+
+Attept to solve by the use of Givens rotations:
+
+Printing calculated matrix R (with Givens angles in the left triangular part):
+
+      2.18      0.666     -0.925      0.911 
+      1.88       2.44      -1.52       1.74 
+    -0.278      -2.09       1.88     -0.768 
+     -0.25      0.713      -0.43      0.999 
+
+The calculated x-vector is:
+     0.367      0.638      -0.72      -1.44 
+
+Let's check if this x-vector actually solves the set of linear equations:
+
+A*x gives:
+      1.03      0.587     -0.451     -0.934 
+A*x is approximately equal to b. The system is solved.

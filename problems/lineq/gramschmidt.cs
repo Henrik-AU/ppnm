@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public class qrDecompositionGS{
 	public matrix Q;
 	public matrix R;
@@ -24,7 +26,6 @@ public class qrDecompositionGS{
 
 	public vector solve(vector b){
 		vector Rx = Q.transpose()*b;
-		// Rx[n-1] = b[n-1]/R[n-1,n-1];
 		for(int i=Rx.size-1; i>=0; i--){
 			double sum = 0;
 			for(int k=i+1; k<Rx.size; k++){
@@ -36,6 +37,26 @@ public class qrDecompositionGS{
 		return Rx;
 	}
 
+	public matrix inverse(){
+		// The dimensions of Q is the same as for the original matrix A so we just use that
+		int n = Q.size1;
+		int m = Q.size2;
+		Trace.Assert(n == m,"The provided matrix is not a square matrix.");
+		matrix Ainv = new matrix(n, m);		
+
+		// We create a vector that we can use as the unit vector. My initial idea was to
+		// create an identity matrix and then just use each column one at a time, but that
+		// is not efficient since it allocates a whole matrix to memory, instead of just
+		// working with one single vector and then updating it smartly throughout the loop.
+		vector e = new vector(n);
+
+		for(int i=0; i<n; i++){
+			e[i] = 1;
+			Ainv[i] = solve(e);
+			e[i] = 0;
+		}
+		return Ainv;
+	}
 
 
 
