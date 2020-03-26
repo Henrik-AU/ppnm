@@ -1,0 +1,5 @@
+The least squares fit gave the results
+lambda = -0.17138 +/- 0.00354
+ln(a) = 4.95867 +/- 0.02984
+The half-life is thus estimated to be 4.04 days
+The table value half-life is 3.66 days
