@@ -1,7 +1,10 @@
-all: fit.txt originalData.txt
+all: fit.txt FitPlot.svg
 	cat fit.txt
 
-fit.txt originalData.txt: main.exe
+FitPlot.svg: fitPlot.gpi fitData.txt originalData.txt
+	gnuplot $<
+
+fit.txt originalData.txt fitData.txt: main.exe
 	mono $<
 
 main.exe: main.cs math.dll
@@ -11,4 +14,4 @@ math.dll: matrix.cs vector.cs gramschmidt.cs lsfit.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt
+	rm -f *.dll *.exe *.txt *.svg

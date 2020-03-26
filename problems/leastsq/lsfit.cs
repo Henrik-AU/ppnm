@@ -32,7 +32,6 @@ public class lsfit{
 		// At last we calculate the covariance matrix, A^T * A
 		matrix Ainv = qrGS.inverse();
 		sigma = Ainv*Ainv.T;
-		WriteLine("Sigma done");
 	}
 
 	public double eval(double z){

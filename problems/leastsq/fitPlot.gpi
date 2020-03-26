@@ -1,0 +1,9 @@
+set term svg font ",18" background rgb "white"
+set tics out
+set xlabel "t [days]"
+set ylabel "Activity [relative units]"
+set title "Least square fit to ThX data"
+set out "FitPlot.svg"
+
+plot "originalData.txt" using 1:2:3 with yerrorbars lt rgb "black" title "Experimental data"\
+,"fitData.txt" using 1:2 with lines lt rgb "red" title "Exponential fit" 
