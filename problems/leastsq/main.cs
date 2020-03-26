@@ -54,7 +54,7 @@ class main{
 		StreamWriter writeFitData = new StreamWriter("fitData.txt");
 		double delta = 0.02;
 		for(double i=x[0]; i<=x[n-1]; i+=delta){
-			writeFitData.WriteLine("{0}\t{1}", i, Exp(fit.eval(i)));
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
 		}
 		writeFitData.Close();
 		
