@@ -1,0 +1,11 @@
+set term svg font ",16" background rgb "white"
+set tics out
+set xlabel "t [days]"
+set ylabel "Activity [relative units]"
+set title "Least square fit to ThX data with upper/lower uncertainties"
+set out "PlotCExtra.svg"
+
+plot "originalData.txt" using 1:2:3 with yerrorbars lt rgb "black" title "Experimental data"\
+,"fitData.txt" index 0 using 1:2 with lines title "Best fit"\
+,"fitData.txt" index 5 using 1:2 with lines title "Upper boundary of uncertainty"\
+,"fitData.txt" index 6 using 1:2 with lines title "Lower boundary of uncertainty"

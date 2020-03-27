@@ -32,22 +32,21 @@ class main{
 		
 		// The lambda coefficient is now stored in the c[1] entry of the c-vector
 		// The uncertainty of lambda can be found from the covariance matrix
-		double lambda = fit.c[1];
-		double dlambda = Sqrt(fit.sigma[1,1]);
 		double lna = fit.c[0];
 		double dlna = Sqrt(fit.sigma[0,0]);
+		double lambda = fit.c[1];
+		double dlambda = Sqrt(fit.sigma[1,1]);
 
 		// The half-life is then
 		double T = -Log(2.0)/lambda;
 
 		// Write out the found half-life and lambda+-dlambda
-		StreamWriter writeFitResult = new StreamWriter("fit.txt");
-		writeFitResult.WriteLine("The least squares fit gave the results");
+		StreamWriter writeFitResult = new StreamWriter("outA-B.txt");
+		writeFitResult.WriteLine("The least squares fit gave the results:");
 		writeFitResult.WriteLine("lambda = {0:f5} +/- {1:f5}", lambda, dlambda);
 		writeFitResult.WriteLine("ln(a) = {0:f5} +/- {1:f5}", lna, dlna);
 		writeFitResult.WriteLine("The half-life is thus estimated to be {0:f2} days", T);
 		writeFitResult.WriteLine("The table value half-life is 3.66 days");
-		writeFitResult.Close();
 
 
 		// Generate data for the fitted curve
@@ -56,7 +55,77 @@ class main{
 		for(double i=x[0]; i<=x[n-1]; i+=delta){
 			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
 		}
-		writeFitData.Close();
 		
+
+		// Part B
+		// The uncertainty of the half-life value for ThX is calculated via the usual formula
+		// for the uncertainty of a function with one variable: dq = dx*|dq/dx|
+		double dT = Log(2.0)*1/(lambda*lambda)*dlambda;
+		writeFitResult.WriteLine("\nThe uncertainty in the estimated halflife is {0:f2} days", dT);
+		writeFitResult.WriteLine("The estimated value does thus not match the modern value within the estimated uncertainty, but it is close.");
+		writeFitResult.Close();
+
+		// Part C
+		// We generate data for plots where the fit coefficients are changed by the estimated
+		// uncertainties. First they are changed one at time, and at last they are changed
+		// together for the upper and lower boundaries of the uncertainty
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();
+		// ln(a) + dln(a)
+		fit.c[0] += dlna;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();
+		// ln(a) - dln(a)
+		fit.c[0] -= 2*dlna;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+
+		// Restore ln(a) to the original value from the fit
+		fit.c[0] += dlna;
+		
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();
+		// lambda + dlambda	
+		fit.c[1] += dlambda;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();
+		// lambda - dlambda
+		fit.c[1] -= 2*dlambda;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+		// Restore lambda to original value
+		fit.c[1] += dlambda;
+
+		// Lower boundary - lowest constant with fastest decay
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();	
+		fit.c[0] += dlna;
+		fit.c[1] += dlambda;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+
+
+		// Upper boundary - highest constant with slowest decay
+		writeFitData.WriteLine();
+		writeFitData.WriteLine();	
+		fit.c[0] -= 2*dlna;
+		fit.c[1] -= 2*dlambda;
+		for(double i=x[0]; i<=x[n-1]; i+=delta){
+			writeFitData.WriteLine("{0:f2}\t{1}", i, Exp(fit.eval(i)));
+		}
+
+		writeFitData.Close();
+
 	}
 }

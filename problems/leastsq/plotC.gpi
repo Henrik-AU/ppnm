@@ -1,0 +1,14 @@
+set term svg font ",16" background rgb "white"
+set tics out
+set log y
+set xlabel "t [days]"
+set ylabel "Activity [relative units]"
+set title "Least square fit to ThX data with uncertainties"
+set out "PlotC.svg"
+
+plot "originalData.txt" using 1:2:3 with yerrorbars lt rgb "black" title "Experimental data"\
+,"fitData.txt" index 0 using 1:2 with lines title "Best fit"\
+,"fitData.txt" index 1 using 1:2 with lines title "ln(a)+dln(a)"\
+,"fitData.txt" index 2 using 1:2 with lines title "ln(a)-dln(a)"\
+,"fitData.txt" index 3 using 1:2 with lines title "lambda+dlambda"\
+,"fitData.txt" index 4 using 1:2 with lines title "lambda-dlambda"

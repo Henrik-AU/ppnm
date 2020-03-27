@@ -1,10 +1,16 @@
-all: fit.txt FitPlot.svg
-	cat fit.txt
+all: outA-B.txt PlotA.svg PlotC.svg PlotCExtra.svg
+	cat outA-B.txt
 
-FitPlot.svg: fitPlot.gpi fitData.txt originalData.txt
+PlotCExtra.svg: plotCExtra.gpi fitData.txt originalData.txt
 	gnuplot $<
 
-fit.txt originalData.txt fitData.txt: main.exe
+PlotC.svg: plotC.gpi fitData.txt originalData.txt
+	gnuplot $<
+
+PlotA.svg: plotA.gpi fitData.txt originalData.txt
+	gnuplot $<
+
+outA-B.txt originalData.txt fitData.txt: main.exe
 	mono $<
 
 main.exe: main.cs math.dll
