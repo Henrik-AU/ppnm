@@ -1,0 +1,22 @@
+Printing matrix A:
+    -0.056          0   -1.1e-11   9.81e-15 
+    -0.988       1.38   9.38e-14  -1.15e-20 
+    -0.422     -0.121     0.0831          0 
+     0.349     -0.298      -1.94      0.863 
+
+Printing matrix V found from the decomposition:
+     0.172      0.878     -0.335      0.295 
+      0.15      0.403      0.839     -0.333 
+     0.764    -0.0841     -0.317     -0.556 
+     0.603     -0.245      0.288      0.702 
+
+Printing the found eigenvalues from the decomposition:
+     -1.57     -0.566       1.72       2.68 
+
+Printing V^T*A*V:
+     -1.57  -1.67e-16   -1.1e-11   9.99e-15 
+ -1.67e-16     -0.566   9.35e-14  -3.05e-16 
+  -1.1e-11   9.37e-14       1.72  -5.55e-17 
+  9.77e-15  -3.33e-16   3.33e-16       2.68 
+
+The decomposition was done in 5 sweeps
