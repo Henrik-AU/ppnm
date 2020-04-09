@@ -1,13 +1,12 @@
 using System;
 using static System.Console;
 using static System.Math;
+using System.IO;
 
 class main{
 	public static void Main(){
 
-		// Create a random symmetric matrix
-
-		// We start out by creating a random matrix.
+		// We start out by creating a random symmetric matrix.
 		var rand = new Random();
 
 		// We can pull out new random numbers between 0 and 1 with rand.NextDouble() and
@@ -44,9 +43,11 @@ class main{
 		
 
 		// We now try to solve the quantum particle in a box problem
+
+		StreamWriter BoxWriter = new StreamWriter("boxData.txt");
+		
 		// First we build the Hamiltonian, three point finite difference formula approximation
-		WriteLine("\n\nAttempt to solve the quantum particle in a box problem:\n");
-		int m = 80;
+		int m = 90;
 		double s = 1.0/(m+1);
 		matrix H = new matrix(m,m);
 		for(int i  = 0; i<m-1;i++){
@@ -57,18 +58,46 @@ class main{
 		matrix.set(H,m-1,m-1,-2);
 		matrix.scale(H,-1/(s*s));
 
-		// Next we diagonalize it with out Jabobi routine,
+		// Next we diagonalize it with out Jacobi routine,
 		matrix VBox = new matrix(m,m);
 		vector eigenvalsBox = new vector(m);
 		int sweepsBox = jacobi.cycle(H,eigenvalsBox,VBox);
+		Error.WriteLine("The Jacobi cycling for the particle in a box problem was completed" +
+		" in {0} sweeps.", sweepsBox);
 
-		// Let's check if the energies are correct
-		WriteLine("n\t calculated E\t exact E");
-		for(int k=0; k<m/3; k++){
+		// Let's check if the energies seem to be correct
+		for(int k=0; k<m/4; k++){
 			double exact = PI*PI*(k+1)*(k+1);
 			double calculated = eigenvalsBox[k];
-			WriteLine("{0}\t{1,8:f8}\t{2,8:f8}", k, calculated, exact);
+			BoxWriter.WriteLine("{0} {1,8:f8} {2,8:f8}", k, calculated, exact);
 		}
+
+		WriteLine();
+		// Print out some data for plots of the functions
+		for(int k = 0; k<3; k++){
+			BoxWriter.WriteLine("\n\n{0} {1,17}", "0", "0");
+			for(int i = 0; i<m; i++){
+				BoxWriter.WriteLine("{0:f15} {1,17:f15}", (i+1.0)/(m+1), matrix.get(VBox,i,k));
+			}
+			BoxWriter.WriteLine("{0} {1,17}", "1", "0");
+		}
+
+		// Print out the analytical expressions for the functions
+		
+		int q = 1;		
+		Func<double,double> psi = (x) => Sin(q*x*PI);
+
+		for(int k = 0; k<3; k++){
+			BoxWriter.WriteLine("\n\n{0} {1,5}", "0", "0");
+			for(double x = 0.02; x<1; x+=0.02){
+				BoxWriter.WriteLine("{0:f3} {1,4:f15}", x, psi(x));
+			}
+			q++;
+			BoxWriter.WriteLine("{0} {1,5}", "1", "0");
+		
+		}
+
+		BoxWriter.Close();
 
 	}
 }

@@ -1,0 +1,11 @@
+set term svg font " ,16" background rgb "white"
+set title "Eigenfunctions for a particle in a box"
+set key off
+set xlabel "x"
+set ylabel "Psi(x)"
+set out "Eigenfunctions.svg"
+
+plot "boxData.txt" index 1 with lines lt rgb "blue"\
+,"boxData.txt" index 2 with lines lt rgb "red"\
+,"boxData.txt" index 3 with lines lt rgb "green"
+
