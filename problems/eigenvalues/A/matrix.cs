@@ -183,6 +183,12 @@ public matrix transpose(){
 	return c;
 	}
 
+public static void scale(matrix M,double x){
+	for(int j=0;j<M.size2;j++)
+	for(int i=0;i<M.size1;i++)
+		M[i,j]*=x;
+	}
+
 public void print(string s="",string format="{0,10:g3} "){
 	System.Console.WriteLine(s);
 	for(int ir=0;ir<this.size1;ir++){
