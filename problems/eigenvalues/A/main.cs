@@ -1,7 +1,7 @@
 using System;
+using System.IO;
 using static System.Console;
 using static System.Math;
-using System.IO;
 
 class main{
 	public static void Main(){
@@ -82,22 +82,27 @@ class main{
 			BoxWriter.WriteLine("{0} {1,17}", "1", "0");
 		}
 
-		// Print out the analytical expressions for the functions
-		
-		int q = 1;		
-		Func<double,double> psi = (x) => Sin(q*x*PI);
+		// q = 1 is the ground state, q = 2 is the first excited state, etc.
+		int q = 1;
 
+		// a is a quick and dirty change of normalization that seems to make the analytical
+		// expressions match the numerical expression well enough to argue that they are
+		// identical
+		double a = 0.149;
+
+		// Prepare the analytical functions for a particle in a box
+		Func<double,double> psi = (x) => a*Sin(q*x*PI);
+
+		// Print out the analytical expressions for the functions
 		for(int k = 0; k<3; k++){
 			BoxWriter.WriteLine("\n\n{0} {1,5}", "0", "0");
 			for(double x = 0.02; x<1; x+=0.02){
 				BoxWriter.WriteLine("{0:f3} {1,4:f15}", x, psi(x));
 			}
-			q++;
 			BoxWriter.WriteLine("{0} {1,5}", "1", "0");
-		
+			// Increase q by 1 to go to the next state
+			q++;
 		}
-
 		BoxWriter.Close();
-
 	}
 }

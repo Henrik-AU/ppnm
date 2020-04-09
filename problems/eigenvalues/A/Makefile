@@ -1,10 +1,10 @@
-all: out.txt boxData.txt Eigenfunctions.svg
+all: outA.txt Eigenfunctions.svg
 
 Eigenfunctions.svg: plotEigenfuncs.gpi boxData.txt
 	gnuplot $<
 
-out.txt boxData.txt: main.exe
-	mono $< >out.txt 2>Log
+outA.txt boxData.txt: main.exe
+	mono $< >outA.txt 2>Log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
