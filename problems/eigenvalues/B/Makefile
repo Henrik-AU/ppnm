@@ -1,7 +1,7 @@
-all: timeScaling.svg outB3.txt outB4.txt
+all: TimeScaling.svg outB3.txt outB4.txt
 	cat time.txt
 
-timeScaling.svg: timePlot.gpi time.txt
+TimeScaling.svg: timePlot.gpi time.txt
 	gnuplot $<
 
 # We will run the \time utility several times with different matrix dimensions. This is done in a small for
