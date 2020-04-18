@@ -1,0 +1,11 @@
+set term svg font ",16" background rgb "white"
+set title "Comparisons of different eigenvalue finding algorithms"
+set key bottom right
+set xlabel "Matrix dimension"
+set ylabel "Operations"
+set logscale xy 
+set out "ComparisonIV.svg"
+set xrange[40:100]
+
+plot "outB4.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Full cyclic"\
+, "outB4.txt" using 1:3 with points pt 7 ps 0.6 lt rgb "green" title "Value by value"

@@ -1,5 +1,10 @@
-all: TimeScaling.svg outB3.txt outB4.txt
-	cat time.txt
+all: TimeScaling.svg outB3.txt outB4.txt ComparisonIII.svg ComparisonIV.svg
+
+ComparisonIV.svg: compPlotIV.gpi outB4.txt
+	gnuplot $<
+
+ComparisonIII.svg: compPlotIII.gpi outB3.txt
+	gnuplot $<
 
 TimeScaling.svg: timePlot.gpi time.txt
 	gnuplot $<
@@ -11,7 +16,7 @@ time.txt: mainTime.exe Makefile
 		\time --format "$$dimension %U" --append --output time.txt mono mainTime.exe $$dimension ; \
 	done	
 
-outB3.txt outB4.txt: mainB.exe
+outB3.txt outB4.txt outB5.txt: mainB.exe
 	mono $<
 
 mainB.exe: mainB.cs math.dll

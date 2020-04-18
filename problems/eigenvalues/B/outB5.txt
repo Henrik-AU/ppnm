@@ -1,0 +1,15 @@
+The eigenvalues found by the cyclic method are:
+-3.54495407614842
+-1.4469891850357
+-0.16773596532035
+0.529703480562359
+2.74302309619278
+
+The eigenvalues found one by one starting from the highest is (in order):
+2.74302309619278
+0.529703480562361
+-0.167735965320351
+-1.4469891850357
+-3.54495407614842
+
+The cyclic routine used 50 operations and the value by value routine used 119.

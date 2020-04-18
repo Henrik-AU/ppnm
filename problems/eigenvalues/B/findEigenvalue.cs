@@ -2,8 +2,9 @@ using System;
 using static System.Math;
 
 public partial class jacobi{
-
-	public static int findEigenvalue(matrix A, vector e, matrix V, int eigValNum){
+	
+	// The bool low dictates if we want to find the lowest eigenvalue first, or the highest
+	public static int findEigenvalue(matrix A, vector e, matrix V, int eigValNum, bool low){
 		
 	bool changed;
 	int rotations = 0;
@@ -37,8 +38,15 @@ public partial class jacobi{
 				double aqq = e[q];
 				double apq = A[p,q];
 				// Calculate the angle phi that zeros the new apq element.
-				double phi = Atan2(2*apq,aqq-app)/2;
-
+				// If we want the highest eigenvalue first (low == False)
+				// then we have to rotate in the opposite direction
+				double phi;
+				if(low){
+					phi = Atan2(2*apq,aqq-app)/2;
+				}
+				else{
+					phi = Atan2(-2*apq,-aqq+app)/2;			
+				}
 				double c = Cos(phi);
 				double s = Sin(phi);
 				// Calculate the updated app and aqq values

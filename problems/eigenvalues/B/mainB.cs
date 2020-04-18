@@ -10,9 +10,9 @@ class mainB{
 		var rand = new Random();
 		StreamWriter partIIIWriter = new StreamWriter("outB3.txt");
 
-		int dn = 4;
+		int dn = 10;
 		
-		for(int n = 40; n<101; n+=dn){
+		for(int n = 50; n<301; n+=dn){
 			matrix A = new matrix(n,n);
 			for(int i=0; i<n; i++){
 				A[i,i] = 2 - 4*rand.NextDouble();
@@ -37,7 +37,7 @@ class mainB{
 			// Calculate the lowest eigenvalue for A
 			int nEigVal = 1;
 			vector eRot = new vector(n);
-			int rotations = jacobi.findEigenvalue(Acopy, eRot, V, nEigVal);
+			int rotations = jacobi.findEigenvalue(Acopy, eRot, V, nEigVal, true);
 			partIIIWriter.WriteLine("{0} {1} {2}", n, sweeps*entries, rotations);
 		}
 
@@ -45,14 +45,11 @@ class mainB{
 
 
 		// part 4
-		// We now want to compare the time it takes to fully diagonalize a matrix A using the two
-		// different routines. We might as well just continue using the matrix A from part 3, which
-		// has already been diagonalized by the normal jacobi routine. We therefore diagonalize
-		// it with the eigenvalue-by-eigenvalue algorithm.
-
 		StreamWriter partIVWriter = new StreamWriter("outB4.txt");
 
-		for(int n = 40; n<101; n+=dn){
+		dn = 5;
+
+		for(int n = 50; n<101; n+=dn){
 			// Create a random matrix
 			matrix A = new matrix(n,n);
 			for(int i=0; i<n; i++){
@@ -71,12 +68,58 @@ class mainB{
 			vector eRot = new vector(n);
 			int sweeps = jacobi.cycle(A, e, V);
 			int entries = (n*n - n)/2;
-			int rotations = jacobi.findEigenvalue(Acopy, eRot, V, n);
+			int rotations = jacobi.findEigenvalue(Acopy, eRot, V, n, true);
 
 			partIVWriter.WriteLine("{0} {1} {2}", n, sweeps*entries, rotations);
 		}
 
 		partIVWriter.Close();
+
+
+		// Part 5
+		// We want to see if we can retrieve the eigenvalues one by one starting with the 
+		// highest eigenvalue
+		
+		// Create a matrix
+		int m = 5;
+		matrix B = new matrix(m,m);
+		for(int i=0; i<m; i++){
+			B[i,i] = 2 - 4*rand.NextDouble();
+			for(int j=i+1; j<m; j++){
+				B[i,j] = 2 - 3.32*rand.NextDouble();
+				B[j,i] = B[i,j];
+			}
+		}
+		matrix Bcopy = B.copy();
+		
+		// Find the eigenvalues with the cyclic routine (for comparison of eigenvalue values)
+		// and find them one at a time starting from the highest
+		matrix VB = new matrix(m, m);
+		vector eB = new vector(m);
+		vector eBRot = new vector(m);
+
+		int sweepsB = jacobi.cycle(B, eB, VB);
+		int entriesB = (m*m-m)/2;
+		int rotationsB = jacobi.findEigenvalue(Bcopy, eBRot, VB, m, false);
+		
+		// Print out the results
+		StreamWriter partVWriter = new StreamWriter("outB5.txt");
+		
+		partVWriter.WriteLine("The eigenvalues found by the cyclic method are:");
+		for(int i=0; i<m; i++){
+			partVWriter.WriteLine("{0}", eB[i]);
+		}
+
+		partVWriter.WriteLine("\nThe eigenvalues found one by one starting from the highest" +
+		" is (in order):");
+		for(int i=0; i<m; i++){
+			partVWriter.WriteLine("{0}", eBRot[i]);
+		}
+
+		partVWriter.WriteLine("\nThe cyclic routine used {0} operations and the value by value" +
+		" routine used {1}.", sweepsB*entriesB, rotationsB);
+		
+		partVWriter.Close();
 
 	}		
 }
