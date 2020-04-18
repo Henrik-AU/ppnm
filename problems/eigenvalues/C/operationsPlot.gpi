@@ -1,0 +1,11 @@
+set term svg font ",16" background rgb "white"
+set title "Comparison of used operations for Jacobi methods"
+set xlabel "Matrix dimension"
+set ylabel "Operations"
+set key top left box
+set logscale y
+set out "CompareOperations.svg"
+
+plot "outCyclic.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Cyclic"\
+, "outValue.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Value-by-value"\
+, "outClassic.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "green" title "Classic"\

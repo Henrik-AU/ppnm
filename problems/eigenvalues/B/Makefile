@@ -1,4 +1,4 @@
-all: TimeScaling.svg outB3.txt outB4.txt ComparisonIII.svg ComparisonIV.svg
+all: TimeScaling.svg ComparisonIII.svg ComparisonIV.svg
 
 ComparisonIV.svg: compPlotIV.gpi outB4.txt
 	gnuplot $<

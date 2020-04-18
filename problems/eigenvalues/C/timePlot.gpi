@@ -1,0 +1,10 @@
+set term svg font ",16" background rgb "white"
+set title "Comparison of run-time for Jacobi methods"
+set xlabel "Matrix dimension"
+set ylabel "Run-time"
+set key top left box
+set out "CompareTime.svg"
+
+plot "timeCyclic.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Cyclic"\
+, "timeValue.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Value-by-value"\
+, "timeClassic.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "green" title "Classic"\

@@ -1,6 +1,6 @@
 set term svg font ",16" background rgb "white"
 set title "Comparisons of different eigenvalue finding algorithms"
-set key bottom right
+set key top left box
 set xlabel "Matrix dimension"
 set ylabel "Operations"
 set logscale xy 

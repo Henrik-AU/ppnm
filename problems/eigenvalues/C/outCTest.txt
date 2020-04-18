@@ -1,0 +1,36 @@
+Create a matrix and diagonalize it via the cyclic, value-by-value and classic method
+The cyclic method used 50 operations
+The value-by-value method used 105 operations
+The classic method used 28 operations
+
+After cyclic diagonalization the matrix looks like:
+
+      0.83  -1.73e-13   3.26e-20          0    7.3e-09 
+      1.12      -1.28          0  -1.38e-09   6.04e-12 
+      1.56      0.285       1.12  -1.12e-11  -1.02e-15 
+     0.464      0.965     -0.363     -0.878  -6.75e-17 
+      -1.1       1.52     -0.754     -0.135       1.64 
+
+After value-by-value diagonalization the matrix looks like:
+
+      0.83   1.13e-08  -3.37e-09   2.57e-09   1.57e-08 
+      1.12      -1.28  -3.32e-09  -2.27e-09   4.58e-09 
+      1.56      0.285       1.12  -2.43e-09   3.06e-09 
+     0.464      0.965     -0.363     -0.878          0 
+      -1.1       1.52     -0.754     -0.135       1.64 
+
+After classic Jacobi diagonalization the matrix looks like:
+
+      0.83  -4.91e-10          0  -1.42e-20  -2.55e-13 
+      1.12      -1.28   9.31e-13  -4.62e-09   4.29e-16 
+      1.56      0.285       1.12  -3.63e-13    2.7e-20 
+     0.464      0.965     -0.363     -0.878          0 
+      -1.1       1.52     -0.754     -0.135       1.64 
+
+
+E(cyclic)		E(val_by_val)		E(classic)
+-2.8235197448303	-2.8235197448303	-2.8235197448303
+-1.31905105139997	-1.31905105139997	-1.31905105139997
+0.231382703958258	0.231382703958258	0.231382703958258
+1.86351447284004	1.86351447284004	1.86351447284004
+3.47982078492795	3.47982078492795	3.47982078492795

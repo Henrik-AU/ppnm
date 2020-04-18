@@ -109,9 +109,11 @@
 		<text><tspan font-family="Arial" >Comparisons of different eigenvalue finding algorithms</tspan></text>
 	</g>
 </g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M141.6,132.1 L141.6,84.1 L377.6,84.1 L377.6,132.1 L141.6,132.1 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>Full cyclic</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(475.9,360.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+	<g transform="translate(298.4,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Full cyclic</tspan></text>
 	</g>
 </g>
@@ -127,12 +129,12 @@
 	<use xlink:href='#gpPt6' transform='translate(516.2,274.3) scale(3.60)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt6' transform='translate(541.9,270.4) scale(3.60)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt6' transform='translate(566.3,266.7) scale(3.60)' color='rgb(  0,   0, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(515.5,355.2) scale(3.60)' color='rgb(  0,   0, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(338.0,96.1) scale(3.60)' color='rgb(  0,   0, 255)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Value by value</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(475.9,384.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+	<g transform="translate(298.4,125.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Value by value</tspan></text>
 	</g>
 </g>
@@ -148,7 +150,7 @@
 	<use xlink:href='#gpPt6' transform='translate(516.2,149.7) scale(3.60)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(541.9,143.1) scale(3.60)' color='rgb(  0, 255,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(566.3,143.8) scale(3.60)' color='rgb(  0, 255,   0)'/>
-	<use xlink:href='#gpPt6' transform='translate(515.5,379.2) scale(3.60)' color='rgb(  0, 255,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(338.0,120.1) scale(3.60)' color='rgb(  0, 255,   0)'/>
 </g>
 	</g>
 <g fill="none" color="#FFFFFF" stroke="rgb(  0, 255,   0)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">

@@ -140,6 +140,8 @@
 		<text><tspan font-family="Arial" >Comparisons of different eigenvalue finding algorithms</tspan></text>
 	</g>
 </g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M141.6,132.1 L141.6,84.1 L411.2,84.1 L411.2,132.1 L141.6,132.1 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>Full cyclic</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(332.0,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
