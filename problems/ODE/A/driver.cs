@@ -59,14 +59,17 @@ public partial class ode{
 			vector err = attempt[1];
 
 			// Calculate the local tolerance
-			vector tauLocal = (eps*yh.abs() + acc)*Sqrt(h/(b-a));
-
+			vector tauLocal = new vector(yh.size);
+			double sqrtFactor = Sqrt(h/(b-a));
+			for(int i=0; i<yh.size; i++){
+				tauLocal[i] = (eps*Abs(yh[i]) + acc)*sqrtFactor;
+			}
 			// Check if the step is acceptable and within tolerances
 			vector tolRatios = new vector(err.size);
 			bool acceptStep = true;
 			for(int i = 0; i<tauLocal.size; i++){
 				// Calculate the fraction of the tolerance ratios
-				tolRatios[i] = Abs(tauLocal[i])/Abs(err[i]);
+				tolRatios[i] = Abs(tauLocal[i]/err[i]);
 				if(tolRatios[i] < 1){
 					// The estimated error is larger than the local tolerance
 					acceptStep = false;
@@ -76,7 +79,7 @@ public partial class ode{
 			// Find the smallest tolerance ratio - this is the factor we will use for the 
 			// empirical step size adjustment
 			double factor = tolRatios[0];
-			for(int i = 1; i<tol.size; i++){
+			for(int i = 1; i<tolRatios.size; i++){
 				factor = Min(factor, tolRatios[i]);
 			}
 
@@ -89,7 +92,7 @@ public partial class ode{
 					xlist.Add(a);
 				}	
 				if(ylist!=null){
-					xlist.Add(ya);
+					ylist.Add(ya);
 				}	
 			}else{
 				Error.WriteLine("Bad step at {0}. Step rejected.", a);
@@ -101,8 +104,7 @@ public partial class ode{
 			double hFactor = Pow(factor, 0.25)*0.95;
 
 			int maxStepFactor = 2;
-			if(dh > maxStepFactor){
-				// 
+			if(hFactor > maxStepFactor){
 				hFactor = maxStepFactor;
 			}
 			h = h*hFactor;
@@ -110,7 +112,7 @@ public partial class ode{
 
 
 		}
-	Error.WriteLine("ODE solved in {nsteps} steps.", nsteps);
+	Error.WriteLine("ODE solved in {0} steps.", nsteps);
 	return ya;
 	} // driver function
 } // class

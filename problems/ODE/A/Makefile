@@ -1,13 +1,16 @@
-all: out.txt
+all: Plot.svg
+
+Plot.svg: plot.gpi out.txt
+	gnuplot $<
 
 out.txt: main.exe
-	mono $< >$@
+	mono $< >$@ 2>Log
 
-main.exe: main.cs
-	mcs $<
+main.exe: main.cs math.dll
+	mcs $< -reference:math.dll
 
-math.dll: vector.cs rkstep45.cs driver.cs
-	mcs $< -target:library -out:$@
+math.dll: vector.cs driver.cs rkstep45.cs
+	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt *.svg
+	rm -f *.dll *.exe *.txt *.svg Log
