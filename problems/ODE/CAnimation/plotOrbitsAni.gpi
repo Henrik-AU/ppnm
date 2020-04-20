@@ -1,0 +1,21 @@
+set terminal unknown
+plot "out.txt" using 1:2
+xmax = GPVAL_DATA_X_MAX
+
+set terminal gif animate delay 5 optimize font ",16"
+set output 'OrbitsAnimated.gif'
+set key out right box
+set title "Animation of special stable 3-body system"
+set xlabel "x"
+set ylabel "y"
+set xrange [-1.5:1.5]
+set yrange [-0.4:0.4]
+
+do for [i=0:int(xmax)] {
+	plot 'out.txt' every ::i::i using 3:4 pt 7 ps 2 lt rgb "black" title "Body 1" \
+	, 'out.txt' every ::i::i using 5:6 pt 7 ps 2 lt rgb "blue" title "Body 2"\
+	, 'out.txt' every ::i::i using 7:8 pt 7 ps 2 lt rgb "red" title "Body 3"\
+	, 'out.txt' every ::0::i using 3:4 with lines lw 1.5 lt rgb "black" notitle \
+	, 'out.txt' every ::0::i using 5:6 with lines lw 1.5 lt rgb "black" notitle \
+	, 'out.txt' every ::0::i using 7:8 with lines lw 1.5 lt rgb "black" notitle
+}

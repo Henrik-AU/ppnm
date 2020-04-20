@@ -1,0 +1,11 @@
+set term svg size 720,480 font ",16" background rgb "white"
+set title "Special stable 3-body system"
+set xlabel "x"
+set ylabel "y"
+set key outside right box
+set out "Orbits.svg"
+
+plot "out.txt" using 3:4 with lines lw 4.5 lt rgb "green" title "Body 1"\
+, "out.txt" using 5:6 with lines lw 3 lt rgb "blue" title "Body 2"\
+, "out.txt" using 7:8 with lines lw 1.5 lt rgb "red" title "Body 3"
+
