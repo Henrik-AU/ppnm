@@ -1,0 +1,5 @@
+The 4-point recursive integrator estimates the integral from 0 to 1 of sqrt(x) dx to 0.666666679685227.
+The table value for this integral is 2/3.
+
+The 4-point recursive integrator estimates the integral from 0 to 1 of 4*sqrt(1-x^2) dx to 3.14159265769177.
+The table value for this integral is 3.141593.
