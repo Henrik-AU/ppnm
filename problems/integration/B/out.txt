@@ -1,0 +1,27 @@
+Calculating the integral from 0 to 1 of 1/sqrt(x):
+Result with o4ac: 		1.99999201046432
+Result with o4a: 		1.99996150007805
+Result with o8av: 		2.00002495541116
+Analytical result: 		2
+Function evaluations with o4ac: 16
+Function evaluations with o4a: 	8572
+Function evaluations with o8av: 8
+
+Calculating the integral from 0 to 1 of ln(x)/sqrt(x):
+Result with o4ac: 		-3.99987385646141
+Result with o4a: 		-3.99991705899915
+Result with o8av: 		-3.93932133686130
+Analytical result: 		-4
+Function evaluations with o4ac: 96
+Function evaluations with o4a: 	8604
+Function evaluations with o8av: 24
+
+Calculating the integral from 0 to 1 of 4*sqrt(1-x^2):
+Result with o4ac: 		3.14159265358979
+Result with o4a: 		3.14159265358994
+Result with o8av: 		3.14159265355351
+Analytical result: 		3.14159265358979
+Function evaluations with o4ac: 14016
+Function evaluations with o4a: 	9596
+Function evaluations with o8av: 88
+
