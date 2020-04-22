@@ -32,4 +32,5 @@ Function evaluations with o4a: 	9968
 Function evaluations with o8av: 128
 
 
-The o4ac routine is significantly more efficient than o4a for some of the specific integrands. The o8av routine is however still superior.
+The o4ac routine is significantly more efficient than o4a for some of the specific integrands.
+The o8av routine is however still superior.

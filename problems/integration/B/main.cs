@@ -63,7 +63,8 @@ class main{
 
 		WriteLine();
 		WriteLine("The o4ac routine is significantly more efficient than o4a for some" +
-		" of the specific integrands. The o8av routine is however still superior.");
+		" of the specific integrands.");
+		WriteLine("The o8av routine is however still superior.");
 
 	}
 
