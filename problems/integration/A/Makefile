@@ -10,4 +10,4 @@ math.dll: integration.cs vector.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.txt *.exe Log
+	rm -f *.dll *.txt *.exe

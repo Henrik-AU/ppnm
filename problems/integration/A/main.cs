@@ -15,10 +15,11 @@ class main{
 		double acc = 1e-6; 
 
 		vector result = integration.o4a(sqrt, a, b, acc, eps);
-		
-		WriteLine("The 4-point recursive integrator estimates the integral from" + 
-		" 0 to 1 of sqrt(x) dx to {0}.", result[0]);
-		WriteLine("The table value for this integral is 2/3.");
+	
+		WriteLine("Calculating the integral from 0 to 1 of sqrt(x):");
+		WriteLine("Using relative tolerance {0} and absolute tolerance {1}.", eps, acc);
+		WriteLine("The o4a routine estimates the integral to be {0}", result[0]); 
+		WriteLine("The analytical value for this integral is {0}.", 2.0/3);
 
 		// Let's try another function on the same interval
 		Func<double, double> f = (x) => 4*Sqrt(1-x*x);
@@ -26,8 +27,9 @@ class main{
 		result = integration.o4a(f, a, b, acc, eps);
 
 		WriteLine();
-		WriteLine("The 4-point recursive integrator estimates the integral from" + 
-		" 0 to 1 of 4*sqrt(1-x^2) dx to {0}.", result[0]);
-		WriteLine("The table value for this integral is {0:f6}.", PI);
+		WriteLine("Calculating the integral from 0 to 1 of 4*sqrt(1-x^2):");	
+		WriteLine("Using relative tolerance {0} and absolute tolerance {1}.", eps, acc);
+		WriteLine("The o4a routine estimates the integral to be {0}", result[0]); 
+		WriteLine("The analytical value for this integral is {0}.", PI);
 	}
 }
