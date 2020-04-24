@@ -30,7 +30,7 @@ class main{
 		double integral = quad.o8av(f, a, b, acc, eps);
 		vector result_o8av = new vector(new double[] {integral, calls});		
 
-		WriteLine("Calculating the integral from 0 to +infty of Exp(-2*x^2)");
+		WriteLine("Calculating the integral from 0 to +infty of exp(-2*x^2)");
 		printResults(result_o4av, result_o8av, 0.5*Sqrt(PI/2), eps, acc);
 	
 		// Let's try another function on the same interval
@@ -45,7 +45,7 @@ class main{
 		printResults(result_o4av, result_o8av, 0.5*PI/4, eps, acc);
 
 		
-		// Let's try the same funktion from minus infinity to zero. The result should be
+		// Let's try the same function from minus infinity to zero. The result should be
 		// the same since the integrand is even.
 		Func<double, double> h = (x) => {calls++; return 1/(x*x + 4*4);};
 		a = NegativeInfinity;
@@ -58,6 +58,23 @@ class main{
 
 		WriteLine("Calculating the integral from -infty to 0 of 1/(x^2 + 4^2)");
 		printResults(result_o4av, result_o8av, 0.5*PI/4, eps, acc);
+
+		// At last let's try a function from minus infinity to infinity
+		Func<double, double> k = (x) => {calls++; return x*x*Exp(-x*x);};
+		a = NegativeInfinity;
+		b = PositiveInfinity;
+	
+		result_o4av = integration.o4av(k, a, b, acc, eps);
+		calls = 0;
+		integral = quad.o8av(k, a, b, acc, eps);
+		result_o8av = new vector(new double[] {integral, calls});		
+
+		WriteLine("Calculating the integral from -infty to +infty of x^2*exp(-x^2)");
+		printResults(result_o4av, result_o8av, Sqrt(PI)/2, eps, acc);
+
+		WriteLine("While both methods can integrate to a high accuracy, it is clear that" +
+		" that the o8av routine is still significantly faster (often a factor 10-100) than" +
+		" the o4av routine.");
 
 	}
 

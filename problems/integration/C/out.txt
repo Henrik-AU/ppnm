@@ -28,3 +28,14 @@ Estimated error with o4av: 	5.1152668277256E-10
 Function evaluations with o4av: 6264
 Function evaluations with o8av: 144
 
+Calculating the integral from -infty to +infty of x^2*exp(-x^2)
+Relative tolerance: 1E-09
+Absolute tolerance: 1E-09
+Analytical result: 		0.886226925452758
+Result with o4av: 		0.88622692540520 (deviation: 4.75631756202688E-11)
+Result with o8av: 		0.88622692544929 (deviation: 3.46422890373788E-12)
+Estimated error with o4av: 	5.11814272932226E-10
+Function evaluations with o4av: 25008
+Function evaluations with o8av: 416
+
+While both methods can integrate to a high accuracy, it is clear that that the o8av routine is still significantly faster (often a factor 10-100) than the o4av routine.

@@ -5,6 +5,8 @@ Analytical result: 		2
 Result with o4ac: 		1.99999201046432 (deviation: 7.98953567748839E-06)
 Result with o4a: 		1.99996150007805 (deviation: 3.84999219518178E-05)
 Result with o8av: 		2.00002495541116 (deviation: -2.49554111615424E-05)
+Estimated error with o4ac: 	0.001187371917641
+Estimated error with o4a: 	0.000412012551873547
 Function evaluations with o4ac: 16
 Function evaluations with o4a: 	8572
 Function evaluations with o8av: 8
@@ -16,6 +18,8 @@ Analytical result: 		-4
 Result with o4ac: 		-3.99987385646141 (deviation: -0.000126143538593304)
 Result with o4a: 		-3.99991705899915 (deviation: -8.29410008478249E-05)
 Result with o8av: 		-3.93932133686130 (deviation: -0.060678663138698)
+Estimated error with o4ac: 	0.00111272494904313
+Estimated error with o4a: 	0.000754016739921987
 Function evaluations with o4ac: 96
 Function evaluations with o4a: 	8604
 Function evaluations with o8av: 24
@@ -27,6 +31,8 @@ Analytical result: 		3.14159265358979
 Result with o4ac: 		3.14159265358979 (deviation: 2.22044604925031E-15)
 Result with o4a: 		3.14159265358993 (deviation: -1.4122036873232E-13)
 Result with o8av: 		3.14159265358967 (deviation: 1.27009514017118E-13)
+Estimated error with o4ac: 	4.83765184471864E-10
+Estimated error with o4a: 	6.19612993076837E-10
 Function evaluations with o4ac: 14152
 Function evaluations with o4a: 	9968
 Function evaluations with o8av: 128
