@@ -1,0 +1,30 @@
+Calculating the integral from 0 to +infty of Exp(-2*x^2)
+Relative tolerance: 1E-09
+Absolute tolerance: 1E-09
+Analytical result: 		0.62665706865775
+Result with o4av: 		0.62665706741995 (deviation: 1.2377971980726E-09)
+Result with o8av: 		0.62665706864420 (deviation: 1.35506050824574E-11)
+Estimated error with o4av: 	4.35704915248197E-10
+Function evaluations with o4av: 7316
+Function evaluations with o8av: 168
+
+Calculating the integral from 0 to +infty of 1/(x^2 + 4^2)
+Relative tolerance: 1E-09
+Absolute tolerance: 1E-09
+Analytical result: 		0.392699081698724
+Result with o4av: 		0.39269908169880 (deviation: -7.66608998503671E-14)
+Result with o8av: 		0.39269908169854 (deviation: 1.81243908770057E-13)
+Estimated error with o4av: 	5.1152668277256E-10
+Function evaluations with o4av: 6264
+Function evaluations with o8av: 144
+
+Calculating the integral from -infty to 0 of 1/(x^2 + 4^2)
+Relative tolerance: 1E-09
+Absolute tolerance: 1E-09
+Analytical result: 		0.392699081698724
+Result with o4av: 		0.39269908169880 (deviation: -7.66608998503671E-14)
+Result with o8av: 		0.39269908169854 (deviation: 1.81243908770057E-13)
+Estimated error with o4av: 	5.1152668277256E-10
+Function evaluations with o4av: 6264
+Function evaluations with o8av: 144
+
