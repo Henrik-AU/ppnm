@@ -1,7 +1,7 @@
 all: out.txt
 
 out.txt: main.exe
-	mono $<
+	mono $< >$@
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
