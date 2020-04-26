@@ -1,12 +1,13 @@
-Attempting to find roots for f(x) = 2x^2 + 3x - 2.
-The analytic roots are x = -2 and x = 1/2.
+Attempting to find 2 roots for f(x) = 2x^2 + 3x - 2.
 
 Looking for the first root
+The analytic root is x = -2.
 Starting search from x0 = -3.2.
 A root has been found at x = -2.00000003745036.
 The function value at this point is 1.87251786520903E-07.
 
 Looking for the second root:
+The analytic root is x = 1/2.
 Starting search from x0 = 2.
 A root has been found at x = 0.500000000000073.
 The function value at this point is 3.66373598126302E-13.

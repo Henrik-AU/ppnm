@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white"
+set tics out
+set title "Found S-wave for hydrogen"
+set xlabel "r [a_{Bohr}]"
+set ylabel "F_{eps}(r)"
+set out "Swave.svg"
+
+plot "out.txt" index 0 using 1:2 with lines lw 6 lc 7 title "Numerical solution"\
+, "out.txt" index 1 using 1:2 with lines dt 2 lw 6 lt rgb "black" title "Analytic solution"

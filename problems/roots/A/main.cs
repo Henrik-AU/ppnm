@@ -22,11 +22,11 @@ class main{
 
 		vector root = roots.newton(parabola, x0, eps);
 		
-		WriteLine("Attempting to find roots for f(x) = 2x^2 + 3x - 2.");
-		WriteLine("The analytic roots are x = -2 and x = 1/2.");
+		WriteLine("Attempting to find 2 roots for f(x) = 2x^2 + 3x - 2.");
 		
 		WriteLine();
 		WriteLine("Looking for the first root");
+		WriteLine("The analytic root is x = -2.");
 		WriteLine("Starting search from x0 = {0}.", x0[0]);
 		WriteLine("A root has been found at x = {0}.", root[0]);
 		WriteLine("The function value at this point is {0}.", parabola(root)[0]);
@@ -37,6 +37,7 @@ class main{
 
 		WriteLine();
 		WriteLine("Looking for the second root:");
+		WriteLine("The analytic root is x = 1/2.");
 		WriteLine("Starting search from x0 = {0}.", x0[0]);
 		WriteLine("A root has been found at x = {0}.", root[0]);
 		WriteLine("The function value at this point is {0}.", parabola(root)[0]);
