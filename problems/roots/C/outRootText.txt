@@ -1,0 +1,70 @@
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.06312349748943.
+Used rmax: 				 2
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.125051650689607
+The deviation from the analytic root is: -0.374948349310393
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.06312349748943.
+Used rmax: 				 4
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.483270743892263
+The deviation from the analytic root is: -0.0167292561077366
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.06312349748943.
+Used rmax: 				 6
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.499262407148873
+The deviation from the analytic root is: -0.000737592851126845
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.06312349748943.
+Used rmax: 				 8
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.499977759286625
+The deviation from the analytic root is: -2.22407133749769E-05
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.06312349748943.
+Used rmax: 				 10
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.500003085162073
+The deviation from the analytic root is: 3.08516207303544E-06
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.14818633531601.
+Used rmax: 				 12
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.50000360677704
+The deviation from the analytic root is: 3.60677703981072E-06
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.14818633531601.
+Used rmax: 				 2
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.499996341687334
+The deviation from the analytic root is: -3.65831266641026E-06
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.14818633531601.
+Used rmax: 				 4
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.500002505104818
+The deviation from the analytic root is: 2.50510481814015E-06
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.14818633531601.
+Used rmax: 				 6
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.499985516207808
+The deviation from the analytic root is: -1.44837921917662E-05
+
+Trying to find a root for the auxiliary function:
+Starting the search from energy: 	 -1.14818633531601.
+Used rmax: 				 8
+The analytic root is at energy: 	 -1/2.
+A root has been found at energy: 	 -0.500002675521072
+The deviation from the analytic root is: 2.67552107235947E-06
+

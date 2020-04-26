@@ -6,7 +6,8 @@ using System.Collections.Generic;
 
 class main{
 	static void Main(){
-	
+		
+		// Accuracy is for the root finding algorithm
 		double accuracy = 1e-5;
 		double rmax = 8;
 		
@@ -20,14 +21,14 @@ class main{
 		};
 
 		// The energy should be close to -1/2, so we start somewhere around that area
-		var rand = new Random(1);
+		var rand = new Random();
 		vector start = new vector(-1-0.2*rand.NextDouble());	
 
 		// Find the root for the auxiliary function
 		vector root = roots.newton(M, start, accuracy);
 		double energy = root[0];
 
-		StreamWriter WriteRoot = new StreamWriter("outRoot.txt");
+		StreamWriter WriteRoot = new StreamWriter("outRootText.txt");
 		WriteRoot.WriteLine("Trying to find a root for the auxiliary function:");
 		WriteRoot.WriteLine("The analytic root is at energy: \t -1/2.");
 		WriteRoot.WriteLine("Starting the search from energy: \t {0}.", start[0]);

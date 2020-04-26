@@ -1,0 +1,5 @@
+Trying to find a root for the auxiliary function:
+The analytic root is at energy: 	 -1/2.
+Starting the search from energy: 	 -1.16336818847962.
+A root has been found at energy: 	 -0.499977788879813
+The deviation from the analytic root is: -2.22111201872988E-05

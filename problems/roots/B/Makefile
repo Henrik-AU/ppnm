@@ -3,7 +3,7 @@ all: Swave.svg
 Swave.svg: plot.gpi out.txt
 	gnuplot $<
 
-out.txt Log: main.exe
+out.txt outRootText.txt Log: main.exe
 	mono $< >$@ 2>Log
 
 main.exe: main.cs math.dll

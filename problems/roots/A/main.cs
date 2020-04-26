@@ -4,7 +4,7 @@ using static System.Console;
 class main{
 	public static void Main(){
 		
-		var rand = new Random(1);
+		var rand = new Random();
 		double eps = 1e-6;
 	
 		// Let's try to find a root of a simple 1D parabola
