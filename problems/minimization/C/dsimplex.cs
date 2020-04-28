@@ -1,11 +1,12 @@
 using System;
+using static System.Console;
 using System.Diagnostics;
 using System.Collections.Generic;
 
 public partial class minimization{
-	public static vector dsimplex(Func<vector, double> f, List<vector> points, double eps = 1e-3){
+	public static vector dsimplex(Func<vector, double> f, List<vector> points,
+	ref int nsteps, double eps = 1e-3){
 
-	int nsteps = 0;
 	int n = points.Count;
 
 	// There should be n+1 vectors for a function taking n parameters
@@ -21,6 +22,7 @@ public partial class minimization{
 		vector fValues = new vector(n);
 		for(int i=0; i<n; i++){
 			fValues[i] = f(points[i]);
+			Error.Write("{0}\t", fValues[i]);
 		}
 
 		// Find the index of the vector giving the highest function value.
@@ -31,6 +33,7 @@ public partial class minimization{
 
 		// Calculate the centroid using all points except for the highest point
 		vector centroid = calcCentroid(points, maxIndex);
+		Error.WriteLine("\n{0}\t{1}", centroid[0], centroid[1]);
 		
 		// Once the simplex becomes small enough we assume that we have converged to a
 		// minimum. We do not know if the points come ordered such that this is actually
@@ -41,6 +44,8 @@ public partial class minimization{
 			distances += (points[i]-points[i+1]).norm();
 		}
 		if(distances < eps){
+			Error.WriteLine("Steps: {0}", nsteps);
+			Error.WriteLine("Distances: {0}", distances);
 			break;
 		}
 		
@@ -63,10 +68,11 @@ public partial class minimization{
 			if(fExp < fRef){
 				// Accept expansion instead of highest point
 				points[maxIndex] = expanded;
-
+				Error.WriteLine("Expanding");
 			}else{
 				// Accept reflection instead of highest point
 				points[maxIndex] = reflected;
+				Error.WriteLine("Reflected 1");
 
 			}			
 		}else{
@@ -75,15 +81,20 @@ public partial class minimization{
 			if(fRef < fHigh){
 				// Accept reflection instead of highest point
 				points[maxIndex] = reflected;
+				Error.WriteLine("Reflected 2");
 			}else{
-				// Try contraction
-				vector contracted = centroid + (centroid - highPoint)/2;
+				// Try contraction - I have found the 1/1.75 factor to be effective
+				// 1/2 did not work at all - the simplex shrunk too quickly which
+				// gave issues with the simplex getting stuck in a wrong spot
+				vector contracted = centroid + (centroid - highPoint)/1.75;
 				double fCon = f(contracted);
 				if(fCon < fHigh){
 					// Accept contraction instead of highest point
 					points[maxIndex] = contracted;
+					Error.WriteLine("Contracted");
 				}else{
-					// Reduce the polytope towards the lowest point
+					Error.WriteLine("Reducing");
+					// Reduce the simplex towards the lowest point
 					for(int i=0; i<n; i++){
 						if(i!=minIndex){
 							points[i] = (points[i] + points[minIndex])/2;
