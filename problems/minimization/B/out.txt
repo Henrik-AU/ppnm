@@ -1,0 +1,8 @@
+Fitting Higgs data to Breit-Wigner formula via chi^2.
+Found mass = 			125.972187614304
+Found width = 			2.08635474790189
+Found A-constant = 		9.87634261619239
+The reduced chi^2 value is = 	0.895650392628055
+Minimization steps used = 	25
+
+A reduced chi^2 value below 1 indicates that it is a good fit.

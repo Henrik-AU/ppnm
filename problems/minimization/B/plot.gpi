@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white"
+set title "Fit to experimental Higgs data"
+set xlabel "Energy [GeV]"
+set ylabel "Signal [arb. units]"
+
+set out "HiggsPlot.svg"
+
+plot "higgsData.txt" using 1:2:3 with yerrorbars lt rgb "black" title "Experimental data"\
+, "higgsFit.txt" using 1:2 with lines lw 1.2 lt rgb "red" title "Breit-Wigner fit"
