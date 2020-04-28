@@ -1,5 +1,4 @@
 all: out.txt
-	cat out.txt
 
 out.txt: main.exe
 	mono $< >$@ 2>Log
@@ -11,4 +10,4 @@ math.dll: vector.cs dsimplex.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt
+	rm -f *.dll *.exe *.txt Log

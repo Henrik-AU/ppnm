@@ -22,7 +22,6 @@ public partial class minimization{
 		vector fValues = new vector(n);
 		for(int i=0; i<n; i++){
 			fValues[i] = f(points[i]);
-			Error.Write("{0}\t", fValues[i]);
 		}
 
 		// Find the index of the vector giving the highest function value.
@@ -33,7 +32,6 @@ public partial class minimization{
 
 		// Calculate the centroid using all points except for the highest point
 		vector centroid = calcCentroid(points, maxIndex);
-		Error.WriteLine("\n{0}\t{1}", centroid[0], centroid[1]);
 		
 		// Once the simplex becomes small enough we assume that we have converged to a
 		// minimum. We do not know if the points come ordered such that this is actually
@@ -44,8 +42,7 @@ public partial class minimization{
 			distances += (points[i]-points[i+1]).norm();
 		}
 		if(distances < eps){
-			Error.WriteLine("Steps: {0}", nsteps);
-			Error.WriteLine("Distances: {0}", distances);
+			Error.WriteLine("Steps: {0}\n\n", nsteps);
 			break;
 		}
 		
@@ -72,7 +69,7 @@ public partial class minimization{
 			}else{
 				// Accept reflection instead of highest point
 				points[maxIndex] = reflected;
-				Error.WriteLine("Reflected 1");
+				Error.WriteLine("Reflected - better than lowest value");
 
 			}			
 		}else{
@@ -81,7 +78,7 @@ public partial class minimization{
 			if(fRef < fHigh){
 				// Accept reflection instead of highest point
 				points[maxIndex] = reflected;
-				Error.WriteLine("Reflected 2");
+				Error.WriteLine("Reflected - better than highest value");
 			}else{
 				// Try contraction - I have found the 1/1.75 factor to be effective
 				// 1/2 did not work at all - the simplex shrunk too quickly which
@@ -93,7 +90,7 @@ public partial class minimization{
 					points[maxIndex] = contracted;
 					Error.WriteLine("Contracted");
 				}else{
-					Error.WriteLine("Reducing");
+					Error.WriteLine("Reduced");
 					// Reduce the simplex towards the lowest point
 					for(int i=0; i<n; i++){
 						if(i!=minIndex){
