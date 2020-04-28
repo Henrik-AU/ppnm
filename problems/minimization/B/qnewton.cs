@@ -1,7 +1,7 @@
 using System;
 using static System.Math;
 
-public class minimization{
+public partial class minimization{
 
 	public static int qnewton(Func<vector, double> f, ref vector x, double eps = 1e-3){
 
