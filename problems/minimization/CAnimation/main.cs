@@ -20,11 +20,11 @@ class main{
 		StreamWriter printRosen = new StreamWriter("rosenbrock.txt");
 		double dl = 0.2;
 		double dp = 0.2;
-		for(double l =-20; l<20; l+=dl){
+		for(double l =-6; l<=6; l+=dl){
 			// Gnuplot needs an empty line in the data set everytime the x-value changes
 			// otherwise 'set pm3d' gives an error
-			//WriteLine();
-			for(double p = -20; p < 20; p+=dp){
+			printRosen.WriteLine();
+			for(double p = -6; p<=6; p+=dp){
 				vector pr = new vector(l, p);
 				printRosen.WriteLine("{0} {1} {2}", l, p, rosenbrock(pr));
 			}
@@ -34,9 +34,9 @@ class main{
 		// The function takes two input arguments, so we need 3 starting points
 		// for the downhill simplex algorithm
 
-		vector point1 = new vector(20, 15);		
-		vector point2 = new vector(8, 3);		
-		vector point3 = new vector(4, 1);
+		vector point1 = new vector(-2, -4.8);		
+		vector point2 = new vector(0, -1);		
+		vector point3 = new vector(-3, 2);
 		
 		List<vector> points = new List<vector>();
 		points.Add(point1);		
@@ -58,64 +58,5 @@ class main{
 		WriteLine("f(x_min) = {0}", rosenbrock(minPoint));
 		WriteLine("Minimum found in {0} steps.", nsteps);
 
-		WriteLine("\n---------------------------------------------");
-	
-		// Let's try with Himmelblau's function
-		Func<vector, double> himmelblau = delegate(vector k){
-			double x = k[0];
-			double y = k[1];
-			double fVal = Pow(x*x+y-11, 2) + Pow(x+y*y-7, 2);
-			return fVal;
-		};
-
-		// Let's just try and see if we can find a minimum using the same starting
-		// points that were used for the Rosenbrock function
-
-		points.Clear();
-		points.Add(point1);		
-		points.Add(point2);		
-		points.Add(point3);		
-
-		nsteps = 0;
-		minPoint = minimization.dsimplex(himmelblau, points, ref nsteps, 1e-6);
-
-		// Print out the results
-		WriteLine();
-		WriteLine("Attempting to find a minimum for Himmelblau's function.");
-		WriteLine("Starting at the three points:\n");
-		WriteLine("\tP1\tP2\tP3");
-		WriteLine("x\t{0}\t{1}\t{2}", point1[0], point2[0], point3[0]);
-		WriteLine("y\t{0}\t{1}\t{2}\n", point1[1], point2[1], point3[1]);
-
-		WriteLine("Minimum found at: x = {0} \t y = {1}", minPoint[0], minPoint[1]);
-		WriteLine("f(x_min) = {0}", himmelblau(minPoint));
-		WriteLine("Minimum found in {0} steps.", nsteps);
-
-
-
-		// Second attept with the Himmelblau function
-		vector point4 = new vector(6, 11);	
-		vector point5 = new vector(-8, -13);	
-		vector point6 = new vector(4, 19);	
-
-		points.Clear();
-		points.Add(point4);		
-		points.Add(point5);		
-		points.Add(point6);	
-	
-		nsteps = 0;
-		minPoint = minimization.dsimplex(himmelblau, points, ref nsteps, 1e-6);
-		
-		// Print out the results
-		Write("\n\n");
-		WriteLine("Attempting to find a minimum for Himmelblau's function.");
-		WriteLine("Starting at the three points:\n");
-		WriteLine("\tP1\tP2\tP3");
-		WriteLine("x\t{0}\t{1}\t{2}", point4[0], point5[0], point6[0]);
-		WriteLine("y\t{0}\t{1}\t{2}\n", point4[1], point5[1], point6[1]);
-
-		WriteLine("Minimum found at: x = {0} \t y = {1}", minPoint[0], minPoint[1]);
-		WriteLine("f(x_min) = {0}", himmelblau(minPoint));
-		WriteLine("Minimum found in {0} steps.", nsteps);
 	}
 }

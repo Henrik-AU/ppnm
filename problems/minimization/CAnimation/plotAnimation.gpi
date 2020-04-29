@@ -1,14 +1,37 @@
-set terminal gif animate delay 50 optimize font ",16"
+set terminal gif animate delay 40 optimize font ",16" size 800,800
 set output 'Animation.gif'
+set tics out
+set title "Downhill simplex algorithm on Rosenbrock function"
 set xlabel "x"
 set ylabel "y"
-set contour surface
-set dgrid3d
+set contour base
+set pm3d map
+set cntrlabel onecolor
+set linetype 1 linecolor rgb "black"
+set cntrparam levels incremental 0.0,10,100
+set grid
 
+set view map
+set xrange [-5:5]
+set yrange [-5:5]
 
-do for [N=0:30]{
+do for [N=0:15]{
 	splot 'rosenbrock.txt' using 1:2:3 with lines notitle \
-	, 'animation.txt' index N every ::0::1 using 1:2:3 with lines lw 1.5 lt rgb "red" notitle \
-	, 'animation.txt' index N every ::0::2 using 1:2:3 with lines lw 1.5 lt rgb "red" notitle \
-	, 'animation.txt' index N every ::1::2 using 1:2:3 with lines lw 1.5 lt rgb "red" notitle \
+	, 'animation.txt' index N using 1:2:3 with lines lw 1.5 lt rgb "red" notitle
+}
+
+# Zoom in a bit
+set xrange [0.5:1.5]
+set yrange [0.5:1.5]
+do for [N=15:35]{
+	splot 'rosenbrock.txt' using 1:2:3 with lines notitle \
+	, 'animation.txt' index N using 1:2:3 with lines lw 1.5 lt rgb "red" notitle
+}
+
+# Zoom in a bit more
+set xrange [0.9:1.1]
+set yrange [0.9:1.1]
+do for [N=35:110]{
+	splot 'rosenbrock.txt' using 1:2:3 with lines notitle \
+	, 'animation.txt' index N using 1:2:3 with lines lw 1.5 lt rgb "red" notitle
 }

@@ -22,10 +22,11 @@ public partial class minimization{
 		nsteps++;
 
 		// Print out the vectors for a fancy animation plot
-		if(nsteps < 30){
+		if(nsteps < 120){
 			for(int i=0; i<n; i++){
 				printAni.WriteLine("{0}\t{1}\t0", points[i][0], points[i][1]);
 			}
+			printAni.WriteLine("{0}\t{1}\t0", points[0][0], points[0][1]);
 			printAni.Write("\n\n");		
 		}
 
