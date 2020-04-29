@@ -30,7 +30,6 @@ line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
-GD Warning: one parameter to a memory allocation multiplication is negative or zero, failing operation gracefully
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".
 line 20: warning: Cannot contour non grid data. Please use "set dgrid3d".

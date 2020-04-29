@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using static System.Console;
 using System.Diagnostics;
 using System.Collections.Generic;
@@ -21,8 +22,19 @@ public partial class minimization{
 		fValues[i] = f(points[i]);
 	}
 
+	StreamWriter printAni = new StreamWriter("animation.txt");
+
 	while(true){
 		nsteps++;
+
+		// Print out the vectors for a fancy animation plot
+		if(nsteps < 120){
+			for(int i=0; i<n; i++){
+				printAni.WriteLine("{0}\t{1}\t0", points[i][0], points[i][1]);
+			}
+			printAni.WriteLine("{0}\t{1}\t0", points[0][0], points[0][1]);
+			printAni.Write("\n\n");		
+		}	
 
 		// Find the index of the vector giving the highest function value.
 		maxIndex = findMaxIndex(fValues);
@@ -116,6 +128,8 @@ public partial class minimization{
 		}
 
 	}
+	
+	printAni.Close();
 
 	// Return the vector that give the lowest point
 	vector result = points[minIndex];

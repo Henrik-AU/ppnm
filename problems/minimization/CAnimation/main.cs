@@ -20,11 +20,11 @@ class main{
 		StreamWriter printRosen = new StreamWriter("rosenbrock.txt");
 		double dl = 0.2;
 		double dp = 0.2;
-		for(double l =-6; l<=6; l+=dl){
+		for(double l =-7; l<=7; l+=dl){
 			// Gnuplot needs an empty line in the data set everytime the x-value changes
 			// otherwise 'set pm3d' gives an error
 			printRosen.WriteLine();
-			for(double p = -6; p<=6; p+=dp){
+			for(double p = -7; p<=7; p+=dp){
 				vector pr = new vector(l, p);
 				printRosen.WriteLine("{0} {1} {2}", l, p, rosenbrock(pr));
 			}
