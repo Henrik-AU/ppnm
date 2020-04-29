@@ -1,0 +1,35 @@
+Attempting to find the minimum for Rosenbrock's function.
+Starting at the three points:
+
+	P1	P2	P3
+x	20	8	4
+y	15	3	1
+
+Minimum found at: x = 1.00000004710124 	 y = 1.00000009001464
+f(x_min) = 3.97233154026856E-15
+Minimum found in 124 steps.
+
+---------------------------------------------
+
+Attempting to find a minimum for Himmelblau's function.
+Starting at the three points:
+
+	P1	P2	P3
+x	20	8	4
+y	15	3	1
+
+Minimum found at: x = 3.58442841337899 	 y = -1.84812633853762
+f(x_min) = 8.95745968820026E-13
+Minimum found in 83 steps.
+
+
+Attempting to find a minimum for Himmelblau's function.
+Starting at the three points:
+
+	P1	P2	P3
+x	6	-8	4
+y	11	-13	19
+
+Minimum found at: x = 2.99999995809821 	 y = 1.99999992294783
+f(x_min) = 2.30465214586769E-13
+Minimum found in 77 steps.
