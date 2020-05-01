@@ -5,7 +5,7 @@ public class montecarlo{
 
 	public static Random rand = new Random();
 	
-	public static vector plainmc(Func<vector, double> f, vector a, vector b, double N){
+	public static vector plainmc(Func<vector, double> f, vector a, vector b, int N){
 
 		int dim = a.size;
 
