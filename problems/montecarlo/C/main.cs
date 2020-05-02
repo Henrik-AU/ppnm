@@ -31,7 +31,7 @@ class main{
 		N, estimate[1], Abs(expected - estimate[0]), scaling*1/Sqrt(N));
 
 		// We run the rest in a loop and print out the data
-		for(int n = 20000; n<300000; n+=5000){
+		for(int n = 20000; n<300000; n+=10000){
 			estimate = montecarlo.plainmc(f, a, b, n);
 
 			// Save the error estimate and actual error along with the amount of function
