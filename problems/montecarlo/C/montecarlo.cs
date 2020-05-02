@@ -1,7 +1,7 @@
 using System;
 using static System.Math;
 
-public class montecarlo{
+public partial class montecarlo{
 
 	public static Random rand = new Random();
 	
