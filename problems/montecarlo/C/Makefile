@@ -1,4 +1,5 @@
 all: out.txt Plot.svg
+	cat out.txt
 
 Plot.svg: plot.gpi stratPoints.txt
 	gnuplot $<
@@ -13,4 +14,4 @@ math.dll: stratified.cs vector.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.txt *.exe *.dll
+	rm -f *.txt *.exe *.dll *.svg

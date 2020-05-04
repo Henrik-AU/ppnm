@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public partial class montecarlo{
 
-	public static Random rand = new Random();
+	private static Random rand = new Random();
 
 
 	public static vector mcStrat(Func<vector, double> f, vector a, vector b, int N, double acc,
@@ -25,23 +25,25 @@ public partial class montecarlo{
 		for(int i=0; i<dim; i++){
 			V *= b[i]-a[i];
 		}
+		// prevStats contains the mean, the variance and the number of evaluated points
+		// In the begining they are all zero, since there has been no previous function call
 		prevStats = new vector(0, 0, 0);
 	}
 
 	// Do plain Monte Carlo with N points
 	double sum = 0;
 	double sumSquare = 0;
-	vector x = new vector(dim);
 	for(int i=0; i<N; i++){
-		x = randomPoint(a,b,x,dim);
+		// The randomPoint creates a brand new vector each time to avoid issues where the
+		// elements in the lists change afterwards, because the vector they refer to is
+		// changed
+		vector x = randomPoint(a,b,dim);
 		double fx = f(x);
 		sum += fx;
 		sumSquare += fx*fx;
 		// Save the point and the function value in lists
 		xs.Add(x);
 		fVals.Add(fx);
-		WriteLine("{0} {1}", xs[i][0], xs[i][1]);
-		WriteLine("{0} {1}", xs[0][0], xs[0][1]);
 	}
 	
 	// If wanted, print out the data points to an output file (for a plot for example)
@@ -61,6 +63,9 @@ public partial class montecarlo{
 
 
 	// Calculate the integral estimate via the new and old points in the subvolume
+
+	// prevStats contains the mean, the variance and the amount of points evaluated in the
+	// previous run, in that order.
 	double mean = sum/N;
 	double estimate = V*(mean*N + prevStats[0]*prevStats[2])/(N+prevStats[2]);
 
@@ -88,8 +93,6 @@ public partial class montecarlo{
 		for(int i=0; i<dim; i++){
 			// We split the evaluated points in two groups - the new left and right
 			// intervals
-			//List<double> fLeft = new List<double>();
-			//List<double> fRight = new List<double>();
 			double sumLeft = 0;
 			double sumRight = 0;
 			double sumLeft2 = 0;
@@ -99,21 +102,21 @@ public partial class montecarlo{
 
 			for(int j = 0; j<N; j++){
 				if(xs[j][i] < (a[i]+b[i])/2){
-					//fLeft.Add(fVals[j];
 					sumLeft += fVals[j];
 					sumLeft2 += fVals[j]*fVals[j];
 					NLeft++;
 				}else{
-					//fRight.Add(fVals[j];
 					sumRight += fVals[j];
 					sumRight2 += fVals[j]*fVals[j];
 					NRight++;
 				}
 			}
+
+			// Calculate the mean in each half
 			double meanLeft = sumLeft/NLeft;
 			double meanRight = sumRight/NRight;
 
-			// We find the variation in the mean in the two groups
+			// Find the variation in the mean in the two groups
 			v = Abs(meanLeft - meanRight);
 		
 			// If this variation is larger than for any previous dividings, then we save
@@ -153,8 +156,10 @@ public partial class montecarlo{
 	} // end mcStrat
 
 
-	public static vector randomPoint(vector a, vector b, vector x, int dim){
+	public static vector randomPoint(vector a, vector b, int dim){
 		// Generate a pseudo random point that lies within our volume
+		// We create a new vector to store the random point in
+		vector x = new vector(dim);
 		for(int i=0; i<dim; i++){
 			x[i] = a[i] + rand.NextDouble()*(b[i] - a[i]);
 		}

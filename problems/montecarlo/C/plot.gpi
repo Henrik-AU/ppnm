@@ -1,9 +1,9 @@
 set term svg font ",16" background rgb "white"
-set size 1,1
+set size square
 set out "Plot.svg"
 set xlabel "x"
 set ylabel "y"
-set title "Stratified Monte Carlo example"
+set key off
+set title "Stratified Monte Carlo - evaluated points for f\n f(r<=0.9) = 1, f(r>0.9) = 0"
 
-#plot "stratPoints.txt" using 1:2 with points ps 0.4 pt 7 lt rgb "black"
-plot "out.txt" using 1:2 with points ps 0.4 pt 7 lt rgb "black"
+plot "stratPoints.txt" using 1:2 with points ps 0.1 pt 7 lt rgb "black"
