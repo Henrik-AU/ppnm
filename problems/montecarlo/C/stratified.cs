@@ -1,56 +1,165 @@
 using System;
+using System.IO;
+using static System.Console;
 using static System.Math;
-
+using System.Collections.Generic;
 
 public partial class montecarlo{
-	public static vector mcStrat(Func<vector, double> f, vector a, vector b, int N, double acc){
 
-	// Attept to integrate via the plain montecarlo routine
-	vector estimate = montecarlo.plainmc(f, a, b, N);
+	public static Random rand = new Random();
 
-	if(estimate[1] < acc){
+
+	public static vector mcStrat(Func<vector, double> f, vector a, vector b, int N, double acc,
+	double V = 1, vector prevStats = null, bool printP = false){
+
+	// Lists for storing of the evaluated points and function values
+	List<vector> xs = new List<vector>();
+	List<double> fVals = new List<double>();
+
+	// Attept to integrate via the plain Monte Carlo routine. We do it directly in this function,
+	// such that we have access to the statistical data throughout the function.
+	int dim = a.size;
+	
+	// Initial setup if it is the first function call
+	if(prevStats == null){
+		for(int i=0; i<dim; i++){
+			V *= b[i]-a[i];
+		}
+		prevStats = new vector(0, 0, 0);
+	}
+
+	// Do plain Monte Carlo with N points
+	double sum = 0;
+	double sumSquare = 0;
+	vector x = new vector(dim);
+	for(int i=0; i<N; i++){
+		x = randomPoint(a,b,x,dim);
+		double fx = f(x);
+		sum += fx;
+		sumSquare += fx*fx;
+		// Save the point and the function value in lists
+		xs.Add(x);
+		fVals.Add(fx);
+		WriteLine("{0} {1}", xs[i][0], xs[i][1]);
+		WriteLine("{0} {1}", xs[0][0], xs[0][1]);
+	}
+	
+	// If wanted, print out the data points to an output file (for a plot for example)
+	if(printP){
+		StreamWriter pointWriter = new StreamWriter("stratPoints.txt", true);
+		for(int i=0; i<N; i++){
+			for(int j=0; j<dim-1; j++){
+				pointWriter.Write("{0}\t", xs[i][0]);
+			}
+			// Write last point in vector - outside j-loop for formatting reasons (no tab
+			// at the end then)
+			pointWriter.Write("{0}", xs[i][dim-1]);
+			pointWriter.WriteLine();
+		}
+		pointWriter.Close();
+	}
+
+
+	// Calculate the integral estimate via the new and old points in the subvolume
+	double mean = sum/N;
+	double estimate = V*(mean*N + prevStats[0]*prevStats[2])/(N+prevStats[2]);
+
+	// Estimate the total error via the new and old points in the subvolume
+	double sigma = Sqrt(sumSquare/N - mean*mean);
+	double error = V*Sqrt(sigma*N + prevStats[1]*prevStats[2])/(N+prevStats[2]);
+
+
+	if(error < acc){
 		// No need for stratification, we just return the result from the plain Monte carlo
-		return estimate;
+		return new vector(estimate, error);
 	}else{
-		// Subdivide the interval and perform plain Monte Carlo on new intervals
-		int n = a.size;
-		// Subinterval to divide along
-		int j = 0;
-		for(int i=0; i<n; i++){
-			// To subdivide we find the new upper corner - it's the same as b, but the
-			// specific dimension is reduced to half the original value
-			vector c = a.copy();
-			vector d = b.copy();
-			c[i] = (a[i]+b[i])/2;
-			d[i] = (a[i]+b[i])/2;
+		// Subdivide the interval and perform plain Monte Carlo on new intervals.
 
-			// If everything is uncorrelated I believe the variance is linear 
-			// ... How do we estimate sub-variances?
+		// Dimension to divide along
+		int iMax = 0;
 
-			// This should update j, the dimension to divide along
+		// Variables for variations. vMax < 0 ensures that there will always be one dimension
+		// stored as the one with the highest variation, even if some are zero
+		double vMax = -1;
+		double v;
+		vector prevStatsLeft = new vector(3);
+		vector prevStatsRight = new vector(3);
+
+		for(int i=0; i<dim; i++){
+			// We split the evaluated points in two groups - the new left and right
+			// intervals
+			//List<double> fLeft = new List<double>();
+			//List<double> fRight = new List<double>();
+			double sumLeft = 0;
+			double sumRight = 0;
+			double sumLeft2 = 0;
+			double sumRight2 = 0;
+			int NLeft = 0;
+			int NRight = 0;
+
+			for(int j = 0; j<N; j++){
+				if(xs[j][i] < (a[i]+b[i])/2){
+					//fLeft.Add(fVals[j];
+					sumLeft += fVals[j];
+					sumLeft2 += fVals[j]*fVals[j];
+					NLeft++;
+				}else{
+					//fRight.Add(fVals[j];
+					sumRight += fVals[j];
+					sumRight2 += fVals[j]*fVals[j];
+					NRight++;
+				}
+			}
+			double meanLeft = sumLeft/NLeft;
+			double meanRight = sumRight/NRight;
+
+			// We find the variation in the mean in the two groups
+			v = Abs(meanLeft - meanRight);
+		
+			// If this variation is larger than for any previous dividings, then we save
+			// the data, before looping again
+			if(v > vMax){
+				iMax = i;
+				vMax = v;
+				// We want to save the variance also
+				double sigmaLeft = Sqrt(sumLeft2/NLeft - meanLeft*meanLeft);
+				double sigmaRight = Sqrt(sumRight2/NRight - meanRight*meanRight);
+
+				prevStatsLeft = new vector(meanLeft, sigmaLeft, NLeft);
+				prevStatsRight = new vector(meanRight, sigmaRight, NRight);
+			}
 		}
 
 		// Once the dimension to subdivide is found we perform the subdivision and
 		// recursively call this function again on the two subintervals.
-		vector a2 = a.copy;
-		vector b2 = b.copy;
-		a2[j] = (a[j]+b[j])/2;
-		b2[j] = (a[j]+b[j])/2;
+		vector a2 = a.copy();
+		vector b2 = b.copy();
+		a2[iMax] = (a[iMax]+b[iMax])/2;
+		b2[iMax] = (a[iMax]+b[iMax])/2;
 		
-		// New required accuracies formula? (like o4a algorithm?)
+		// New required accuracies
 		acc = acc/Sqrt(2);
 
-		vector estimate1 = mcStrat(f, a, b2, N, acc);
-		vector estimate2 = mcStrat(f, a, b2, N, acc);
+		// Do two recursive calls on the new intervals
+		vector estimate1 = mcStrat(f, a, b2, N, acc, V/2, prevStatsLeft, printP:printP);
+		vector estimate2 = mcStrat(f, a2, b, N, acc, V/2, prevStatsRight, printP:printP);
 		
-		// We should keep the already found points somehow, not do entire recalculations
+		double integralTotal = estimate1[0] + estimate2[0];
+		double errorTotal = Sqrt(estimate1[1]*estimate1[1] + estimate2[1]*estimate2[1]);
 
-		//double averageTotal = ...
-		//double errorTotal = ...
+		return new vector(integralTotal, errorTotal);
+	}
 
-		return new vector(averageTotal, errorTotal);
+	} // end mcStrat
+
+
+	public static vector randomPoint(vector a, vector b, vector x, int dim){
+		// Generate a pseudo random point that lies within our volume
+		for(int i=0; i<dim; i++){
+			x[i] = a[i] + rand.NextDouble()*(b[i] - a[i]);
+		}
+		return x;
 	}
 
 
-	} // end mcStrat
 } // end class

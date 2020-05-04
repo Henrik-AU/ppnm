@@ -1,13 +1,15 @@
-all: out.txt
+all: out.txt Plot.svg
 
+Plot.svg: plot.gpi stratPoints.txt
+	gnuplot $<
 
-out.txt: main.exe
+out.txt stratPoints.txt: main.exe
 	mono $< >out.txt
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-math.dll: montecarlo.cs vector.cs
+math.dll: stratified.cs vector.cs
 	mcs $^ -target:library -out:$@
 
 clean:

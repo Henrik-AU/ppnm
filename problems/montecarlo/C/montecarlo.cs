@@ -1,5 +1,6 @@
 using System;
 using static System.Math;
+using System.Collections.Generic;
 
 public partial class montecarlo{
 
@@ -21,7 +22,8 @@ public partial class montecarlo{
 		double sumSquare = 0;
 		vector x = new vector(dim);
 		for(int i=0; i<N; i++){
-			double fx = f(randomPoint(a,b,x,dim));
+			x = randomPoint(a,b,x,dim);
+			double fx = f(x);
 			sum += fx;
 			sumSquare += fx*fx;
 		}
