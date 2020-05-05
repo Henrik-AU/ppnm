@@ -5,7 +5,7 @@ set xlabel "x"
 set ylabel "y"
 set key right
 
-set title "Interpolation of tabulated data"
+set title "Test of neural network on random points (after training)"
 plot "outB.txt" index 0 using 1:2 with points ps 0.5 pt 7 title "F(x)"\
 , sin(x) title "sin(x)"
 

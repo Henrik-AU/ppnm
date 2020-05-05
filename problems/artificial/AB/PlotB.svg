@@ -152,7 +152,7 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(271.5,41.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Interpolation of tabulated data</tspan></text>
+		<text><tspan font-family="Arial" >Test of neural network on random points (after training)</tspan></text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1a" ><title>F(x)</title>
