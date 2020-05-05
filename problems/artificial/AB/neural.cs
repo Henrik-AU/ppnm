@@ -2,10 +2,11 @@ using System;
 using static System.Console;
 using static System.Math;
 
-public class ann{
+public partial class ann{
 	
 	// n is the number of hidden neurons
 	public int n;
+	public string chosenFunc;
 	// Vectors for the tabulated data
 	private vector xs;
 	private vector ys;
@@ -19,14 +20,16 @@ public class ann{
 	public vector finalParams;
 
 	// Constructor that does the training and sets up the network
-	public ann(vector x, vector y, int nNeurons, double startVal = 0.01){
+	public ann(vector x, vector y, int nNeurons, string acFunc = "f", double startVal = 0.01){
 		// To train the network we minimize a system of n functions (hidden neurons), with
 		// each 3 parameter
 
 		// Make the tabulated data available for the other functions in the class also
 		xs = x;
 		ys = y;
+
 		n = nNeurons;
+		chosenFunc = acFunc;
 
 		// Create a vector with initial parameters all being set to 0.1
 		vector param = new vector(3*n);
@@ -62,56 +65,46 @@ public class ann{
 			ai = parameters[0+3*i];
 			bi = parameters[1+3*i];
 			wi = parameters[2+3*i];
-			sumNeuron += f2(x);	
+			if(chosenFunc == "f"){
+				sumNeuron += f(x);
+			}
+			if(chosenFunc == "f2"){
+				sumNeuron += f2(x);
+			}
 		}
 		return sumNeuron;
 	} // end feedforward
 
 	
 	public double ffDeriv(double x){
-
 		double sumNeuron = 0;
 		for(int i=0; i<n; i++){
 			ai = finalParams[0+3*i];
 			bi = finalParams[1+3*i];
 			wi = finalParams[2+3*i];
-			sumNeuron += f2Deriv(x);	
+			if(chosenFunc == "f"){
+				sumNeuron += fDeriv(x);
+			}
+			if(chosenFunc == "f2"){
+				sumNeuron += f2Deriv(x);
+			}
 		}
 		return sumNeuron;
 	} // end feed forward derivative
-
-	// f is the activation function.
-	private double f(double t){
-		return (t-ai)/bi * Exp(-(t-ai)*(t-ai)/bi/bi)*wi;
-	}
-
-	// Different activation function
-	private double f2(double t){
-		return Cos(5*(t-ai)/bi) * Exp(-(t-ai)*(t-ai)/bi/bi)*wi;
-	}
-
-	// Derivative of f
-	private double fDeriv(double t){
-		return wi/bi * Exp(-(t-ai)*(t-ai)/bi/bi)*(1 - 2*(t-ai)*(t-ai)/bi/bi);
-
-	}
 	
-	// Derivative of f2
-	private double f2Deriv(double t){
-		return -wi/bi * Exp(-(t-ai)*(t-ai)/bi/bi) * (5*Sin(5*(t-ai)/bi)
-			+ 2*(t-ai)*Cos(5*(t-ai)/bi)/bi);
-	}
-
-	// Integral of f
-	private double fInteg(double t){
-		return wi*bi/2 *(Sqrt(PI)*ai*math.erf((t-ai)/bi) - b*Exp(-(t-ai)*(t-ai)/bi/bi));
-
-	}
-
-	// Integral of f2
-	//private double f2Integ(double t){
-	//	return -wi/bi * Exp(-(t-ai)*(t-ai)/bi/bi) * (5*Sin(5*(t-ai)/bi)
-	//		+ 2*(t-ai)*Cos(5*(t-ai)/bi)/bi);
-	//}
-	
+	public double ffInteg(double x){
+		double sumNeuron = 0;
+		for(int i=0; i<n; i++){
+			ai = finalParams[0+3*i];
+			bi = finalParams[1+3*i];
+			wi = finalParams[2+3*i];
+			if(chosenFunc == "f"){
+				sumNeuron += fInteg(x);
+			}
+			//if(chosenFunc == "f2"){
+			//	sumNeuron += f2Integ(x);
+			//}
+		}
+		return sumNeuron;
+	} // end feed forward integration
 }

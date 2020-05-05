@@ -26,7 +26,7 @@ class main{
 
 		// Let's feed the data to a neural network with 3 hidden neurons
 		int neurons = 3;
-		var ann = new ann(xs, ys, neurons);
+		var ann = new ann(xs, ys, neurons, "f2");
 
 		// Now let's take 40 new data points and send it through the network and see how well
 		// it does.
@@ -59,7 +59,7 @@ class main{
 		// The integral is not easy to get, since the activation function is difficult to
 		// integrate. Instead let's try a new neural network and use the easier to integrate
 		// activation function x*Exp(-x^2).
-		
+			
 
 
 
