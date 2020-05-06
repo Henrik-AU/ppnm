@@ -1,14 +1,14 @@
 set term svg font ",16" background rgb "white" size 960,480
-set out "PlotA.svg"
+set out "Plot.svg"
 set multiplot layout 1,2
 set xlabel "x"
 set ylabel "y"
 set key top left
 
 set title "Test of neural network on random points (after training)"
-plot "outA.txt" index 0 using 1:2 with points ps 0.5 pt 7 title "F(x)"\
+plot "out.txt" index 0 using 1:2 with points ps 0.5 pt 7 title "F(x)"\
 , cos(x) title "cos(x)"
 
 set title "Found derivative via the interpolation"
-plot "outA.txt" index 1 using 1:2 with points ps 0.5 pt 7 title "F'(x)"\
+plot "out.txt" index 1 using 1:2 with points ps 0.5 pt 7 title "F'(x)"\
 , -sin(x) title "-sin(x)"

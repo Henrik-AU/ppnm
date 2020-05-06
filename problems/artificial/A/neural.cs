@@ -91,7 +91,7 @@ public partial class ann{
 		}
 		return sumNeuron;
 	} // end feed forward derivative
-	
+	/*	
 	public double ffInteg(double x){
 		double sumNeuron = 0;
 		for(int i=0; i<n; i++){
@@ -107,4 +107,5 @@ public partial class ann{
 		}
 		return sumNeuron;
 	} // end feed forward integration
+	*/
 }

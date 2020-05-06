@@ -2,7 +2,7 @@ using System;
 using static System.Math;
 using static System.Console;
 
-class mainB{
+class main{
 	static void Main(){
 
 		// First we create a set of tabulated data to feed to the network. Let's try with
@@ -26,14 +26,15 @@ class mainB{
 		vector xTest = new vector(k);
 		vector yTest = new vector(k);
 		vector yDerivTest = new vector(k);
-		vector yIntegTest = new vector(k);
+		//vector yIntegTest = new vector(k);
 		for(int i=0; i<k; i++){
 			xTest[i] = 2*PI*rand.NextDouble();
 			yTest[i] = ann.feedforward(xTest[i]);
 			yDerivTest[i] = ann.ffDeriv(xTest[i]);
-			yIntegTest[i] = ann.ffInteg(xTest[i]);
-			WriteLine("{0}\t{1}\t{2}\t{3}", xTest[i], yTest[i], yDerivTest[i],
-			yIntegTest[i]);
+			//yIntegTest[i] = ann.ffInteg(xTest[i]);
+			WriteLine("{0}\t{1}\t{2}", xTest[i], yTest[i], yDerivTest[i]);
+			//WriteLine("{0}\t{1}\t{2}\t{3}", xTest[i], yTest[i], yDerivTest[i],
+			//yIntegTest[i]);
 		}
 
 		

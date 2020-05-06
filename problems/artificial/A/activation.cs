@@ -25,15 +25,11 @@ public partial class ann{
 	}
 
 	// Integral of f
-	private double fInteg(double t){
-		//return wi*bi/2 *(Sqrt(PI)*ai*math.erf((t-ai)/bi) - bi*Exp(-(t-ai)*(t-ai)/bi/bi));
-		return -wi*bi/2 * Exp(-(ai-t)*(ai-t)/bi/bi);
-	}
+	//private double fInteg(double t){
+	//}
 
 	// Integral of f2
 	//private double f2Integ(double t){
-	//	return -wi/bi * Exp(-(t-ai)*(t-ai)/bi/bi) * (5*Sin(5*(t-ai)/bi)
-	//		+ 2*(t-ai)*Cos(5*(t-ai)/bi)/bi);
 	//}
 
 
