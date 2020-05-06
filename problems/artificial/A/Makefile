@@ -9,7 +9,7 @@ out.txt: main.exe
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-math.dll: neural.cs activation.cs vector.cs matrix.cs qnewton.cs
+math.dll: neural.cs vector.cs matrix.cs qnewton.cs
 	mcs $^ -target:library -out:$@
 
 clean:

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using static System.Console;
 using static System.Math;
 
@@ -6,36 +7,47 @@ public partial class ann{
 	
 	// n is the number of hidden neurons
 	public int n;
-	public string chosenFunc;
-	// Vectors for the tabulated data
-	private vector xs;
-	private vector ys;
 
-	// Dummy initialization of ai, bi and wi
-	private double ai = 1;
-	private double bi = 1;
-	private double wi = 1;
-	
+	// Activation function
+	public Func<double, double> f;
+
 	// Vector of all parameters, ordered as a_0, b_0, w_0, a_1, b_1, w_1, a_2 ...
 	public vector finalParams;
 
-	// Constructor that does the training and sets up the network
-	public ann(vector x, vector y, int nNeurons, string acFunc = "f", double startVal = 0.01){
-		// To train the network we minimize a system of n functions (hidden neurons), with
-		// each 3 parameter
+	// Constructor sets up the network
+	public ann(int nNeurons, Func<double, double> acFunc){
 
-		// Make the tabulated data available for the other functions in the class also
-		xs = x;
-		ys = y;
-
+		// Take the inputs and place them in the public variables for the class
 		n = nNeurons;
-		chosenFunc = acFunc;
+		f = acFunc;
+		finalParams = null;
 
-		// Create a vector with initial parameters all being set to 0.1
+	} // end constructor
+
+
+	public void training(vector xs, vector ys){
+		// Create a vector with initial parameters, that spread out activation functions
+		// somewhat evenly.
+		// We set the a_i's to evenly span the distance from [c, d] where c and d are the
+		// start and end-point of the interval along the x-axis, that we are interested in. 
+		// I assume that the training data is provided in order, with the first point being at
+		// c and the last at d
 		vector param = new vector(3*n);
-		for(int i = 0; i<3*n; i++){
-			param[i] = startVal;
+
+		for(int i = 0; i<n; i++){
+			param[0+3*i] = xs[0] + (xs[xs.size-1] - xs[0])*i/(n-1); 
+			param[1+3*i] = 1; // b_i's start at 1
+			param[2+3*i] = 1; // Weights start at 1
 		}
+
+		Func<vector, double> deviation = delegate(vector p){
+			double sum = 0;
+			// Go through the data points, and calculate the total deviation
+			for(int i = 0; i<xs.size; i++){
+				sum += Pow((feedforward(xs[i], p) - ys[i]), 2);
+			}
+			return sum;
+		};
 
 		// Perform the optimization
 		int nsteps = minimization.qnewton(deviation, ref param);
@@ -44,68 +56,48 @@ public partial class ann{
 		// The vector param now contains the optimized parameters, so we now save this in
 		// the finalParams vector that is available to all functions and outside the class
 		finalParams = param;	
-	} // end constructor
+	} // end training
 
-	public double deviation(vector param){
-		double sum = 0;
-		// Go through the data points one at a time, and calculate the total deviation
-		for(int i = 0; i<xs.size; i++){
-			sum += Pow((feedforward(xs[i], param) - ys[i]), 2);
-		}
-		return sum;
-	} // end deviation
 
 	public double feedforward(double x, vector parameters = null){
+		Trace.Assert(finalParams == null, "The network has not been trained yet.");
+
 		if(parameters == null){
 			parameters = finalParams;
 		}
+		
 
 		double sumNeuron = 0;
 		for(int i=0; i<n; i++){
-			ai = parameters[0+3*i];
-			bi = parameters[1+3*i];
-			wi = parameters[2+3*i];
-			if(chosenFunc == "f"){
-				sumNeuron += f(x);
-			}
-			if(chosenFunc == "f2"){
-				sumNeuron += f2(x);
-			}
+			double ai = parameters[0+3*i];
+			double bi = parameters[1+3*i];
+			double wi = parameters[2+3*i];
+			sumNeuron += wi*f((x-ai)/bi);
 		}
 		return sumNeuron;
 	} // end feedforward
 
-	
+	/*	
 	public double ffDeriv(double x){
 		double sumNeuron = 0;
 		for(int i=0; i<n; i++){
-			ai = finalParams[0+3*i];
-			bi = finalParams[1+3*i];
-			wi = finalParams[2+3*i];
-			if(chosenFunc == "f"){
-				sumNeuron += fDeriv(x);
-			}
-			if(chosenFunc == "f2"){
-				sumNeuron += f2Deriv(x);
-			}
+			double ai = finalParams[0+3*i];
+			double bi = finalParams[1+3*i];
+			double wi = finalParams[2+3*i];
+			sumNeuron += wi*fDeriv((x-ai)/bi);
 		}
 		return sumNeuron;
 	} // end feed forward derivative
-	/*	
+
 	public double ffInteg(double x){
 		double sumNeuron = 0;
 		for(int i=0; i<n; i++){
-			ai = finalParams[0+3*i];
-			bi = finalParams[1+3*i];
-			wi = finalParams[2+3*i];
-			if(chosenFunc == "f"){
-				sumNeuron += fInteg(x);
-			}
-			//if(chosenFunc == "f2"){
-			//	sumNeuron += f2Integ(x);
-			//}
+			double ai = finalParams[0+3*i];
+			double bi = finalParams[1+3*i];
+			double wi = finalParams[2+3*i];
+			sumNeuron += fInteg(x);
 		}
 		return sumNeuron;
 	} // end feed forward integration
 	*/
-}
+} // end class
