@@ -2,6 +2,6 @@ Integrating the function f(r<=0.9) = 1, f(r>0.9) = 0.
 Lower integration limits:         -1         -1 
 Upper integration limits:          1          1 
 Analytic value: 		2.54469004940773
-Estimate of integral: 		2.83735725003075
-Estimate of error: 		0.0015588526140255
-Actual deviation: 		0.292667200623016
+Estimate of integral: 		2.83990574593347
+Estimate of error: 		0.00154005659040295
+Actual error: 			0.295215696525741

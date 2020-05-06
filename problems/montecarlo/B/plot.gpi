@@ -5,6 +5,8 @@ set xlabel "N [points evaluated in volume]"
 set ylabel "Error"
 set xtics 0,50000,300000
 set tics out
+set key bottom left
+set logscale xy
 
 plot "out.txt" using 1:2 with lines lw 2.5 lc 3 title "Estimated error"\
 , "out.txt" using 1:4 with lines lw 2.5 dt 2 lt rgb "black" title "O(1/sqrt(N))"\
