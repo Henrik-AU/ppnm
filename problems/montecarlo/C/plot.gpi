@@ -1,6 +1,6 @@
 set term svg font ",16" background rgb "white"
 set size square
-set out "Plot.svg"
+set out "PlotDistribution.svg"
 set xlabel "x"
 set ylabel "y"
 set key off

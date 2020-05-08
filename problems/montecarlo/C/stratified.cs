@@ -6,8 +6,8 @@ using System.Collections.Generic;
 
 public partial class montecarlo{
 
-	private static Random rand = new Random();
-
+	// A random number generator has already been created in the montecarlo.cs file, and is
+	// also available for this file
 
 	public static vector mcStrat(Func<vector, double> f, vector a, vector b, int N, double acc,
 	double V = 1, vector prevStats = null, bool printP = false){

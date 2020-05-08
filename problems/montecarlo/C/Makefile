@@ -1,7 +1,6 @@
-all: out.txt Plot.svg
-	cat out.txt
+all: out.txt PlotDistribution.svg
 
-Plot.svg: plot.gpi stratPoints.txt
+PlotDistribution.svg: plot.gpi stratPoints.txt
 	gnuplot $<
 
 out.txt stratPoints.txt: main.exe
@@ -10,7 +9,7 @@ out.txt stratPoints.txt: main.exe
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-math.dll: stratified.cs vector.cs
+math.dll: stratified.cs vector.cs montecarlo.cs
 	mcs $^ -target:library -out:$@
 
 clean:
