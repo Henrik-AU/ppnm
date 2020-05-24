@@ -11,10 +11,10 @@ plot "outData.txt" index 0 using 1:2 with points ps 0.5 pt 7 lt rgb "black" titl
 
 set title "Found derivative via the interpolation"
 set key top center box
-plot cos(x) lt rgb "black" lw 3 title "cos(x)"\
+plot cos(x) lt rgb "black" lw 3 title "Analytic derivative"\
 , "outData.txt" index 1 using 1:3 with lines lw 3 dt 2 lt rgb "red" title "F'(x)"
 
 set title "Found integral via the interpolation"
 set key bottom center box
-plot -cos(x)+1 lt rgb "black" lw 3 title "Analytical F(x)-F(x0)"\
+plot -cos(x)+1 lt rgb "black" lw 3 title "Analytic F(x)-F(x0)"\
 ,"outData.txt" index 1 using 1:4 with lines lw 3 dt 2 lt rgb "red" title "Integ. of F(x)"

@@ -323,17 +323,17 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M858.3,132.1 L858.3,84.1 L1004.7,84.1 L1004.7,132.1 L858.3,132.1 Z  '/></g>
-	<g id="gnuplot_plot_1b" ><title>cos(x)</title>
+	<path stroke='black'  d='M785.5,132.1 L785.5,84.1 L1077.5,84.1 L1077.5,132.1 L785.5,132.1 Z  '/></g>
+	<g id="gnuplot_plot_1b" ><title>Analytic derivative</title>
 <g fill="none" color="#FFFFFF" stroke="black" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(925.5,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >cos(x)</tspan></text>
+	<g transform="translate(998.3,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+		<text><tspan font-family="Arial" >Analytic derivative</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M936.7,96.1 L993.5,96.1 M696.8,142.3 L701.1,142.6 L705.3,143.4 L709.6,144.9 L713.8,146.8 L718.1,149.3
+	<path stroke='rgb(  0,   0,   0)'  d='M1009.5,96.1 L1066.3,96.1 M696.8,142.3 L701.1,142.6 L705.3,143.4 L709.6,144.9 L713.8,146.8 L718.1,149.3
 		L722.3,152.4 L726.6,156.0 L730.9,160.0 L735.1,164.6 L739.4,169.7 L743.6,175.2 L747.9,181.1 L752.1,187.5
 		L756.4,194.2 L760.7,201.3 L764.9,208.7 L769.2,216.4 L773.4,224.4 L777.7,232.6 L781.9,241.1 L786.2,249.7
 		L790.4,258.4 L794.7,267.2 L799.0,276.1 L803.2,285.0 L807.5,293.9 L811.7,302.7 L816.0,311.5 L820.2,320.2
@@ -349,12 +349,12 @@
 	</g>
 	<g id="gnuplot_plot_2b" ><title>F'(x)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(925.5,125.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+	<g transform="translate(998.3,125.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >F'(x)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255,   0,   0)' stroke-dasharray='7.5,12.0'  d='M936.7,120.1 L993.5,120.1 M696.8,148.9 L698.9,148.1 L701.0,147.5 L703.2,147.1 L705.3,146.9 L707.4,146.9
+	<path stroke='rgb(255,   0,   0)' stroke-dasharray='7.5,12.0'  d='M1009.5,120.1 L1066.3,120.1 M696.8,148.9 L698.9,148.1 L701.0,147.5 L703.2,147.1 L705.3,146.9 L707.4,146.9
 		L709.5,147.1 L711.6,147.4 L713.7,148.0 L715.9,148.7 L718.0,149.6 L720.1,150.7 L722.2,151.9 L724.3,153.3
 		L726.4,154.9 L728.6,156.7 L730.7,158.6 L732.8,160.6 L734.9,162.9 L737.0,165.2 L739.2,167.8 L741.3,170.4
 		L743.4,173.2 L745.5,176.1 L747.6,179.2 L749.7,182.3 L751.9,185.6 L754.0,189.0 L756.1,192.5 L758.2,196.1
@@ -481,17 +481,17 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M174.3,911.2 L174.3,863.2 L488.7,863.2 L488.7,911.2 L174.3,911.2 Z  '/></g>
-	<g id="gnuplot_plot_1c" ><title>Analytical F(x)-F(x0)</title>
+	<path stroke='black'  d='M185.5,911.2 L185.5,863.2 L477.5,863.2 L477.5,911.2 L185.5,911.2 Z  '/></g>
+	<g id="gnuplot_plot_1c" ><title>Analytic F(x)-F(x0)</title>
 <g fill="none" color="#FFFFFF" stroke="black" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(409.5,880.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >Analytical F(x)-F(x0)</tspan></text>
+	<g transform="translate(398.3,880.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+		<text><tspan font-family="Arial" >Analytic F(x)-F(x0)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M420.7,875.2 L477.5,875.2 M96.8,853.0 L101.1,852.7 L105.3,851.8 L109.6,850.4 L113.8,848.5 L118.1,845.9
+	<path stroke='rgb(  0,   0,   0)'  d='M409.5,875.2 L466.3,875.2 M96.8,853.0 L101.1,852.7 L105.3,851.8 L109.6,850.4 L113.8,848.5 L118.1,845.9
 		L122.3,842.9 L126.6,839.3 L130.9,835.2 L135.1,830.7 L139.4,825.6 L143.6,820.1 L147.9,814.2 L152.1,807.8
 		L156.4,801.1 L160.7,794.0 L164.9,786.5 L169.2,778.8 L173.4,770.8 L177.7,762.6 L181.9,754.2 L186.2,745.6
 		L190.4,736.9 L194.7,728.1 L199.0,719.2 L203.2,710.3 L207.5,701.3 L211.7,692.5 L216.0,683.7 L220.2,675.0
@@ -507,12 +507,12 @@
 	</g>
 	<g id="gnuplot_plot_2c" ><title>Integ. of F(x)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(409.5,904.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+	<g transform="translate(398.3,904.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Integ. of F(x)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255,   0,   0)' stroke-dasharray='7.5,12.0'  d='M420.7,899.2 L477.5,899.2 M96.8,853.0 L98.9,852.9 L101.0,852.7 L103.2,852.3 L105.3,851.8 L107.4,851.2
+	<path stroke='rgb(255,   0,   0)' stroke-dasharray='7.5,12.0'  d='M409.5,899.2 L466.3,899.2 M96.8,853.0 L98.9,852.9 L101.0,852.7 L103.2,852.3 L105.3,851.8 L107.4,851.2
 		L109.5,850.4 L111.6,849.5 L113.7,848.5 L115.9,847.4 L118.0,846.1 L120.1,844.6 L122.2,843.1 L124.3,841.4
 		L126.4,839.6 L128.6,837.6 L130.7,835.5 L132.8,833.3 L134.9,831.0 L137.0,828.6 L139.2,826.0 L141.3,823.4
 		L143.4,820.6 L145.5,817.7 L147.6,814.7 L149.7,811.6 L151.9,808.4 L154.0,805.1 L156.1,801.7 L158.2,798.2
