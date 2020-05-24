@@ -81,7 +81,7 @@ class main{
 		WriteLine("Analytic value: \t\t{0}", expected);
 		WriteLine("Estimate of integral: \t\t{0}", estimate[0]);
 		WriteLine("Estimate of error: \t\t{0}", estimate[1]);
-		WriteLine("Actual deviation: \t\t{0}", Abs(expected-estimate[0]));
+		WriteLine("Actual error: \t\t\t{0}", Abs(expected-estimate[0]));
 		WriteLine("The function was sampled in {0} points.", N);
 	} // end printResults
 

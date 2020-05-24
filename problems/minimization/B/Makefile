@@ -13,4 +13,4 @@ math.dll: vector.cs qnewton.cs matrix.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe higgsFit.txt out.txt Log
+	rm -f *.dll *.exe higgsFit.txt out.txt Log *.svg

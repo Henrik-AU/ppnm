@@ -1,5 +1,5 @@
 all: outA-B.txt PlotA.svg PlotC.svg PlotCExtra.svg
-	cat outA-B.txt
+	
 
 PlotCExtra.svg: plotCExtra.gpi fitData.txt originalData.txt
 	gnuplot $<

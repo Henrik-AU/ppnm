@@ -93,7 +93,7 @@ class main{
 		// purposes.
 
 		WriteLine("Generally we notice that the estimated error is a lot lower with the" +
-		" stratified Monte Carlo method");
+		" stratified Monte Carlo method.");
 		WriteLine("The error goes as 1/sqrt(N) so we need a lot more points to compensate " +
 		"the plain Monte Carlo method.");
 		WriteLine("Let's try to do it.\n");

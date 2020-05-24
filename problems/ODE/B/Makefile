@@ -1,7 +1,7 @@
 all: OutbreakUnhindered.svg OutbreakHindered.svg
 
 OutbreakHindered.svg: plotHind.gpi out.txt
-	gnuplot $<
+	gnuplot $< 2>>LogPlotHind
 
 OutbreakUnhindered.svg: plotUnhind.gpi out.txt
 	gnuplot $<
@@ -16,4 +16,4 @@ math.dll: vector.cs driver.cs rkstep45.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt *.svg Log
+	rm -f *.dll *.exe *.txt *.svg Log*

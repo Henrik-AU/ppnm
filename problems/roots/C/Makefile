@@ -24,4 +24,4 @@ math.dll: vector.cs gramschmidt.cs newton.cs matrix.cs rkstep45.cs driver.cs hyd
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt Log
+	rm -f *.dll *.exe *.txt Log *.svg

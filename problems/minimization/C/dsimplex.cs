@@ -54,8 +54,8 @@ public partial class minimization{
 		
 		// Now it is time to attempt to take a step
 		// Vector highPoint and lowPoint introduced only for readability of the code.
-		// For better optimization they can be omitted and points[maxIndex] or
-		// points[minIndex] used directly instead.
+		// If preferred, one can omit them and use points[maxIndex] and points[minIndex]
+		// directly instead.
 		vector highPoint = points[maxIndex];
 		vector lowPoint = points[minIndex];
 		double fHigh = fValues[maxIndex];

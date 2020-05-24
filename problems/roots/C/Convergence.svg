@@ -457,7 +457,7 @@
 		L583.3,367.1 L584.1,367.1 L584.9,367.1 L585.7,367.1 L586.5,367.1 L587.4,367.1 L588.2,367.1 L589.0,367.1
 		L589.8,367.1 L590.6,367.1 L591.4,367.1 L592.2,367.1 L593.0,367.1 L593.8,367.1 L594.6,367.1 L595.4,367.1
 		L596.2,367.1 L597.0,367.1 L597.8,367.2 L598.7,367.2 L599.5,367.2 L600.3,367.2 L601.1,367.2 L601.9,367.2
-		L602.7,367.2 L603.5,367.2  '/></g>
+		L602.7,367.2 L603.5,367.2 L603.6,367.2  '/></g>
 	</g>
 	<g id="gnuplot_plot_7a" ><title>Analytic solution</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -1120,8 +1120,8 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(803.6,712.8) scale(3.60)' color='rgb(255,   0,   0)'/>
-	<use xlink:href='#gpPt6' transform='translate(953.8,773.5) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(803.6,712.9) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(953.8,773.4) scale(3.60)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(1104.1,606.3) scale(3.60)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(1254.3,775.1) scale(3.60)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(1203.5,576.0) scale(3.60)' color='rgb(255,   0,   0)'/>

@@ -1,4 +1,4 @@
-Calculating the integral from 0 to +infty of Exp(-2*x^2)
+Calculating the integral from 0 to +infty of exp(-2*x^2)
 Relative tolerance: 1E-09
 Absolute tolerance: 1E-09
 Analytical result: 		0.62665706865775
