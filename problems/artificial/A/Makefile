@@ -1,9 +1,9 @@
 all: Plot.svg
 
-Plot.svg: plot.gpi out.txt
+Plot.svg: plot.gpi outData.txt
 	gnuplot $<
 
-out.txt: main.exe
+outData.txt: main.exe
 	mono $< >$@ 2>Log
 
 main.exe: main.cs math.dll

@@ -30,7 +30,7 @@ class main{
 		int nsteps = annGauss.training(xs, ys, eps);
 
 		StreamWriter writeOut = new StreamWriter("out.txt");
-		writeOut.WriteLine("The networks {0} neurons has been trained with {1} points.",
+		writeOut.WriteLine("The networks {0} neurons have been trained with {1} points.",
 		neurons, m);
 		writeOut.WriteLine("The network parameters were minimized to an accuracy of {0}.", eps);
 		writeOut.WriteLine("The training (minimization) was done in {0} steps", nsteps);
@@ -48,7 +48,7 @@ class main{
 		// The new data is to be printed in a new block in the output file.
 		Write("\n\n");
 		for(int i=0; i<points; i++){
-			xTest[i] = 0+2*PI*i/(points-1);
+			xTest[i] = 2*PI*i/(points-1);
 			yTest[i] = annGauss.feedforward(xTest[i]);
 			yDerivTest[i] = annGauss.feedforwardDeriv(xTest[i]);
 			yIntTest[i] = annGauss.feedforwardInt(xTest[i]);

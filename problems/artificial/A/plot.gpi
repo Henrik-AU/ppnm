@@ -4,6 +4,6 @@ set xlabel "x"
 set ylabel "y"
 set key top left
 
-set title "Test of neural network on random points (after training)"
-plot "out.txt" index 0 using 1:2 with points ps 0.5 pt 7 title "F(x)"\
-, cos(x) title "cos(x)"
+set title "Fit of neural network to cos(x)"
+plot "outData.txt" index 0 using 1:2 with points ps 0.5 pt 7 lt rgb "black" title "Tabulated points"\
+, "outData.txt" index 1 using 1:2 with lines lt rgb "red" title "F(x)"

@@ -1,4 +1,4 @@
-The networks 5 neurons has been trained with 40 points.
-The network parameters were minimized to an accuracy of 0.001
+The networks 5 neurons have been trained with 40 points.
+The network parameters were minimized to an accuracy of 0.001.
 The training (minimization) was done in 1185 steps
 The final parameters for the network are available in the Log.
