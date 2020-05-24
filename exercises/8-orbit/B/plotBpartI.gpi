@@ -3,4 +3,4 @@ set out "PlotBpartI.svg"
 set title "Circular orbit"
 set tics out
 set size square
-plot "outBpartI.txt" using (1/$2)*sin($1):(1/$2)*cos($1) ls 7 lc rgb "violet" notitle 
+plot "outBpartI.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with points pt 7 ps 1 lt rgb "violet" notitle 

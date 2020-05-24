@@ -31,7 +31,7 @@ class main{
 		List<vector> ys = new List<vector>();
 
 		// Call the ODE solver to solve the system
-		vector yb = ode.rk45(diffeq, a, ya, b, stepsize, acc, eps, xlist:xs, ylist:ys);
+		ode.rk45(diffeq, a, ya, b, stepsize, acc, eps, xlist:xs, ylist:ys);
 
 		for(int i=0; i<xs.Count; i++){
 			WriteLine("{0,8:f8}\t{1,8:f8}\t{2,8:f8}", xs[i], ys[i][0], ys[i][1]);

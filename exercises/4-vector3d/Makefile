@@ -1,14 +1,13 @@
-all: out.txt	# Have 'make' print the out.txt file in the console
-	cat out.txt
+all: out.txt
 
 out.txt: main.exe
-	mono main.exe > out.txt
+	mono $< > $@
 
 main.exe: main.cs vector3d.dll
-	mcs -target:exe -out:$@ -reference:$(word 2, $^) $<
+	mcs $< -reference:$(word 2, $^)
 
 vector3d.dll: vector3d.cs
-	mcs -target:library -out:$@ $<
+	mcs $< -target:library -out:$@
 
 clean:
 	rm -f *.txt *.exe *.dll

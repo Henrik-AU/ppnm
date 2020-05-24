@@ -71,7 +71,7 @@ class main{
 		// The effective social distancing seems to reduce the infection factor to 0.6
 		infectFactor = 0.6;	
 		Tc = Tr/infectFactor;
-		vector yc = ode.rk45(SIRmodel, b, yb, c, stepsize, acc, eps, xlist:xsbc, ylist:ysbc);
+		ode.rk45(SIRmodel, b, yb, c, stepsize, acc, eps, xlist:xsbc, ylist:ysbc);
 		
 		// Print the data
 		Write("\n\n");

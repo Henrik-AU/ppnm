@@ -23,7 +23,7 @@ readcmdline.exe: readcmdline.cs Makefile
 	mcs $<
 
 clean: 
-	rm -f *.exe out* input.txt
+	rm -f *.exe *.txt
 
 $(INPUT): Makefile
 	/bin/echo -e '1\n3\n5\n7\n9' > $@

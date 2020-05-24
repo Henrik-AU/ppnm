@@ -1,10 +1,10 @@
 all: out.txt
-	cat out.txt
 
 out.txt : main.exe
-	mono main.exe > out.txt
+	mono $< >$@
+
 main.exe : main.cs
-	mcs -out:main.exe main.cs
+	mcs $<
 	
 clean:
-	rm --force out.txt main.exe
+	rm -f *.txt *.exe

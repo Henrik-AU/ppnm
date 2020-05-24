@@ -1,4 +1,4 @@
-all: cgamma-out.txt ComplexGamma.png
+all: ComplexGamma.png
 
 ComplexGamma.png: cgamma.gpi cgamma-out.txt
 	gnuplot $<

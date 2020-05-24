@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.4)  14 MAR 2020 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.4)  24 MAY 2020 21:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,10 +194,10 @@ e
 \gptboxwidth=\skip47
 \gptboxtext=\box29
 Package epstopdf Info: Source file: <Sqrt.eps>
-(epstopdf)                    date: 2020-03-14 19:23:09
+(epstopdf)                    date: 2020-05-24 21:15:43
 (epstopdf)                    size: 5965 bytes
 (epstopdf)             Output file: <Sqrt-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-03-14 19:23:09
+(epstopdf)                    date: 2020-05-24 21:15:43
 (epstopdf)                    size: 3162 bytes
 (epstopdf)             Command: <repstopdf --outfile=Sqrt-eps-converted-to.pdf 
 Sqrt.eps>
@@ -243,7 +243,7 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
 fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on ms.pdf (1 page, 140445 bytes).
+Output written on ms.pdf (1 page, 140197 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream

@@ -1,4 +1,4 @@
-all: erf-data.txt erf-tableval.txt Erf.svg
+all: Erf.svg
 
 Erf.svg: erf.gpi erf-data.txt erf-tableval.txt
 	gnuplot $<

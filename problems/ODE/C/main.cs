@@ -63,7 +63,7 @@ class main{
 		};
 
 		// Call the ODE solver to solve the system
-		vector yb = ode.rk45(threeBody, a, ya, b, stepsize, acc, eps, xlist:xs, ylist:ys);
+		ode.rk45(threeBody, a, ya, b, stepsize, acc, eps, xlist:xs, ylist:ys);
 
 		// Print out the data
 		for(int i=0; i<xs.Count; i++){

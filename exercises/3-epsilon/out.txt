@@ -7,8 +7,8 @@ The int.MinValue command says = -2147483648
 Part B:
 The machine epsilon with double is = 2.22044604925031E-16
 The machine epsilon with float is = 1.192093E-07
-Dimitry says the machince epsilon for doubles should be around = 2.22044604925031E-16
-Dimitry says the machince epsilon for floats should be around = 1.19209289550781E-07
+Dimitry says the machine epsilon for doubles should be around = 2.22044604925031E-16
+Dimitry says the machine epsilon for floats should be around = 1.19209289550781E-07
 
 Part C:
 The sum going up using floats becomes = 15.40368
@@ -17,5 +17,6 @@ The sum going up using doubles becomes = 20.9661659719623
 The sum going down using doubles becomes = 20.9661659733582
 
 Part D:
+If two values are within around 1e-9 of each other, the approx function will return true.
 The truth value for 1.01 ~ 1 is False
 The truth value for 1.999999999 ~ 2 is True

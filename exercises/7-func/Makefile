@@ -1,5 +1,7 @@
-outA-and-B.txt: main.exe
-	mono $< > $@ 2> log
+all: outA-B.txt
+
+outA-B.txt: main.exe
+	mono $< >$@ 2>log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll 

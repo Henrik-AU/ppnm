@@ -1,4 +1,4 @@
-all: gamma-data.txt gamma-tableval.txt Gamma.svg
+all: Gamma.svg
 
 Gamma.svg: gamma.gpi gamma-data.txt gamma-tableval.txt
 	gnuplot $<

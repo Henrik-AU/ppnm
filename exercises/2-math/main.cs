@@ -3,26 +3,41 @@ using static System.Console;
 using static System.Math;
 
 class main{
-	static int Main(){
+	static void Main(){
 	
 		double a = sqrt(2);
-		Write("sqrt2 = {0}\n", a);	
+		WriteLine("sqrt(2) = {0}. \t\t\t\t Correct result: 1.41421", a);	
 	
-	
-		complex i = new complex (0,1);
+		complex i = new complex(0,1);
 
 		complex ipowi = i.pow(i);
-		Write($"i.pow(i) = {ipowi}\n");
+		WriteLine("i.pow(i) = {0}. \t\t\t Correct result: 0.20787", ipowi);
 
 		complex sinipi = sin(i*PI);
-		Write($"sin(i*pi) = {sinipi}\n");
+		WriteLine("sin(i*pi) = {0}. \t\t\t Correct result: 11.54873*i", sinipi);
 
 		complex epowi = exp(i);
-		Write($"epowi = {epowi}\n");
+		WriteLine("epowi = {0}. \t\t Correct result: 0.54030 + 0.84147*i", epowi);
 	
 		complex epowipi = exp(i*PI);
-		Write($"epowipi = {epowipi}\n");
+		WriteLine("epowipi = {0}. \t\t\t Correct result: -1", epowipi);
 
-		return 0;
+		complex sinhi = sinh(i);
+		WriteLine("sinh(i) = {0}. \t\t\t Correct result: 0.84147*i", sinhi);
+
+		complex coshi = cosh(i);
+		WriteLine("cosh(i) = {0}. \t\t\t Correct result: 0.54030", coshi);
+
+		complex minusOne = new complex(-1, 0);
+		complex sqrtMinusOne = sqrt(minusOne);
+		WriteLine("sqrt(-1) = {0}. \t\t\t Correct result: i", sqrtMinusOne);
+
+		complex sqrti = sqrt(i);
+		WriteLine("sqrt(i) = {0}. \t Correct result: 0.70710 + 0.70710*i", sqrti);
+		
+		
+
+
+
 	}
 }

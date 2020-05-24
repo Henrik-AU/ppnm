@@ -33,7 +33,8 @@ class main{
 
 }
 
-	public static vector orbitsolver(double eps, double xa, double xb, vector ystart, string filepath){
+	public static void orbitsolver(double eps, double xa, double xb, vector ystart,
+	string filepath){
 		
 		// Create a function for the planet equation
 		Func<double, vector, vector> planetmotion = delegate(double x, vector y){
@@ -46,23 +47,17 @@ class main{
 		double stepsize = 0.001;
 
 
-		vector odeout = ode.rk23(planetmotion,xa,ystart,xb,xlist:xs,ylist:ys, h:stepsize);
+		ode.rk23(planetmotion,xa,ystart,xb,xlist:xs,ylist:ys, h:stepsize);
 		
-		// Clean the txt file that we want to write to - otherwise the following streamwriter will
-		// append more data to it each time, potentially requiring a 'make clean' between each run
-		System.IO.File.Delete(filepath);
-
 		// Create a streamwriter connected to the wanted output file
-		var outfile = new System.IO.StreamWriter(filepath,append:true);
-		
+		var outfile = new System.IO.StreamWriter(filepath);
 		
 		// Print out the data to the file (we don't need to print the first derivative)
-		for(int i=0; i<xs.Count; i++)
+		for(int i=0; i<xs.Count; i++){
 			outfile.WriteLine("{0:f8}\t{1:f8}", xs[i], ys[i][0]);
-		
-		outfile.Close();
+		}
 
-		return odeout;
+		outfile.Close();
 
 	}	
 

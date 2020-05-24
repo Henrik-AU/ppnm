@@ -1,12 +1,8 @@
 using static System.Math;
 using static System.Console;
 
-// Has to be spelled as the class, not the name of the DLL or the name of the function!
-// So here with upper case A.
-using static Approx;
-
 class main{
-	static int Main(){
+	static void Main(){
 
 	// part A
 
@@ -51,10 +47,10 @@ class main{
 	// be around System.Math.Pow(2, -52).
 	
 	double dmachineepsilon = Pow(2, -52);
-	Write("Dimitry says the machince epsilon for doubles should be around = {0}\n", dmachineepsilon);
+	Write("Dimitry says the machine epsilon for doubles should be around = {0}\n", dmachineepsilon);
 
 	double fmachineepsilon = Pow(2, -23);
-	Write("Dimitry says the machince epsilon for floats should be around = {0}\n", fmachineepsilon);
+	Write("Dimitry says the machine epsilon for floats should be around = {0}\n", fmachineepsilon);
 
 	// part C
 	WriteLine("\nPart C:");
@@ -84,19 +80,19 @@ class main{
 
 	// part D
 	WriteLine("\nPart D:");
+	WriteLine("If two values are within around 1e-9 of each other, the approx function will" +
+	" return true.");
 	
 	double a = 1.01;
        	double b = 1;
-	bool truth = approx(a, b);
+	bool truth = Approx.approx(a, b);
 	Write("The truth value for {0} ~ {1} is {2}\n", a, b, truth);	
 
 
 	double c = 1.999999999;
        	double d = 2;
-	truth = approx(c, d);
+	truth = Approx.approx(c, d);
 	Write("The truth value for {0} ~ {1} is {2}\n", c, d, truth);	
-
-	return 0;
 
 	}
 }

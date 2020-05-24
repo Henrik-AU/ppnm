@@ -3,7 +3,7 @@ using System;
 
 class readcmdline{
 	// We let the main function take an array of strings as input
-	static int Main(string[] args){
+	static void Main(string[] args){
 
 	// We loop over all the strings in the input array, convert the string
 	// to doubles using Parse, and then print out the value and the sine and cosine of
@@ -14,8 +14,6 @@ class readcmdline{
 		Console.WriteLine("{0} {1} {2}", x, Math.Sin(x), Math.Cos(x));
 	}
 	
-
-	return 0;	
 }
 
 

@@ -1,4 +1,4 @@
-all: lngamma-data.txt Gamma.svg
+all: Gamma.svg
 
 Gamma.svg: lngamma.gpi lngamma-data.txt
 	gnuplot $<

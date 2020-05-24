@@ -3,7 +3,7 @@ using System;
 using System.IO;
 
 class readstdin{
-	static int Main(){
+	static void Main(){
 	
 	// We connect stdin to the input stream and stdout to the output stream
 	TextReader stdin = Console.In;
@@ -33,7 +33,6 @@ class readstdin{
 	}
 	while(true);
 	
-	return 0;
 }
 
 }

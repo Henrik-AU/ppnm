@@ -8,7 +8,7 @@ Sqrt.tex: plot.gpi out.txt
 	gnuplot $<
 
 out.txt: main.exe
-	mono $< 1>$@ 2> log
+	mono $< 1>$@ 2>log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll

@@ -1,13 +1,13 @@
 all: out.txt
-	cat out.txt
 
 out.txt : main.exe
-	mono main.exe > out.txt
+	mono $< > $@
+
 main.exe : main.cs cmath.dll
-	mcs -reference:cmath.dll main.cs
+	mcs $< -reference:cmath.dll
 	
 cmath.dll : cmath.cs complex.cs
-	mcs -target:library -out:cmath.dll cmath.cs complex.cs
+	mcs $^ -target:library -out:$@
 
 clean:
-	rm --force out.txt main.exe
+	rm -f *.txt *.exe *.dll

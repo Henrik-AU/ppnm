@@ -11,6 +11,19 @@ public static void print(this complex z, string s)
 public static void printf(this complex z,string s)
 	{System.Console.WriteLine(s,z.Re,z.Im);}
 
+public static readonly complex I = new complex(0, 1);
+
+
+// sinh and cosh implemented
+public static double sinh(double x){return Math.Sinh(x);}
+public static complex sinh(complex z){
+	return (exp(z)-exp(-z))/2;
+	}
+
+public static double cosh(double x){return Math.Cosh(x);}
+public static complex cosh(complex z){
+	return (exp(z)+exp(-z))/2;
+	}
 
 public static double  exp(double x) {return Math.Exp(x);}
 public static complex exp(complex z){
@@ -41,6 +54,12 @@ public static complex log(complex z){
 	return new complex( log(abs(z)), arg(z) ); }
 
 public static double sqrt(double x){return Math.Sqrt(x);}
+// Implementation of complex square root
+public static complex sqrt(complex z){
+		// Return the "principal value" (see wiki)
+		return Math.Sqrt(abs(z))*exp(complex.I*arg(z)/2);
+	}
+
 public static double arg(complex z){return Math.Atan2(z.Im,z.Re);}
 
 public static double  pow (this double x, double y){return Math.Pow (x,y);}

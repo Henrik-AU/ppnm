@@ -1,6 +1,10 @@
 class hello{
 	static void Main(){
-		System.Console.Write("hello\n");
+		// Part A
+		System.Console.WriteLine("Hello world.");
+
+		// Part B
+		System.Console.WriteLine("Hello, {0}.", System.Environment.UserName);
 	}
 }
 

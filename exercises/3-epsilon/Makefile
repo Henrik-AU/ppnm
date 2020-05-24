@@ -1,14 +1,13 @@
 all: out.txt
-	cat out.txt
 
 out.txt : main.exe
-	mono main.exe > out.txt
+	mono $< > $@
 
 main.exe : main.cs approx.dll
-	mcs -reference:approx.dll main.cs
+	mcs $< -reference:approx.dll
 	
 approx.dll : approx.cs
-	mcs -target:library -out:approx.dll approx.cs
+	mcs $< -target:library -out:$@
 
 clean:
-	rm --force out.txt main.exe
+	rm -f *.txt *.exe *.dll
