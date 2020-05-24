@@ -92,7 +92,7 @@ public class cubicspline{
 		// We integrate S_i between each set of points individually and add the results
 		for(int k=0; k<i; k++){
 			double dx = x[k+1] - x[k];
-			sum+= dx*(y[k] + b[k]*dx/2 + c[k]*dx*dx/3 + c[k]*dx*dx*dx/4);
+			sum+= dx*(y[k] + b[k]*dx/2 + c[k]*dx*dx/3 + d[k]*dx*dx*dx/4);
 		}
 		// At last we add the part from the interval which z lies in.
 		double dxi = z - x[i];

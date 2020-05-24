@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using static System.Console;
-using static cubicspline;
 
 class main{
 	public static int Main(string[] args){
