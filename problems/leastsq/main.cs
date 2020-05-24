@@ -4,6 +4,10 @@ using static System.Math;
 
 class main{
 	static void Main(){
+
+		// Note: Contains problem A, B and C, since they are so interrelated, that splitting
+		// it up in several files and folders would be quite an unneccesary hassle.
+
 		// Arrays with the measured data points
 		vector x = new vector(new double[] {1, 2, 3, 4, 6, 9, 10, 13, 15});
 		vector y = new vector (new double[] {117, 100, 88, 72, 53, 29.5, 25.2, 15.2, 11.1});
@@ -61,8 +65,10 @@ class main{
 		// The uncertainty of the half-life value for ThX is calculated via the usual formula
 		// for the uncertainty of a function with one variable: dq = dx*|dq/dx|
 		double dT = Log(2.0)*1/(lambda*lambda)*dlambda;
-		writeFitResult.WriteLine("\nThe uncertainty in the estimated halflife is {0:f2} days", dT);
-		writeFitResult.WriteLine("The estimated value does thus not match the modern value within the estimated uncertainty, but it is close.");
+		writeFitResult.WriteLine("\nThe uncertainty in the estimated halflife is {0:f2} days",
+		dT);
+		writeFitResult.WriteLine("The estimated value does thus not match the modern value" +
+		" within the estimated uncertainty, but it is close.");
 		writeFitResult.Close();
 
 		// Part C

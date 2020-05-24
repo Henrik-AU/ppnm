@@ -98,9 +98,12 @@ class mainA{
 		Q = qrGSC.Q;
 		R = qrGSC.R;
 
-		vector x = qrGSC.solve(b);
-	
 		WriteLine("\nSolving by QR decomposition and back-substitution.");
+		vector x = qrGSC.solve(b);
+		
+		WriteLine("\nThe obtained x-vector from the routine is:");
+		x.print();
+	
 		WriteLine("\nPrinting vector C*x :");
 		vector Cx = C*x;
 		Cx.print();
@@ -112,9 +115,6 @@ class mainA{
 		}else{
 			WriteLine("Cx is not approximately equal to b. The system has not been solved.");
 		}	
-
-		WriteLine("\nThe obtained x-vector from the routine is:");
-		x.print();
 
 	}
 }

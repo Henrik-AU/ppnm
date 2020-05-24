@@ -15,14 +15,24 @@ class mainB{
 				A[i,j] = 2 - 4*rand.NextDouble();
 			}
 		}
+		WriteLine("Set up a random matrix, and try to find the inverse matrix via QR" +
+		" decomposition.\n");
 		WriteLine("Printing random matrix A:");
 		A.print();
 
 		// Factorize the matrix into two matrices Q and R, and calculate the inverse matrix B
 		var qrGS = new qrDecompositionGS(A);
 		matrix B = qrGS.inverse();
+		matrix Q = qrGS.Q;
+		matrix R = qrGS.R;
+
+		WriteLine("\nPrinting matrix R:");
+		R.print();
+
+		WriteLine("\nPrinting matrix Q:");
+		Q.print();
 	
-		WriteLine("\nPrinting random matrix B:");
+		WriteLine("\nPrinting matrix B (inverse to A):");
 		B.print();
 
 		// Let's check if B is actually the inverse by calculating A*B which then should
