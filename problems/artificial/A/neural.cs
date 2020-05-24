@@ -1,8 +1,9 @@
 using System;
+using System.Diagnostics;
 using static System.Console;
 using static System.Math;
 
-public partial class ann{
+public class ann{
 	
 	// n is the number of hidden neurons
 	public int n;
@@ -19,11 +20,12 @@ public partial class ann{
 		// Take the inputs and place them in the public variables for the class
 		n = nNeurons;
 		f = acFunc;
+		finalParams = null;
 
 	} // end constructor
 
 
-	public void training(vector xs, vector ys){
+	public int training(vector xs, vector ys, double eps = 1e-3){
 		// Create a vector with initial parameters, that spread out activation functions
 		// somewhat evenly.
 		// We set the a_i's to evenly span the distance from [c, d] where c and d are the
@@ -48,16 +50,19 @@ public partial class ann{
 		};
 
 		// Perform the optimization
-		int nsteps = minimization.qnewton(deviation, ref param);
-		Error.WriteLine("Neural network optimized in {0} steps.", nsteps);
+		int nsteps = minimization.qnewton(deviation, ref param, eps);
 
 		// The vector param now contains the optimized parameters, so we now save this in
 		// the finalParams vector that is available to all functions and outside the class
-		finalParams = param;	
+		finalParams = param;
+
+		return nsteps;	
 	} // end training
 
 
 	public double feedforward(double x, vector parameters = null){
+		Trace.Assert(finalParams == null, "The network has not been trained yet.");
+
 		if(parameters == null){
 			parameters = finalParams;
 		}
@@ -72,27 +77,4 @@ public partial class ann{
 		return sumNeuron;
 	} // end feedforward
 
-	/*	
-	public double ffDeriv(double x){
-		double sumNeuron = 0;
-		for(int i=0; i<n; i++){
-			double ai = finalParams[0+3*i];
-			double bi = finalParams[1+3*i];
-			double wi = finalParams[2+3*i];
-			sumNeuron += wi*fDeriv((x-ai)/bi);
-		}
-		return sumNeuron;
-	} // end feed forward derivative
-
-	public double ffInteg(double x){
-		double sumNeuron = 0;
-		for(int i=0; i<n; i++){
-			double ai = finalParams[0+3*i];
-			double bi = finalParams[1+3*i];
-			double wi = finalParams[2+3*i];
-			sumNeuron += fInteg(x);
-		}
-		return sumNeuron;
-	} // end feed forward integration
-	*/
 } // end class
