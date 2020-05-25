@@ -30,7 +30,7 @@ class main{
 		double integral = quad.o8av(f, a, b, acc, eps);
 		vector result_o8av = new vector(new double[] {integral, calls});		
 
-		WriteLine("Calculating the integral from 0 to +infty of exp(-2*x^2)");
+		WriteLine("Calculating the integral from 0 to infinity of exp(-2*x^2)");
 		printResults(result_o4av, result_o8av, 0.5*Sqrt(PI/2), eps, acc);
 	
 		// Let's try another function on the same interval
@@ -41,7 +41,7 @@ class main{
 		integral = quad.o8av(g, a, b, acc, eps);
 		result_o8av = new vector(new double[] {integral, calls});		
 
-		WriteLine("Calculating the integral from 0 to +infty of 1/(x^2 + 4^2)");
+		WriteLine("Calculating the integral from 0 to infinity of 1/(x^2 + 4^2)");
 		printResults(result_o4av, result_o8av, 0.5*PI/4, eps, acc);
 
 		
@@ -56,7 +56,7 @@ class main{
 		integral = quad.o8av(h, a, b, acc, eps);
 		result_o8av = new vector(new double[] {integral, calls});		
 
-		WriteLine("Calculating the integral from -infty to 0 of 1/(x^2 + 4^2)");
+		WriteLine("Calculating the integral from minus infinity to 0 of 1/(x^2 + 4^2)");
 		printResults(result_o4av, result_o8av, 0.5*PI/4, eps, acc);
 
 		// At last let's try a function from minus infinity to infinity
@@ -69,7 +69,7 @@ class main{
 		integral = quad.o8av(k, a, b, acc, eps);
 		result_o8av = new vector(new double[] {integral, calls});		
 
-		WriteLine("Calculating the integral from -infty to +infty of x^2*exp(-x^2)");
+		WriteLine("Calculating the integral from minus infinity to infinity of x^2*exp(-x^2)");
 		printResults(result_o4av, result_o8av, Sqrt(PI)/2, eps, acc);
 
 		WriteLine("While both methods can integrate to a high accuracy, it is clear that" +
@@ -80,13 +80,13 @@ class main{
 
 	public static void printResults(vector result_o4av, vector result_o8av, 
 		double resultAnalytical, double eps, double acc){
-			WriteLine("Relative tolerance: {0}", eps);
-			WriteLine("Absolute tolerance: {0}", acc);
+			WriteLine("Relative tolerance: \t\t{0}", eps);
+			WriteLine("Absolute tolerance: \t\t{0}", acc);
 			WriteLine("Analytical result: \t\t{0}", resultAnalytical);
-			WriteLine("Result with o4av: \t\t{0:f14} (deviation: {1})",
-			result_o4av[0], resultAnalytical-result_o4av[0]); 
-			WriteLine("Result with o8av: \t\t{0:f14} (deviation: {1})",
-			result_o8av[0], resultAnalytical-result_o8av[0]);
+			WriteLine("Result with o4av: \t\t{0:f14}", result_o4av[0]); 
+			WriteLine("Result with o8av: \t\t{0:f14}", result_o8av[0]);
+			WriteLine("Actual error with o4av: \t{0}", resultAnalytical-result_o4av[0]);
+			WriteLine("Actual error with o8av: \t{0}", resultAnalytical-result_o8av[0]);
 			WriteLine("Estimated error with o4av: \t{0}", result_o4av[1]);
 			WriteLine("Function evaluations with o4av: {0}", result_o4av[2]);	
 			WriteLine("Function evaluations with o8av: {0}", result_o8av[1]);

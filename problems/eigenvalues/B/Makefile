@@ -1,13 +1,13 @@
-all: TimeScaling.svg ComparisonIII.svg ComparisonIV.svg
+all: TimeScaling.svg ComparisonLowEig.svg ComparisonFullDiag.svg
 
-ComparisonIV.svg: compPlotIV.gpi outB4.txt
+ComparisonFullDiag.svg: plotFullDiag.gpi outB4.txt
 	gnuplot $<
 
-ComparisonIII.svg: compPlotIII.gpi outB3.txt
+ComparisonLowEig.svg: plotLowEig.gpi outB3.txt
 	gnuplot $<
 
-TimeScaling.svg: timePlot.gpi time.txt
-	gnuplot $<
+TimeScaling.svg: plotTime.gpi time.txt
+	gnuplot $< 2>LogTimePlot
 
 # We will run the \time utility several times with different matrix dimensions. This is done in a small for
 # loop
@@ -16,10 +16,10 @@ time.txt: mainTime.exe Makefile
 		\time --format "$$dimension %U" --append --output time.txt mono mainTime.exe $$dimension ; \
 	done	
 
-outB3.txt outB4.txt outB5.txt: mainB.exe
+outB3.txt outB4.txt outB5.txt: main.exe
 	mono $<
 
-mainB.exe: mainB.cs math.dll
+main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
 mainTime.exe: mainTime.cs math.dll
@@ -29,4 +29,4 @@ math.dll: jacobi.cs findEigenvalue.cs matrix.cs vector.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.exe *.txt *.dll *.svg Log
+	rm -f *.exe *.txt *.dll *.svg Log*

@@ -5,6 +5,7 @@ set ylabel "y"
 set key outside right box
 set out "Plot.svg"
 
+set yrange [-1:1]
 plot "out.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "y_0 solution"\
 , "out.txt" using 1:3 with points pt 7 ps 0.6 lt rgb "red" title "y_1 solution" \
 , sin(x)\

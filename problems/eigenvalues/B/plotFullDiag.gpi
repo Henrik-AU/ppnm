@@ -1,10 +1,10 @@
 set term svg font ",16" background rgb "white"
-set title "Comparisons of different eigenvalue finding algorithms"
+set title "Comparisons of different eigenvalue finding algorithms\n Full diagonalization"
 set key top left box
 set xlabel "Matrix dimension"
 set ylabel "Operations"
-set logscale xy 
-set out "ComparisonIV.svg"
+set logscale y 
+set out "ComparisonFullDiag.svg"
 set xrange[40:100]
 
 plot "outB4.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Full cyclic"\

@@ -1,9 +1,9 @@
 set term svg font ",16" background rgb "white"
-set title "Comparisons of different eigenvalue finding algorithms"
+set title "Comparisons of different eigenvalue finding algorithms\n Finding lowest eigenvalue"
 set key top left box
 set xlabel "Matrix dimension"
 set ylabel "Operations"
-set out "ComparisonIII.svg"
+set out "ComparisonLowEig.svg"
 set xrange[20:300]
 
 plot "outB3.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Full cyclic"\

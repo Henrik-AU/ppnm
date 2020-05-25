@@ -28,7 +28,7 @@ class main{
 		// Perform a cyclic sweep on the matrix A
 		matrix V = new matrix(n,n);
 		vector e = new vector(n);
-		int sweeps = jacobi.cycle(A, e, V);
+		jacobi.cycle(A, e, V);
 
 		return 0;	
 	}		

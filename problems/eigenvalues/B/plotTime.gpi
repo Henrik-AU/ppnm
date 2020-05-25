@@ -1,0 +1,16 @@
+# Small trick to find the largest dimension plotted. Doesn't actually create a figure
+set terminal unknown
+plot "time.txt" using 1:2
+nmax = GPVAL_DATA_X_MAX
+tmax = GPVAL_DATA_Y_MAX
+
+set term svg font ",16" background rgb "white"
+set title "Plot of time scaling"
+set key top left box
+set xlabel "Dimension of square matrix"
+set ylabel "Time used on diagonalization [seconds]"
+set out "TimeScaling.svg"
+
+# Plot the data and the O(n^3) graph (scaled to fit with the largest datapoint)
+plot "time.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Data"\
+, x*x*x/nmax/nmax/nmax*tmax with lines title "O(n^3)"
