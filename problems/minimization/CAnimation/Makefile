@@ -13,4 +13,4 @@ math.dll: vector.cs dsimplex.cs
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.dll *.exe *.txt *Log *.gif
+	rm -f *.dll *.exe *.txt Log* *.gif

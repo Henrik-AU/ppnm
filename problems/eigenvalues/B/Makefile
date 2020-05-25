@@ -12,7 +12,7 @@ TimeScaling.svg: timePlot.gpi time.txt
 # We will run the \time utility several times with different matrix dimensions. This is done in a small for
 # loop
 time.txt: mainTime.exe Makefile
-	for dimension in 40 80 120 160 ; do \
+	for dimension in `seq 40 20 160` ; do \
 		\time --format "$$dimension %U" --append --output time.txt mono mainTime.exe $$dimension ; \
 	done	
 

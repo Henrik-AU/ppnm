@@ -39,7 +39,9 @@ class main{
 		WriteLine("x\t{0}\t{1}\t{2}", point1[0], point2[0], point3[0]);
 		WriteLine("y\t{0}\t{1}\t{2}\n", point1[1], point2[1], point3[1]);
 
-		WriteLine("Minimum found at: x = {0} \t y = {1}", minPoint[0], minPoint[1]);
+		WriteLine("Minimum found at:");
+		WriteLine("x = {0}", minPoint[0]);
+		WriteLine("y = {0}", minPoint[1]);
 		WriteLine("f(x_min) = {0}", rosenbrock(minPoint));
 		WriteLine("Minimum found in {0} steps.", nsteps);
 
@@ -72,7 +74,9 @@ class main{
 		WriteLine("x\t{0}\t{1}\t{2}", point1[0], point2[0], point3[0]);
 		WriteLine("y\t{0}\t{1}\t{2}\n", point1[1], point2[1], point3[1]);
 
-		WriteLine("Minimum found at: x = {0} \t y = {1}", minPoint[0], minPoint[1]);
+		WriteLine("Minimum found at:");
+		WriteLine("x = {0}", minPoint[0]);
+		WriteLine("y = {0}", minPoint[1]);
 		WriteLine("f(x_min) = {0}", himmelblau(minPoint));
 		WriteLine("Minimum found in {0} steps.", nsteps);
 
@@ -99,7 +103,9 @@ class main{
 		WriteLine("x\t{0}\t{1}\t{2}", point4[0], point5[0], point6[0]);
 		WriteLine("y\t{0}\t{1}\t{2}\n", point4[1], point5[1], point6[1]);
 
-		WriteLine("Minimum found at: x = {0} \t y = {1}", minPoint[0], minPoint[1]);
+		WriteLine("Minimum found at:");
+		WriteLine("x = {0}", minPoint[0]);
+		WriteLine("y = {0}", minPoint[1]);
 		WriteLine("f(x_min) = {0}", himmelblau(minPoint));
 		WriteLine("Minimum found in {0} steps.", nsteps);
 	}

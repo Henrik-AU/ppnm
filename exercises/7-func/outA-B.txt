@@ -16,7 +16,7 @@ Printing out exercise B:
 The integral from 0 to inf of sqrt(x)*exp(-x) gives = 0.886226939229309
 According to Wikipedia the result should be sqrt(pi)/2 = 0.886226925452758
 
-The integral from 0 to inf of x^3/(exp(x)-1) gives = 6.48958880254537
+The integral from 0 to inf of x^3/(exp(x)-1) gives = 6.49393750718217
 According to Wikipedia the result should be pi^4/15 = 6.49393940226683
 
 The integral from 0 to inf of sin^2(x)/x^2 gives = 1.57095183122813

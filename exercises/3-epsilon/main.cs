@@ -43,14 +43,14 @@ class main{
        	y*=2F;
 	Write("The machine epsilon with float is = {0}\n", y);
 
-	// According to Dimitry the machine epsilon for a double precision machince should
+	// According to Dmitri the machine epsilon for a double precision machince should
 	// be around System.Math.Pow(2, -52).
 	
 	double dmachineepsilon = Pow(2, -52);
-	Write("Dimitry says the machine epsilon for doubles should be around = {0}\n", dmachineepsilon);
+	Write("Dmitri says the machine epsilon for doubles should be around = {0}\n", dmachineepsilon);
 
 	double fmachineepsilon = Pow(2, -23);
-	Write("Dimitry says the machine epsilon for floats should be around = {0}\n", fmachineepsilon);
+	Write("Dmitri says the machine epsilon for floats should be around = {0}\n", fmachineepsilon);
 
 	// part C
 	WriteLine("\nPart C:");

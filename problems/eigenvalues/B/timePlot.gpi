@@ -2,7 +2,7 @@ set term svg font ",16" background rgb "white"
 set title "Plot of time scaling"
 set key off
 set xlabel "Dimension of square matrix"
-set ylabel "Time used on diagonalization"
+set ylabel "Time used on diagonalization [seconds]"
 set out "TimeScaling.svg"
 
 plot "time.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red"

@@ -36,7 +36,8 @@ const double inf = double.PositiveInfinity;
 
 			hresult = quad.o8av(h,0,1);
 
-			WriteLine("The integral from 0 to 1 of ln(1/x)^p with p = {0} gives {1}", p, hresult);
+			WriteLine("The integral from 0 to 1 of ln(1/x)^p with p = {0} gives {1}",
+			p, hresult);
 		}
 
 		WriteLine("The results of the integrals should be equal to gamma(p+1) = p!");
@@ -55,7 +56,11 @@ const double inf = double.PositiveInfinity;
 		
 		Func<double,double> k = (x) => Pow(x,3) / (Exp(x)-1);
 		double kresult;
-		kresult = quad.o8av(k,0,inf);
+		// For some strange reason the precision of the integral here is not very good, unless
+		// the tolerance is set to be more strict. Let's set it to 1e-9 instead of the
+		// standard 1e-6.
+		double eps = 1e-9;
+		kresult = quad.o8av(k,0,inf, eps:eps);
 		WriteLine("The integral from 0 to inf of x^3/(exp(x)-1) gives = {0}", kresult);
 		WriteLine("According to Wikipedia the result should be pi^4/15 = {0}", Pow(PI,4)/15);
 		WriteLine();
