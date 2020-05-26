@@ -53,6 +53,11 @@ class main{
 	Write("Dmitri says the machine epsilon for floats should be around = {0}\n", fmachineepsilon);
 
 	// part C
+	/* Explanations: Small numbers added together gives smaller roundoff errors compared to large
+	numbers added to small numbers. Summing up lowest to highest should therefore be more precise.
+	Doubles have better precision than floats, and the result with doubles are therefore in
+	general more precise, since it is less vulnerable to roundoff errors.
+	*/
 	WriteLine("\nPart C:");
 	int max = int.MaxValue/3; // I get the same value for 2 or 3
 
@@ -62,10 +67,22 @@ class main{
 
 	float float_sum_down = 1F/max;
 	for(int j =max-1;j>0;j--) float_sum_down +=1F/j;
-	Write("The sum going down using floats becomes = {0}\n", float_sum_down);
-	
+	Write("The sum going down using floats becomes = {0}\n\n", float_sum_down);
 
-	// Using doubles
+	WriteLine("Small numbers added to small numbers have smaller roundoff errors than large" +
+	" numbers added to small numbers. The sum going from smallest to largest should thus be" +
+	" the most precise one.\n");
+
+	
+	/* These sums will appear to converge as a function of max, since at some point the numbers
+	that have to be added are smaller than the machine epsilon, and thus the computer can't
+	handle it properly. This is in contrast to mathematical theory in which this particular sum
+	actually diverges.
+	*/
+	WriteLine("The sums will converge as a function of max, since at some point we are adding" +
+	" numbers smaller than the machine epsilon, which will just be zeros for the computer.\n");
+
+	// Let's try the sum with doubles now.
 
 	double double_sum_up = 1D;
 
@@ -76,11 +93,12 @@ class main{
 	double double_sum_down = 1D/max;
 	for(int j = max-1; j > 0; j--) double_sum_down += 1D/j;
 	Write("The sum going down using doubles becomes = {0}\n", double_sum_down);
-	
+
+
 
 	// part D
 	WriteLine("\nPart D:");
-	WriteLine("If two values are within around 1e-9 of each other, the approx function will" +
+	WriteLine("If two values are within 1e-9 of each other, the approx function will" +
 	" return true.");
 	
 	double a = 1.01;

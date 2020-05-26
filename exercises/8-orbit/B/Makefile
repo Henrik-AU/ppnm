@@ -1,16 +1,16 @@
-all: out PlotBpartI.svg PlotBpartII.svg PlotBpartIII.svg
+all: circle.txt PlotB1.svg PlotB2.svg PlotB3.svg
 
-PlotBpartIII.svg: plotBpartIII.gpi outBpartIII.txt
+PlotB3.svg: plotB3.gpi outB3.txt
 	gnuplot $<
 
-PlotBpartII.svg: plotBpartII.gpi outBpartII.txt
+PlotB2.svg: plotB2.gpi outB2.txt
 	gnuplot $<
 
-PlotBpartI.svg: plotBpartI.gpi outBpartI.txt
+PlotB1.svg: plotB1.gpi circle.txt outB1.txt
 	gnuplot $<
 
-out: main.exe
-	mono $< 2> log
+circle.txt outB1.txt outB2.txt outB3.txt: main.exe
+	mono $< > circle.txt 2> log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll

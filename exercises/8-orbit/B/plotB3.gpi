@@ -1,0 +1,11 @@
+set term svg font ", 16" background rgb 'white'
+set out "PlotB3.svg"
+set title "Precession of orbit"
+set xlabel "x"
+set ylabel "y"
+set tics out
+set size square
+set xrange [-1:2.5]
+set yrange [-1.75:1.75]
+
+plot "outB3.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with lines notitle 

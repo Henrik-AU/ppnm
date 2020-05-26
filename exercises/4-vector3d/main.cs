@@ -26,32 +26,34 @@ class main{
 		Write(x);
 
 
-		Write("\nAttempt at dot product:\n");
+		WriteLine("\nAttempt at dot product:");
 		double dot = dot_product(u, v);
-		Write("The dot product of u and v is = {0}\n\n", dot);
+		WriteLine("The dot product of u and v is = {0}", dot);
+		WriteLine("Correct dot product: 33\n");
 
 		vector3d cross = new vector3d(0, 0, 0);
-		Write("Attempt at cross product:\n");
+		WriteLine("Attempt at cross product:");
 		cross = cross_product(u, v);
-		Write("The cross product of u and v is = {0}\n", cross);
+		Write("The cross product of u and v is = {0}", cross);
+		WriteLine("Correct cross product: (0, 8, -6)\n");
 
-		Write("Attempt at calculating the magnitude:\n");
+		WriteLine("Attempt at calculating the magnitude:");
 		double magni = magnitude(u);
-		Write("The magnitude of u is = {0}\n\n", magni);
+		double magniCorrect = 5.385;
+		WriteLine("The magnitude of u is {0:f3}", magni);
+		WriteLine("Correct magnitude: {0}\n", magniCorrect);
 
 
-		Write("Let's try to change the x-value of the u vector to 5\n");
+		WriteLine("Let's try to change the x-value of the u vector to 5");
 		u.xval = 5;
 		Write("The vector u is: ");
 		Write(u);
 		
 
-		Write("\nLet's try to read the z-value of the u vector\n");
+		WriteLine("\nLet's try to read the z-value of the u vector");
 		double zvalue = u.zval;
 		Write("The z-value of the u-vector is: ");
-		Write("{0}\n", zvalue);
-
-
+		WriteLine("{0}", zvalue);
 }
 
 }

@@ -12,22 +12,28 @@ class main{
 		double eps = 0;
 		double xa = 0;
 		double xb = 2*PI;
-		string filepathI = "outBpartI.txt";
+		string filepathI = "outB1.txt";
 
 		// To avoid code repetition we call a function orbitsolver for each set of parameters
 		orbitsolver(eps, xa, xb, ystart, filepathI);
+
+		// Additionally we create a file with some angles for a simple circle plot to help
+		// guide the eye.
+		for(double dx=0; dx<2*PI; dx+=1.0/16){
+			WriteLine("{0}\t{1}", Cos(dx), Sin(dx));
+		}
 		
 		
 		// Part II)
 		ystart[1] = -0.5;
-		string filepathII = "outBpartII.txt";
+		string filepathII = "outB2.txt";
 		orbitsolver(eps, xa, xb, ystart, filepathII);
 		
 		
 		// Part III)
 		eps = 0.01;
 		xb = 15*PI;
-		string filepathIII = "outBpartIII.txt";
+		string filepathIII = "outB3.txt";
 		orbitsolver(eps, xa, xb, ystart, filepathIII);
 
 

@@ -6,12 +6,15 @@ The vector x = 8*u is: (16, 24, 32)
 
 Attempt at dot product:
 The dot product of u and v is = 33
+Correct dot product: 33
 
 Attempt at cross product:
 The cross product of u and v is = (0, 8, -6)
+Correct cross product: (0, 8, -6)
 
 Attempt at calculating the magnitude:
-The magnitude of u is = 5.3851648071345
+The magnitude of u is 5.385
+Correct magnitude: 5.385
 
 Let's try to change the x-value of the u vector to 5
 The vector u is: (5, 3, 4)

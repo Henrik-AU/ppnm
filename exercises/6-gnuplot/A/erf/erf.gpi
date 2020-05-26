@@ -1,4 +1,4 @@
-set term svg background rgb "white"
+set term svg font ",16" background rgb "white"
 set title "Error-function and table values"
 set tics out
 set key top left
