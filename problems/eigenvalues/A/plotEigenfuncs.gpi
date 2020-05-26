@@ -1,14 +1,14 @@
-set term svg font " ,14" background rgb "white"
+set term svg font ",16" background rgb "white" size 900,500
 set title "Eigenfunctions for a particle in a box"
-set key outside bottom horizontal
+set key rmargin
 set xlabel "x"
 set ylabel "Psi(x)"
 set out "Eigenfunctions.svg"
 
 
-plot "boxData.txt" index 4 with lines lt rgb "black" lw 3 title "Analytical expressions"\
+plot "boxData.txt" index 3 with lines lt rgb "black" lw 3 title "Analytic expressions"\
+,"boxData.txt" index 4 with lines lt rgb "black" lw 3 notitle\
 ,"boxData.txt" index 5 with lines lt rgb "black" lw 3 notitle\
-,"boxData.txt" index 6 with lines lt rgb "black" lw 3 notitle\
-,"boxData.txt" index 1 with lines lt rgb "red" title "Numerical results"\
-,"boxData.txt" index 2 with lines lt rgb "red" notitle\
-,"boxData.txt" index 3 with lines lt rgb "red" notitle
+,"boxData.txt" index 0 with lines lt rgb "red" title "Numeric, n=0"\
+,"boxData.txt" index 1 with lines lt rgb "blue" title "Numeric, n=1"\
+,"boxData.txt" index 2 with lines lt rgb "green" title "Numeric, n=2"

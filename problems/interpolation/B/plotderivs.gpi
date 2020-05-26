@@ -1,9 +1,9 @@
-set term svg font ",16" background rgb "white"
+set term svg font ",16" background rgb "white" size 700,500
 set tics out
 set xlabel "x"
 set ylabel "y"
-set key bottom right
+set key top left
 set title "Derivative of f(x) = x^2 + 2*x + 1 + 25*sin(x)"
 set out "Deriv.svg"
-plot "exactfuncs.txt" using 1:4 with lines lt rgb "red" title "Exact derivative of f(x)"\
-,"out.txt" using 1:4 with lines lt rgb "black" title "Derivative of qspline"
+plot "exactfuncs.txt" using 1:4 with lines lw 2.5 lt rgb "red" title "Exact derivative of f(x)"\
+,"out.txt" using 1:4 with lines lw 2.5 lt rgb "blue" title "Derivative of qspline"

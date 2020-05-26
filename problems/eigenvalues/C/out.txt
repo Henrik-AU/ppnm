@@ -1,0 +1,47 @@
+
+Create a matrix and diagonalize it via the cyclic, value-by-value and classic method.
+
+Setting up a random matrix:
+
+     -1.02     -0.322       1.26     -0.819       1.46 
+    -0.322      -1.21      0.483       1.18       -1.3 
+      1.26      0.483     -0.522      -1.29       1.78 
+    -0.819       1.18      -1.29   -0.00974       0.71 
+      1.46       -1.3       1.78       0.71      0.818 
+
+The cyclic method used 50 operations
+The value-by-value method used 134 operations
+The classic method used 28 operations
+
+After cyclic diagonalization the matrix looks like:
+
+     -1.02  -1.98e-10   4.44e-15  -6.57e-18          0 
+    -0.322      -1.21  -5.43e-16   -6.6e-24  -9.86e-10 
+      1.26      0.483     -0.522          0  -3.01e-12 
+    -0.819       1.18      -1.29   -0.00974  -1.73e-14 
+      1.46       -1.3       1.78       0.71      0.818 
+
+After value-by-value diagonalization the matrix looks like:
+
+     -1.02  -6.59e-09   1.07e-08   5.49e-10  -3.93e-09 
+    -0.322      -1.21   1.02e-08   4.49e-09   2.65e-09 
+      1.26      0.483     -0.522   2.16e-09   1.93e-09 
+    -0.819       1.18      -1.29   -0.00974          0 
+      1.46       -1.3       1.78       0.71      0.818 
+
+After classic Jacobi diagonalization the matrix looks like:
+
+     -1.02  -2.55e-11   -7.3e-14   6.89e-17   5.49e-09 
+    -0.322      -1.21   2.08e-24   3.93e-16  -1.69e-14 
+      1.26      0.483     -0.522          0   1.68e-13 
+    -0.819       1.18      -1.29   -0.00974  -8.87e-22 
+      1.46       -1.3       1.78       0.71      0.818 
+
+
+The found eigenvalues are:
+E(cyclic)		E(val_by_val)		E(classic)
+-3.67030326318436	-3.67030326318436	-3.67030326318436
+-2.067981292471	-2.067981292471	-2.067981292471
+-0.429839068990439	-0.429839068990439	-0.429839068990439
+0.912446284017137	0.912446284017137	0.912446284017136
+3.31581819812968	3.31581819812968	3.31581819812968

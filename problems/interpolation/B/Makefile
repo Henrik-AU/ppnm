@@ -1,4 +1,4 @@
-all: Qspline.svg Integralvalues.svg Deriv.svg
+all: Qspline.svg Integrated.svg Deriv.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
@@ -9,7 +9,7 @@ XSTART = 0
 Deriv.svg: plotderivs.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
+Integrated.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
 Qspline.svg: plotqspline.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)

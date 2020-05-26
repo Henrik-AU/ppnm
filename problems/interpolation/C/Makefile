@@ -1,4 +1,4 @@
-all: Quickspline.svg Cspline.svg Integralvalues.svg Deriv.svg
+all: Quickspline.svg Cspline.svg Integrated.svg Deriv.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
@@ -6,8 +6,8 @@ EXACTFUNCS = exactfuncs.txt
 NDATA = 10
 XSTART = 0
 
-Quickspline.svg: quickspline.txt
-	graph --output-format svg < quickspline.txt > Quickspline.svg
+Quickspline.svg: plotquick.gpi quickspline.txt $(OUT)
+	gnuplot $<
 
 quickspline.txt: $(TABVAL)
 	spline $(TABVAL) > quickspline.txt
@@ -15,7 +15,7 @@ quickspline.txt: $(TABVAL)
 Deriv.svg: plotderivs.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
+Integrated.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
 Cspline.svg: plotcspline.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)

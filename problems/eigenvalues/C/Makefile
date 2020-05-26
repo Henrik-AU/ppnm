@@ -1,4 +1,5 @@
-all: outCTest.txt CompareTime.svg CompareOperations.svg
+all: out.txt CompareTime.svg CompareOperations.svg
+	cat out.txt
 
 CompareTime.svg: timePlot.gpi timeCyclic.txt timeValue.txt timeClassic.txt
 	gnuplot $<
@@ -6,29 +7,29 @@ CompareTime.svg: timePlot.gpi timeCyclic.txt timeValue.txt timeClassic.txt
 CompareOperations.svg: operationsPlot.gpi outCyclic.txt outValue.txt outClassic.txt
 	gnuplot $<
 
-outCyclic.txt timeCyclic.txt: mainC.exe
+outCyclic.txt timeCyclic.txt: main.exe
 	for dim in `seq 20 5 100`; do \
-		\time -f "$$dim %U" -ao timeCyclic.txt mono mainC.exe $$dim cyclic; \
+		\time -f "$$dim %U" -ao timeCyclic.txt mono main.exe $$dim cyclic; \
 	done
 
-outValue.txt timeValue.txt: mainC.exe
+outValue.txt timeValue.txt: main.exe
 	for dim in `seq 20 5 100`; do \
-		\time -f "$$dim %U" -ao timeValue.txt mono mainC.exe $$dim value; \
+		\time -f "$$dim %U" -ao timeValue.txt mono main.exe $$dim value; \
 	done
 
-outClassic.txt timeClassic.txt: mainC.exe
+outClassic.txt timeClassic.txt: main.exe
 	for dim in `seq 20 5 100`; do \
-		\time -f "$$dim %U" -ao timeClassic.txt mono mainC.exe $$dim classic; \
+		\time -f "$$dim %U" -ao timeClassic.txt mono main.exe $$dim classic; \
 	done
 
 
-mainC.exe: mainC.cs math.dll
+main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-outCTest.txt: mainCTest.exe
+out.txt: mainTest.exe
 	mono $< >$@
 
-mainCTest.exe: mainCTest.cs math.dll
+mainTest.exe: mainTest.cs math.dll
 	mcs $< -reference:math.dll
 
 math.dll: jacobi.cs findEigenvalue.cs matrix.cs vector.cs jacobiClassic.cs

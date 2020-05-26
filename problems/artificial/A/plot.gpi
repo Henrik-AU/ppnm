@@ -3,6 +3,7 @@ set out "Plot.svg"
 set xlabel "x"
 set ylabel "y"
 set key top left
+set xrange[0:2*pi]
 
 set title "Fit of neural network to cos(x)"
 plot "outData.txt" index 0 using 1:2 with points ps 0.5 pt 7 lt rgb "black" title "Tabulated points"\

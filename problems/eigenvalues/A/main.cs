@@ -38,13 +38,14 @@ class main{
 		Write("\nPrinting V^T*A*V:");
 		matrix VTAV = V.T*Acopy*V;
 		VTAV.print();
+		WriteLine("This matrix should now be diagonal with the eigenvalues along the" + 
+		" diagonal entries.");
 
-		Write("\nThe decomposition was done in {0} sweeps", sweeps);
+		WriteLine("\nThe decomposition was done in {0} sweeps", sweeps);
 		
 
 		// We now try to solve the quantum particle in a box problem
 
-		StreamWriter BoxWriter = new StreamWriter("boxData.txt");
 		
 		// First we build the Hamiltonian, three point finite difference formula approximation
 		int m = 90;
@@ -66,18 +67,22 @@ class main{
 		" in {0} sweeps.", sweepsBox);
 
 		// Let's check if the energies seem to be correct
+		StreamWriter EnergyWriter = new StreamWriter("energies.txt");
+		EnergyWriter.WriteLine("n\tcalc\t\texact");
 		for(int k=0; k<m/4; k++){
 			double exact = PI*PI*(k+1)*(k+1);
 			double calculated = eigenvalsBox[k];
-			BoxWriter.WriteLine("{0} {1,8:f8} {2,8:f8}", k, calculated, exact);
+			EnergyWriter.WriteLine("{0}\t{1,8:f8}\t{2,8:f8}", k, calculated, exact);
 		}
+		EnergyWriter.Close();
 
-		WriteLine();
+		StreamWriter BoxWriter = new StreamWriter("boxData.txt");
 		// Print out some data for plots of the functions
 		for(int k = 0; k<3; k++){
 			BoxWriter.WriteLine("\n\n{0} {1,17}", "0", "0");
 			for(int i = 0; i<m; i++){
-				BoxWriter.WriteLine("{0:f15} {1,17:f15}", (i+1.0)/(m+1), matrix.get(VBox,i,k));
+				BoxWriter.WriteLine("{0:f15} {1,17:f15}",
+				(i+1.0)/(m+1), matrix.get(VBox,i,k));
 			}
 			BoxWriter.WriteLine("{0} {1,17}", "1", "0");
 		}

@@ -21,7 +21,8 @@ class mainA{
 		}
 
 		// Print A
-		WriteLine("Printing matrix A:");
+		WriteLine("We will setup a random tall matrix and perform QR factorization on it.");
+		WriteLine("Printing random tall matrix A:");
 		A.print();
 
 		// We can now try to factorize the matrix A into the two matríces Q and R
@@ -53,17 +54,21 @@ class mainA{
 		}
 	
 
-		// Checking that Q*R=A
-		WriteLine("\nPrinting out Q*R:");
-		matrix QR = Q*R;
-		QR.print();
+		// Checking that Q*R=A, or in other words that A-Q*R = 0
+		WriteLine("\nPrinting out A-Q*R:");
+		matrix AmQR = A-Q*R;
+		AmQR.print();
 
-		// Let's check if Q*R is approximately equal to A
-		approx = QR.approx(A);
+		// Let's check if Q*R is approximately equal to A, or that A-QR is approx. the zero
+		// matrix
+		matrix nullMatrix = new matrix(AmQR.size1, AmQR.size2);
+		nullMatrix.set_zero();
+
+		approx = AmQR.approx(nullMatrix);
 		if(approx == true){
-			WriteLine("QR is approximately equal to A.");
+			WriteLine("QR is thus approximately equal to A.");
 		}else{
-			WriteLine("QR is not approximately equal to A.");
+			WriteLine("QR is thus not approximately equal to A.");
 		}
 
 

@@ -1,4 +1,4 @@
-all: Linterp.svg Integralvalues.svg
+all: Linterp.svg Integrated.svg
 
 TABVAL = tabval.txt
 OUT = out.txt
@@ -6,7 +6,7 @@ EXACTFUNCS = exactfuncs.txt
 NDATA = 10
 XSTART = 0
 
-Integralvalues.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
+Integrated.svg: plotintegrals.gpi $(OUT) $(EXACTFUNCS)
 	gnuplot $<
 
 Linterp.svg: plotlinterp.gpi $(OUT) $(TABVAL) $(EXACTFUNCS)

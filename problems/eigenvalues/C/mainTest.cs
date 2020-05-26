@@ -6,8 +6,9 @@ using static System.Math;
 class mainCTest{
 	public static void Main(){
 
-		WriteLine("Create a matrix and diagonalize it via the cyclic, value-by-value and classic" + 
-		" method");
+		WriteLine();
+		WriteLine("Create a matrix and diagonalize it via the cyclic, value-by-value and" +
+		" classic method.");
 
 		var rand = new Random();
 		int n = 5;
@@ -21,6 +22,11 @@ class mainCTest{
 				A[j,i] = A[i,j];
 			}
 		}
+		// Print the random matrix.
+		WriteLine("\nSetting up a random matrix:");
+		A.print();
+		WriteLine();
+
 		// Diagonalize it via the three different methods
 		matrix Acopy = A.copy();
 		matrix AcopyII = A.copy();
@@ -45,6 +51,7 @@ class mainCTest{
 		AcopyII.print();
 		
 		Write("\n\n");
+		WriteLine("The found eigenvalues are:");
 		WriteLine("E(cyclic)\t\tE(val_by_val)\t\tE(classic)");	
 		for(int j=0; j<n; j++){
 			WriteLine("{0}\t{1}\t{2}", e[j], eRot[j], eClassic[j]);
