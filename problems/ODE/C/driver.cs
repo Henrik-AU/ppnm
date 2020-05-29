@@ -44,17 +44,24 @@ public partial class ode{
 			ylist.Clear();
 			ylist.Add(ya);
 		}
+
+		// x will denote the current point between a and b that we are evaluating. It starts
+		// at a, and will then be incremented towards b in stepsizes of h.
+		// For clarity we create a vector yx, for the y-vector at x. It starts as the initial
+		// condition at a.
+		double x = a;
+		vector yx = ya;
 		
 		// Solve the ode in steps from a to b
-		while(a<b){
-			// Check if a step h would make us exceed the endpoint b. In that case, set the
-			// stepsize h equal to the last stretch to the endpoint.
-			if(a+h>b){
-				h = b-a;
+		while(x<b){
+			// Check if a step h would make us exceed the endpoint b. In that case,
+			// set the stepsize h equal to the last stretch to the endpoint.
+			if(x+h>b){
+				h = b-x;
 			}
 
 			// Attempt to take a step
-			vector[] attempt = stepper(f, a, ya, h);
+			vector[] attempt = stepper(f, x, yx, h);
 			vector yh = attempt[0];
 			vector err = attempt[1];
 
@@ -85,22 +92,23 @@ public partial class ode{
 
 			// If the step is accepted we update and progress
 			if(acceptStep){
-				a += h;
-				ya = yh;
+				x += h;
+				yx = yh;
 				nsteps++;
 				if(xlist!=null){
-					xlist.Add(a);
+					xlist.Add(x);
 				}	
 				if(ylist!=null){
-					ylist.Add(ya);
+					ylist.Add(yx);
 				}	
 			}else{
-				Error.WriteLine("Bad step at {0}. Step rejected.", a);
+				Error.WriteLine("Bad step at {0}. Step rejected.", x);
 			}
 
-			// The next step size is adjusted according to the empirical formula, no matter
-			// whether the step was accepted or not. We set an upper maximum for the increase
-			// in step size, via maxStepFactor.
+			/* The next step size is adjusted according to the empirical formula,
+			no matter whether the step was accepted or not. We set an upper maximum for
+			the increase in step size, via maxStepFactor.
+			*/
 			double hFactor = Pow(factor, 0.25)*0.95;
 
 			int maxStepFactor = 2;
@@ -109,10 +117,9 @@ public partial class ode{
 			}
 			h = h*hFactor;
 			
-
-
 		}
+
 	Error.WriteLine("ODE solved in {0} steps.", nsteps);
-	return ya;
+	return yx;
 	} // driver function
 } // class
