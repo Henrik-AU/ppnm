@@ -61,9 +61,13 @@ class main{
 		
 		WriteLine();
 		WriteLine("Attempting to find a root for the 2D harmonic oscillator f(x,y) = x^2+y^2");
-		WriteLine("The analytic root is at x = 0 and y = 0.");
-		WriteLine("Starting search from x0 = {0} and y0 = {1}.", x0[0], x0[1]);
-		WriteLine("A root has been found at x = {0}, y = {1}.", root[0], root[1]);
+		WriteLine("The analytic root is at x = 0, y = 0.");
+		WriteLine("Starting search from:");
+		WriteLine("x0 = {0}", x0[0]);
+		WriteLine("y0 = {0}", x0[1]);
+		WriteLine("A root has been found at:");
+		WriteLine("x = {0}", root[0]);
+		WriteLine("y = {0}", root[1]);
 		WriteLine("f(root) = {0}", f(root)[0]);
 		WriteLine("Convergence criterium: ||f(x,y)|| < {0}", eps);
 
@@ -102,8 +106,12 @@ class main{
 		WriteLine();
 		
 		WriteLine("Searching for roots of the gradient:");
-		WriteLine("Starting search from x0 = {0} and y0 = {1}.", x0[0], x0[1]);
-		WriteLine("A root has been found at x = {0}, y = {1}.", root[0], root[1]);
+		WriteLine("Starting search from:");
+		WriteLine("x0 = {0}", x0[0]);
+		WriteLine("y0 = {0}", x0[1]);
+		WriteLine("A root has been found at:");
+		WriteLine("x = {0}", root[0]);
+		WriteLine("y = {0}", root[1]);
 		WriteLine("The x-derivative of the Rosenbrock function at the root is {0}.",
 		rosenbrockGrad(root)[0]);
 		WriteLine("The y-derivative of the Rosenbrock function at the root is {0}.",
