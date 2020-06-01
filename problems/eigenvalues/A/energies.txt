@@ -1,3 +1,4 @@
+Energies found for the quantum particle in a box:
 n	calc		exact
 0	9.86862419	9.86960440
 1	39.46273615	39.47841760
@@ -21,3 +22,4 @@ n	calc		exact
 19	3793.47351905	3947.84176044
 20	4165.16498879	4352.49554088
 21	4551.63000109	4776.88853013
+The found energies seem to fit the analytic results very well, at least for low n.

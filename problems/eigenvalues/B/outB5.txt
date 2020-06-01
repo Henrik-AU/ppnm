@@ -1,15 +1,23 @@
+Part 5 of problem B. Let's see if we obtain the largest eigenvalue first.
+We set up a random 5x5 symmetric matrix.
+     -1.94       1.48       1.46     -0.274    -0.0739 
+      1.48     -0.759          2     -0.155       1.07 
+      1.46          2        1.6       1.24      0.251 
+    -0.274     -0.155       1.24      -1.05     -0.286 
+   -0.0739       1.07      0.251     -0.286     0.0675 
+
 The eigenvalues found by the cyclic method are:
--2.37029839103964
--1.17492379836293
--0.0532890591954231
-2.12390180017754
-3.2800976901663
+-3.11702121781676
+-2.41396544974886
+-0.813483649591272
+0.513134926074102
+3.74767238007408
 
 The eigenvalues found one by one starting from the highest is (in order):
-3.28009769016631
-2.12390180017754
--0.0532890591954234
--1.17492379836293
--2.37029839103964
+3.74767238007408
+0.513134926074103
+-0.813483649591272
+-2.41396544974886
+-3.11702121781676
 
-The cyclic routine used 60 operations and the value by value routine used 106.
+The cyclic routine used 50 operations and the value by value routine used 61.

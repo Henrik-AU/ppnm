@@ -1,4 +1,5 @@
 all: TimeScaling.svg ComparisonLowEig.svg ComparisonFullDiag.svg
+	cat outB5.txt
 
 ComparisonFullDiag.svg: plotFullDiag.gpi outB4.txt
 	gnuplot $<

@@ -4,7 +4,7 @@ set key top left box
 set xlabel "Matrix dimension"
 set ylabel "Operations"
 set out "ComparisonLowEig.svg"
-set xrange[20:300]
+set xrange[20:200]
 
 plot "outB3.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "blue" title "Full cyclic"\
 , "outB3.txt" using 1:3 with points pt 7 ps 0.6 lt rgb "red" title "Lowest eigenvalue"

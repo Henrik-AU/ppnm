@@ -12,7 +12,7 @@ class mainB{
 
 		int dn = 10;
 		
-		for(int n = 50; n<301; n+=dn){
+		for(int n = 50; n<201; n+=dn){
 			matrix A = new matrix(n,n);
 			for(int i=0; i<n; i++){
 				A[i,i] = 2 - 4*rand.NextDouble();
@@ -45,6 +45,10 @@ class mainB{
 
 
 		// part 4
+
+		// Compare the effectiveness of the cyclic and the value-by-value implementations
+		// for full diagonalizations.
+
 		StreamWriter partIVWriter = new StreamWriter("outB4.txt");
 
 		dn = 5;
@@ -80,6 +84,10 @@ class mainB{
 		// We want to see if we can retrieve the eigenvalues one by one starting with the 
 		// highest eigenvalue
 		
+		StreamWriter partVWriter = new StreamWriter("outB5.txt");
+		partVWriter.WriteLine("Part 5 of problem B. Let's see if we obtain the largest" +
+		" eigenvalue first.");
+			
 		// Create a matrix
 		int m = 5;
 		matrix B = new matrix(m,m);
@@ -90,6 +98,16 @@ class mainB{
 				B[j,i] = B[i,j];
 			}
 		}
+		partVWriter.WriteLine("We set up a random {0}x{0} symmetric matrix.", m);
+		// Print out the matrix
+		for(int i=0; i<m; i++){
+			for(int j=0; j<m; j++){
+				partVWriter.Write("{0,10:g3} ", B[i,j]);
+			}
+			partVWriter.WriteLine();
+		}
+		partVWriter.WriteLine();
+
 		matrix Bcopy = B.copy();
 		
 		// Find the eigenvalues with the cyclic routine (for comparison of eigenvalue values)
@@ -102,9 +120,8 @@ class mainB{
 		int entriesB = (m*m-m)/2;
 		int rotationsB = jacobi.findEigenvalue(Bcopy, eBRot, VB, m, false);
 		
+
 		// Print out the results
-		StreamWriter partVWriter = new StreamWriter("outB5.txt");
-		
 		partVWriter.WriteLine("The eigenvalues found by the cyclic method are:");
 		for(int i=0; i<m; i++){
 			partVWriter.WriteLine("{0}", eB[i]);
@@ -116,8 +133,8 @@ class mainB{
 			partVWriter.WriteLine("{0}", eBRot[i]);
 		}
 
-		partVWriter.WriteLine("\nThe cyclic routine used {0} operations and the value by value" +
-		" routine used {1}.", sweepsB*entriesB, rotationsB);
+		partVWriter.WriteLine("\nThe cyclic routine used {0} operations and the value by" +
+		" value routine used {1}.", sweepsB*entriesB, rotationsB);
 		
 		partVWriter.Close();
 

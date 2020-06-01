@@ -1,4 +1,5 @@
 using System;
+using static System.Console;
 using static System.Math;
 
 public partial class jacobi{
@@ -65,12 +66,20 @@ public partial class jacobi{
 
 					// We update the matrix elements via several for loops such
 					// that we skip the elements already determined above
+
+					// This for loop is not necessary for this algorithm, since
+					// we have already zeroed the elements in the first row,
+					// so these numbers stay appears to stay zeroed / at least
+					// very close to zero (1e-8 or smaller when I checked).
+					/*
 					for(int i = 0; i<p; i++){
 						double aip = A[i,p];
 						double aiq = A[i,q];
 						A[i,p] = c*aip - s*aiq;
-						A[i,q] = c*aiq + s*aip;
+						A[i,q] = c*aiq + s*aip;				
 					}
+					*/
+
 					for(int i = p+1; i<q; i++){
 						double api = A[p,i];
 						double aiq = A[i,q];

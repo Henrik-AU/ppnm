@@ -1,4 +1,5 @@
 all: Plot.svg
+	cat out.txt
 
 Plot.svg: plot.gpi outData.txt
 	gnuplot $<

@@ -1,7 +1,7 @@
 set term svg font ",16" background rgb "white"
-set title "Comparison of run-time for Jacobi methods"
+set title "Comparison of run-time for Jacobi methods (full diag.)"
 set xlabel "Matrix dimension"
-set ylabel "Run-time"
+set ylabel "Run-time [seconds]"
 set key top left box
 set out "CompareTime.svg"
 

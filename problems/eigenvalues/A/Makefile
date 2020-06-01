@@ -1,4 +1,6 @@
 all: out.txt Eigenfunctions.svg
+	cat out.txt
+	cat energies.txt
 
 Eigenfunctions.svg: plotEigenfuncs.gpi boxData.txt
 	gnuplot $<

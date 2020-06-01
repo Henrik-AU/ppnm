@@ -23,7 +23,7 @@ class mainCTest{
 			}
 		}
 		// Print the random matrix.
-		WriteLine("\nSetting up a random matrix:");
+		WriteLine("\nSetting up a random symmetric matrix:");
 		A.print();
 		WriteLine();
 

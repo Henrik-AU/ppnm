@@ -9,6 +9,8 @@ class main{
 		// We start out by creating a random symmetric matrix.
 		var rand = new Random();
 
+		WriteLine("Let's test that the matrix diagonalization algorithm works.");
+
 		// We can pull out new random numbers between 0 and 1 with rand.NextDouble() and
 		// stuff it into a matrix
 		int n = 4;
@@ -20,14 +22,14 @@ class main{
 				A[j,i] = A[i,j];
 			}
 		}
+		Write("Printing random symmetric matrix A:");
+		A.print();
 	
 		// Perform a cyclic sweep on the matrix A
 		matrix V = new matrix(n,n);
 		vector e = new vector(n);
 		matrix Acopy = A.copy();
 		int sweeps = jacobi.cycle(A, e, V);
-		Write("Printing matrix A:");
-		A.print();
 
 		Write("\nPrinting matrix V found from the decomposition:");
 		V.print();
@@ -41,7 +43,7 @@ class main{
 		WriteLine("This matrix should now be diagonal with the eigenvalues along the" + 
 		" diagonal entries.");
 
-		WriteLine("\nThe decomposition was done in {0} sweeps", sweeps);
+		WriteLine("\nThe decomposition was done in {0} sweeps.", sweeps);
 		
 
 		// We now try to solve the quantum particle in a box problem
@@ -68,12 +70,15 @@ class main{
 
 		// Let's check if the energies seem to be correct
 		StreamWriter EnergyWriter = new StreamWriter("energies.txt");
+		EnergyWriter.WriteLine("Energies found for the quantum particle in a box:");
 		EnergyWriter.WriteLine("n\tcalc\t\texact");
 		for(int k=0; k<m/4; k++){
 			double exact = PI*PI*(k+1)*(k+1);
 			double calculated = eigenvalsBox[k];
 			EnergyWriter.WriteLine("{0}\t{1,8:f8}\t{2,8:f8}", k, calculated, exact);
 		}
+
+		EnergyWriter.WriteLine("The found energies seem to fit the analytic results very well, at least for low n.");
 		EnergyWriter.Close();
 
 		StreamWriter BoxWriter = new StreamWriter("boxData.txt");
