@@ -29,7 +29,9 @@ class main{
 		WriteLine("The analytic root is x = -2.");
 		WriteLine("Starting search from x0 = {0}.", x0[0]);
 		WriteLine("A root has been found at x = {0}.", root[0]);
-		WriteLine("The function value at this point is {0}.", parabola(root)[0]);
+		WriteLine("f(root) = {0}.", parabola(root)[0]);
+		WriteLine("Convergence criterium: ||f(x)|| < {0}", eps);
+		
 
 		// Let's start somewhere higher than 0.5 now
 		x0[0] = 2;	
@@ -40,11 +42,12 @@ class main{
 		WriteLine("The analytic root is x = 1/2.");
 		WriteLine("Starting search from x0 = {0}.", x0[0]);
 		WriteLine("A root has been found at x = {0}.", root[0]);
-		WriteLine("The function value at this point is {0}.", parabola(root)[0]);
+		WriteLine("f(root) = {0}.", parabola(root)[0]);
+		WriteLine("Convergence criterium: ||f(x)|| < {0}", eps);
 		
 		WriteLine("---------------------------------------------");
 		
-		// Let's test the root finding algorithm with a few simple functions of two variables
+		// Let's test the root finding algorithm on the 2D harmonic oscillator
 		Func<vector, vector> f = delegate(vector x){
 			vector z = new vector(2);
 			z[0] = x[0]*x[0];
@@ -57,13 +60,12 @@ class main{
 		root = roots.newton(f, x0, eps);
 		
 		WriteLine();
-		WriteLine("Attempting to find a root for the set of equations f(x) = x^2 and" +
-		" g(y) = y^2:");
-		WriteLine("The analytic roots are x = 0 and y = 0.");
+		WriteLine("Attempting to find a root for the 2D harmonic oscillator f(x,y) = x^2+y^2");
+		WriteLine("The analytic root is at x = 0 and y = 0.");
 		WriteLine("Starting search from x0 = {0} and y0 = {1}.", x0[0], x0[1]);
 		WriteLine("A root has been found at x = {0}, y = {1}.", root[0], root[1]);
-		WriteLine("f(x) = {0}", f(root)[0]);
-		WriteLine("g(y) = {0}", f(root)[1]);
+		WriteLine("f(root) = {0}", f(root)[0]);
+		WriteLine("Convergence criterium: ||f(x,y)|| < {0}", eps);
 
 
 		WriteLine("---------------------------------------------");
@@ -106,8 +108,9 @@ class main{
 		rosenbrockGrad(root)[0]);
 		WriteLine("The y-derivative of the Rosenbrock function at the root is {0}.",
 		rosenbrockGrad(root)[1]);
+		WriteLine("Convergence criterium: ||grad f(x,y)|| < {0}", eps);
 		WriteLine("The Rosenbrock function should be 0 at the extremum.");
-		WriteLine("The found function value is f(x,y) = {0}.", rosenbrock(root[0], root[1]));
+		WriteLine("f(root) = {0}.", rosenbrock(root[0], root[1]));
 
 
 

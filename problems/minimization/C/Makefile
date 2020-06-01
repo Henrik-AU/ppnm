@@ -1,4 +1,5 @@
 all: out.txt
+	cat out.txt
 
 out.txt: main.exe
 	mono $< >$@ 2>Log

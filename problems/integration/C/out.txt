@@ -1,7 +1,8 @@
 Calculating the integral from 0 to infinity of exp(-2*x^2)
 Relative tolerance: 		1E-09
 Absolute tolerance: 		1E-09
-Analytical result: 		0.62665706865775
+Tolerance goal: 		1.62665706865775E-09
+Analytic result: 		0.62665706865775
 Result with o4av: 		0.62665706741995
 Result with o8av: 		0.62665706864420
 Actual error with o4av: 	1.2377971980726E-09
@@ -13,7 +14,8 @@ Function evaluations with o8av: 168
 Calculating the integral from 0 to infinity of 1/(x^2 + 4^2)
 Relative tolerance: 		1E-09
 Absolute tolerance: 		1E-09
-Analytical result: 		0.392699081698724
+Tolerance goal: 		1.39269908169872E-09
+Analytic result: 		0.392699081698724
 Result with o4av: 		0.39269908169880
 Result with o8av: 		0.39269908169854
 Actual error with o4av: 	-7.66608998503671E-14
@@ -25,7 +27,8 @@ Function evaluations with o8av: 144
 Calculating the integral from minus infinity to 0 of 1/(x^2 + 4^2)
 Relative tolerance: 		1E-09
 Absolute tolerance: 		1E-09
-Analytical result: 		0.392699081698724
+Tolerance goal: 		1.39269908169872E-09
+Analytic result: 		0.392699081698724
 Result with o4av: 		0.39269908169880
 Result with o8av: 		0.39269908169854
 Actual error with o4av: 	-7.66608998503671E-14
@@ -37,7 +40,8 @@ Function evaluations with o8av: 144
 Calculating the integral from minus infinity to infinity of x^2*exp(-x^2)
 Relative tolerance: 		1E-09
 Absolute tolerance: 		1E-09
-Analytical result: 		0.886226925452758
+Tolerance goal: 		1.88622692545276E-09
+Analytic result: 		0.886226925452758
 Result with o4av: 		0.88622692540520
 Result with o8av: 		0.88622692544929
 Actual error with o4av: 	4.75631756202688E-11

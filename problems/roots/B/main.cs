@@ -29,11 +29,12 @@ class main{
 		double energy = root[0];
 
 		StreamWriter WriteRoot = new StreamWriter("outRootText.txt");
-		WriteRoot.WriteLine("Trying to find a root for the auxiliary function:");
+		WriteRoot.WriteLine("Trying to find a root for the auxiliary function, M:");
 		WriteRoot.WriteLine("The analytic root is at energy: \t -1/2.");
 		WriteRoot.WriteLine("Starting the search from energy: \t {0}.", start[0]);
 		WriteRoot.WriteLine("A root has been found at energy: \t {0}", energy);
 		WriteRoot.WriteLine("The deviation from the analytic root is: {0}", -0.5-energy);
+		WriteRoot.WriteLine("Convergence criterium: ||M(root)|| < {0}", accuracy);
 
 		WriteRoot.Close();
 
@@ -52,8 +53,7 @@ class main{
 		double eps = 0;
 		double h = 1e-3;
 	
-		vector solution = ode.rk45(hydrogen.diffeq(energy), r0, f0, rmax, h, acc, eps,
-		xlist:rs, ylist:fs);
+		ode.rk45(hydrogen.diffeq(energy), r0, f0, rmax, h, acc, eps, xlist:rs, ylist:fs);
 
 		// Inspired by Rasmus Berg Jensen, let's spline the data points to get a nice curve.
 		// This is a good strategy if the equations are expensive to solve, since you only

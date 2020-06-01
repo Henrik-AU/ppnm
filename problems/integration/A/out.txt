@@ -1,9 +1,19 @@
 Calculating the integral from 0 to 1 of sqrt(x):
-Using relative tolerance 1E-06 and absolute tolerance 1E-06.
-The o4a routine estimates the integral to be 0.666666679685227
-The analytical value for this integral is 0.666666666666667.
+Relative tolerance: 		1E-06
+Absolute tolerance: 		1E-06
+Tolerance goal: 		1.66666666666667E-06
+Numeric integral (o4a): 	0.666666679685227
+Analytic integral: 		0.666666666666667
+Estimated error: 		5.6174172712469E-07
+Actual error: 			-1.30185600077937E-08
+Function evaluations: 		276
 
 Calculating the integral from 0 to 1 of 4*sqrt(1-x^2):
-Using relative tolerance 1E-06 and absolute tolerance 1E-06.
-The o4a routine estimates the integral to be 3.14159265769177
-The analytical value for this integral is 3.14159265358979.
+Relative tolerance: 		1E-06
+Absolute tolerance: 		1E-06
+Tolerance goal: 		4.14159265358979E-06
+Numeric integral (o4a): 	3.14159265769177
+Analytic integral: 		3.14159265358979
+Estimated error: 		8.43106021819808E-07
+Actual error: 			-4.10197920075461E-09
+Function evaluations: 		560

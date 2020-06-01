@@ -142,12 +142,12 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='black'  d='M323.5,252.1 L323.5,84.1 L593.1,84.1 L593.1,252.1 L323.5,252.1 Z  '/></g>
-	<g id="gnuplot_plot_1a" ><title>Rmax = 2</title>
+	<g id="gnuplot_plot_1a" ><title>rmax = 2</title>
 <g fill="none" color="#FFFFFF" stroke="black" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 2</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 2</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -165,10 +165,10 @@
 		L189.4,292.1 L190.2,297.3 L191.0,302.6 L191.8,307.9 L192.6,313.3 L193.5,318.6 L194.3,324.0 L195.1,329.3
 		L195.9,334.7 L196.7,340.1 L197.5,345.5 L198.3,351.0 L199.1,356.4 L199.9,361.8 L200.7,367.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_2a" ><title>Rmax = 4</title>
+	<g id="gnuplot_plot_2a" ><title>rmax = 4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,125.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 4</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 4</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -181,7 +181,7 @@
 		L157.1,98.5 L157.9,98.2 L158.7,98.0 L159.6,97.9 L160.4,98.0 L161.2,98.1 L162.0,98.4 L162.8,98.7
 		L163.6,99.2 L164.4,99.7 L165.2,100.3 L166.0,101.1 L166.8,101.9 L167.6,102.8 L168.4,103.7 L169.2,104.8
 		L170.0,105.9 L170.9,107.1 L171.7,108.4 L172.5,109.7 L173.3,111.1 L174.1,112.6 L174.9,114.1 L175.7,115.6
-		L176.5,117.3 L177.3,118.9 L178.1,120.6 L178.9,122.4 L179.7,124.2 L180.5,126.0 L181.3,127.8 L182.2,129.7
+		L176.5,117.2 L177.3,118.9 L178.1,120.6 L178.9,122.4 L179.7,124.2 L180.5,126.0 L181.3,127.8 L182.2,129.7
 		L183.0,131.6 L183.8,133.6 L184.6,135.5 L185.4,137.5 L186.2,139.5 L187.0,141.5 L187.8,143.5 L188.6,145.6
 		L189.4,147.6 L190.2,149.7 L191.0,151.8 L191.8,153.9 L192.6,156.0 L193.5,158.1 L194.3,160.2 L195.1,162.4
 		L195.9,164.5 L196.7,166.7 L197.5,168.9 L198.3,171.1 L199.1,173.3 L199.9,175.5 L200.7,177.7 L201.5,179.9
@@ -193,16 +193,16 @@
 		L234.6,268.0 L235.4,270.0 L236.2,271.9 L237.0,273.8 L237.9,275.7 L238.7,277.6 L239.5,279.5 L240.3,281.4
 		L241.1,283.2 L241.9,285.1 L242.7,286.9 L243.5,288.7 L244.3,290.6 L245.1,292.4 L245.9,294.2 L246.7,296.0
 		L247.5,297.7 L248.3,299.5 L249.2,301.3 L250.0,303.0 L250.8,304.8 L251.6,306.5 L252.4,308.2 L253.2,310.0
-		L254.0,311.7 L254.8,313.4 L255.6,315.1 L256.4,316.8 L257.2,318.5 L258.0,320.2 L258.8,321.9 L259.6,323.5
+		L254.0,311.7 L254.8,313.4 L255.6,315.1 L256.4,316.8 L257.2,318.5 L258.0,320.2 L258.8,321.8 L259.6,323.5
 		L260.5,325.2 L261.3,326.8 L262.1,328.5 L262.9,330.2 L263.7,331.8 L264.5,333.4 L265.3,335.1 L266.1,336.7
 		L266.9,338.3 L267.7,340.0 L268.5,341.6 L269.3,343.2 L270.1,344.8 L270.9,346.4 L271.8,348.0 L272.6,349.6
-		L273.4,351.2 L274.2,352.9 L275.0,354.5 L275.8,356.0 L276.6,357.6 L277.4,359.2 L278.2,360.8 L279.0,362.4
+		L273.4,351.2 L274.2,352.8 L275.0,354.4 L275.8,356.0 L276.6,357.6 L277.4,359.2 L278.2,360.8 L279.0,362.4
 		L279.8,364.0 L280.6,365.6 L281.4,367.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_3a" ><title>Rmax = 6</title>
+	<g id="gnuplot_plot_3a" ><title>rmax = 6</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,149.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 6</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 6</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -245,10 +245,10 @@
 		L350.9,362.1 L351.7,362.5 L352.5,362.8 L353.3,363.2 L354.1,363.5 L354.9,363.9 L355.7,364.3 L356.5,364.6
 		L357.3,365.0 L358.1,365.4 L358.9,365.7 L359.7,366.1 L360.5,366.5 L361.3,366.8 L362.1,367.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_4a" ><title>Rmax = 8</title>
+	<g id="gnuplot_plot_4a" ><title>rmax = 8</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,173.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 8</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 8</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -294,20 +294,20 @@
 		L370.2,358.2 L371.0,358.4 L371.8,358.5 L372.6,358.7 L373.5,358.8 L374.3,359.0 L375.1,359.1 L375.9,359.3
 		L376.7,359.4 L377.5,359.6 L378.3,359.7 L379.1,359.9 L379.9,360.0 L380.7,360.1 L381.5,360.3 L382.3,360.4
 		L383.1,360.5 L383.9,360.7 L384.8,360.8 L385.6,360.9 L386.4,361.0 L387.2,361.2 L388.0,361.3 L388.8,361.4
-		L389.6,361.5 L390.4,361.6 L391.2,361.8 L392.0,361.9 L392.8,362.0 L393.6,362.1 L394.4,362.2 L395.2,362.3
+		L389.6,361.5 L390.4,361.6 L391.2,361.7 L392.0,361.9 L392.8,362.0 L393.6,362.1 L394.4,362.2 L395.2,362.3
 		L396.1,362.4 L396.9,362.5 L397.7,362.6 L398.5,362.7 L399.3,362.8 L400.1,362.9 L400.9,363.0 L401.7,363.1
 		L402.5,363.2 L403.3,363.3 L404.1,363.4 L404.9,363.5 L405.7,363.6 L406.5,363.7 L407.4,363.7 L408.2,363.8
-		L409.0,363.9 L409.8,364.0 L410.6,364.1 L411.4,364.2 L412.2,364.3 L413.0,364.4 L413.8,364.4 L414.6,364.5
+		L409.0,363.9 L409.8,364.0 L410.6,364.1 L411.4,364.2 L412.2,364.3 L413.0,364.3 L413.8,364.4 L414.6,364.5
 		L415.4,364.6 L416.2,364.7 L417.0,364.8 L417.8,364.8 L418.7,364.9 L419.5,365.0 L420.3,365.1 L421.1,365.2
 		L421.9,365.2 L422.7,365.3 L423.5,365.4 L424.3,365.5 L425.1,365.5 L425.9,365.6 L426.7,365.7 L427.5,365.8
 		L428.3,365.8 L429.1,365.9 L430.0,366.0 L430.8,366.1 L431.6,366.1 L432.4,366.2 L433.2,366.3 L434.0,366.4
 		L434.8,366.4 L435.6,366.5 L436.4,366.6 L437.2,366.7 L438.0,366.7 L438.8,366.8 L439.6,366.9 L440.4,367.0
 		L441.3,367.0 L442.1,367.1 L442.9,367.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_5a" ><title>Rmax = 10</title>
+	<g id="gnuplot_plot_5a" ><title>rmax = 10</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,197.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 10</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 10</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -375,10 +375,10 @@
 		L512.3,367.0 L513.1,367.0 L513.9,367.0 L514.7,367.0 L515.5,367.0 L516.3,367.1 L517.1,367.1 L517.9,367.1
 		L518.7,367.1 L519.6,367.1 L520.4,367.1 L521.2,367.2 L522.0,367.2 L522.8,367.2 L523.6,367.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_6a" ><title>Rmax = 12</title>
+	<g id="gnuplot_plot_6a" ><title>rmax = 12</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,221.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 12</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 12</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -624,12 +624,12 @@
 	<path stroke='black'  d='M758.8,72.1 L758.8,367.2 L1254.3,367.2 L1254.3,72.1 L758.8,72.1 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(672.0,219.7) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Energy</tspan></text>
+		<text><tspan font-family="Arial" >Energy [Hartree]</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1006.5,444.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >r [a</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">Bohr</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px">]</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> [a</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">Bohr</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px">]</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -638,7 +638,7 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M1029.5,108.1 L1029.5,84.1 L1243.1,84.1 L1243.1,108.1 L1029.5,108.1 Z  '/></g>
+	<path stroke='black'  d='M1029.5,132.1 L1029.5,84.1 L1243.1,84.1 L1243.1,132.1 L1029.5,132.1 Z  '/></g>
 	<g id="gnuplot_plot_1b" ><title>Found energy</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1163.9,101.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
@@ -655,8 +655,29 @@
 	<use xlink:href='#gpPt6' transform='translate(1203.5,96.1) scale(3.60)' color='rgb(255,   0,   0)'/>
 </g>
 	</g>
+	<g id="gnuplot_plot_2b" ><title>-0.5</title>
 <g fill="none" color="#FFFFFF" stroke="rgb(255,   0,   0)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(1163.9,125.3)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+		<text>-0.5</text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 158, 115)' stroke-dasharray=' 5,8'  d='M1175.1,120.1 L1231.9,120.1 M758.8,318.0 L763.8,318.0 L768.8,318.0 L773.8,318.0 L778.8,318.0 L783.8,318.0
+		L788.8,318.0 L793.8,318.0 L798.8,318.0 L803.8,318.0 L808.9,318.0 L813.9,318.0 L818.9,318.0 L823.9,318.0
+		L828.9,318.0 L833.9,318.0 L838.9,318.0 L843.9,318.0 L848.9,318.0 L853.9,318.0 L858.9,318.0 L863.9,318.0
+		L868.9,318.0 L873.9,318.0 L878.9,318.0 L883.9,318.0 L888.9,318.0 L893.9,318.0 L898.9,318.0 L903.9,318.0
+		L909.0,318.0 L914.0,318.0 L919.0,318.0 L924.0,318.0 L929.0,318.0 L934.0,318.0 L939.0,318.0 L944.0,318.0
+		L949.0,318.0 L954.0,318.0 L959.0,318.0 L964.0,318.0 L969.0,318.0 L974.0,318.0 L979.0,318.0 L984.0,318.0
+		L989.0,318.0 L994.0,318.0 L999.0,318.0 L1004.0,318.0 L1009.1,318.0 L1014.1,318.0 L1019.1,318.0 L1024.1,318.0
+		L1029.1,318.0 L1034.1,318.0 L1039.1,318.0 L1044.1,318.0 L1049.1,318.0 L1054.1,318.0 L1059.1,318.0 L1064.1,318.0
+		L1069.1,318.0 L1074.1,318.0 L1079.1,318.0 L1084.1,318.0 L1089.1,318.0 L1094.1,318.0 L1099.1,318.0 L1104.1,318.0
+		L1109.2,318.0 L1114.2,318.0 L1119.2,318.0 L1124.2,318.0 L1129.2,318.0 L1134.2,318.0 L1139.2,318.0 L1144.2,318.0
+		L1149.2,318.0 L1154.2,318.0 L1159.2,318.0 L1164.2,318.0 L1169.2,318.0 L1174.2,318.0 L1179.2,318.0 L1184.2,318.0
+		L1189.2,318.0 L1194.2,318.0 L1199.2,318.0 L1204.2,318.0 L1209.3,318.0 L1214.3,318.0 L1219.3,318.0 L1224.3,318.0
+		L1229.3,318.0 L1234.3,318.0 L1239.3,318.0 L1244.3,318.0 L1249.3,318.0 L1254.3,318.0  '/></g>
+	</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -766,12 +787,12 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='black'  d='M323.5,684.0 L323.5,564.0 L593.1,564.0 L593.1,684.0 L323.5,684.0 Z  '/></g>
-	<g id="gnuplot_plot_1c" ><title>Rmax = 2</title>
+	<g id="gnuplot_plot_1c" ><title>rmax = 2</title>
 <g fill="none" color="#FFFFFF" stroke="black" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,581.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 2</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 2</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -789,10 +810,10 @@
 		L189.4,619.9 L190.2,621.8 L191.0,623.8 L191.8,625.7 L192.6,627.7 L193.5,629.6 L194.3,631.6 L195.1,633.6
 		L195.9,635.5 L196.7,637.5 L197.5,639.5 L198.3,641.5 L199.1,643.5 L199.9,645.5 L200.7,647.4  '/></g>
 	</g>
-	<g id="gnuplot_plot_2c" ><title>Rmax = 4</title>
+	<g id="gnuplot_plot_2c" ><title>rmax = 4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,605.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 4</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 4</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -823,10 +844,10 @@
 		L273.4,782.9 L274.2,783.9 L275.0,785.0 L275.8,786.0 L276.6,787.0 L277.4,788.0 L278.2,789.1 L279.0,790.1
 		L279.8,791.1 L280.6,792.1 L281.4,793.1  '/></g>
 	</g>
-	<g id="gnuplot_plot_3c" ><title>Rmax = 6</title>
+	<g id="gnuplot_plot_3c" ><title>rmax = 6</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,629.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 6</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 6</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -869,10 +890,10 @@
 		L350.9,833.3 L351.7,833.5 L352.5,833.8 L353.3,834.0 L354.1,834.2 L354.9,834.4 L355.7,834.6 L356.5,834.8
 		L357.3,835.0 L358.1,835.2 L358.9,835.4 L359.7,835.6 L360.5,835.8 L361.3,836.0 L362.2,836.2  '/></g>
 	</g>
-	<g id="gnuplot_plot_4c" ><title>Rmax = 8</title>
+	<g id="gnuplot_plot_4c" ><title>rmax = 8</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(513.9,653.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >R</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 8</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> = 8</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="3.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -1098,12 +1119,12 @@
 	<path stroke='black'  d='M803.6,552.0 L803.6,847.2 L1254.3,847.2 L1254.3,552.0 L803.6,552.0 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(672.0,699.6) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Energy</tspan></text>
+		<text><tspan font-family="Arial" >Energy [Hartree]</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(1028.9,924.4)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >r [a</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">Bohr</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px">]</tspan></text>
+		<text><tspan font-family="Arial" >r</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">max</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px"> [a</tspan><tspan font-family="Arial"  font-size="12.8" dy="4.80px">Bohr</tspan><tspan font-family="Arial"  font-size="16.0" dy="-4.80px">]</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -1112,23 +1133,44 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M1029.5,588.0 L1029.5,564.0 L1243.1,564.0 L1243.1,588.0 L1029.5,588.0 Z  '/></g>
+	<path stroke='black'  d='M814.8,612.0 L814.8,564.0 L1028.4,564.0 L1028.4,612.0 L814.8,612.0 Z  '/></g>
 	<g id="gnuplot_plot_1d" ><title>Found energy</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(1163.9,581.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+	<g transform="translate(949.2,581.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Found energy</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(803.6,712.9) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(803.6,714.3) scale(3.60)' color='rgb(255,   0,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(953.8,773.4) scale(3.60)' color='rgb(255,   0,   0)'/>
-	<use xlink:href='#gpPt6' transform='translate(1104.1,606.3) scale(3.60)' color='rgb(255,   0,   0)'/>
-	<use xlink:href='#gpPt6' transform='translate(1254.3,775.1) scale(3.60)' color='rgb(255,   0,   0)'/>
-	<use xlink:href='#gpPt6' transform='translate(1203.5,576.0) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(1104.1,609.0) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(1254.3,775.0) scale(3.60)' color='rgb(255,   0,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(988.8,576.0) scale(3.60)' color='rgb(255,   0,   0)'/>
 </g>
 	</g>
+	<g id="gnuplot_plot_2d" ><title>-0.5</title>
 <g fill="none" color="#FFFFFF" stroke="rgb(255,   0,   0)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(949.2,605.2)" stroke="none" fill="black" font-family="Arial" font-size="16.00"  text-anchor="end">
+		<text>-0.5</text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 158, 115)' stroke-dasharray=' 5,8'  d='M960.4,600.0 L1017.2,600.0 M803.6,748.8 L808.2,748.8 L812.7,748.8 L817.3,748.8 L821.8,748.8 L826.4,748.8
+		L830.9,748.8 L835.5,748.8 L840.0,748.8 L844.6,748.8 L849.1,748.8 L853.7,748.8 L858.2,748.8 L862.8,748.8
+		L867.3,748.8 L871.9,748.8 L876.4,748.8 L881.0,748.8 L885.5,748.8 L890.1,748.8 L894.7,748.8 L899.2,748.8
+		L903.8,748.8 L908.3,748.8 L912.9,748.8 L917.4,748.8 L922.0,748.8 L926.5,748.8 L931.1,748.8 L935.6,748.8
+		L940.2,748.8 L944.7,748.8 L949.3,748.8 L953.8,748.8 L958.4,748.8 L962.9,748.8 L967.5,748.8 L972.0,748.8
+		L976.6,748.8 L981.1,748.8 L985.7,748.8 L990.3,748.8 L994.8,748.8 L999.4,748.8 L1003.9,748.8 L1008.5,748.8
+		L1013.0,748.8 L1017.6,748.8 L1022.1,748.8 L1026.7,748.8 L1031.2,748.8 L1035.8,748.8 L1040.3,748.8 L1044.9,748.8
+		L1049.4,748.8 L1054.0,748.8 L1058.5,748.8 L1063.1,748.8 L1067.6,748.8 L1072.2,748.8 L1076.8,748.8 L1081.3,748.8
+		L1085.9,748.8 L1090.4,748.8 L1095.0,748.8 L1099.5,748.8 L1104.1,748.8 L1108.6,748.8 L1113.2,748.8 L1117.7,748.8
+		L1122.3,748.8 L1126.8,748.8 L1131.4,748.8 L1135.9,748.8 L1140.5,748.8 L1145.0,748.8 L1149.6,748.8 L1154.1,748.8
+		L1158.7,748.8 L1163.2,748.8 L1167.8,748.8 L1172.4,748.8 L1176.9,748.8 L1181.5,748.8 L1186.0,748.8 L1190.6,748.8
+		L1195.1,748.8 L1199.7,748.8 L1204.2,748.8 L1208.8,748.8 L1213.3,748.8 L1217.9,748.8 L1222.4,748.8 L1227.0,748.8
+		L1231.5,748.8 L1236.1,748.8 L1240.6,748.8 L1245.2,748.8 L1249.7,748.8 L1254.3,748.8  '/></g>
+	</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">

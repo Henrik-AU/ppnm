@@ -1,4 +1,5 @@
 all: Swave.svg
+	cat outRootText.txt
 
 Swave.svg: plot.gpi out.txt
 	gnuplot $<

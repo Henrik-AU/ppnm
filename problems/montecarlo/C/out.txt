@@ -4,20 +4,20 @@ Integrating the function f(r<=0.9) = 1, f(r>0.9) = 0 using strata.
 Lower integration limits:         -1         -1 
 Upper integration limits:          1          1 
 Analytic value: 		2.54469004940773
-Estimate of integral: 		2.91620429727292
-Estimate of error: 		0.00154196350513001
-Actual error: 			0.371514247865189
-Function evaluations: 		12860
+Estimate of integral: 		2.89285777787006
+Estimate of error: 		0.00153815861677277
+Actual error: 			0.348167728462326
+Function evaluations: 		12820
 
 
 Integrating again using the plain Monte Carlo method:
 Lower integration limits:         -1         -1 
 Upper integration limits:          1          1 
 Analytic value: 		2.54469004940773
-Estimate of integral: 		2.81959564541213
-Estimate of error: 		0.0160874915862672
-Actual error: 			0.274905596004398
-Function evaluations: 		12860
+Estimate of integral: 		2.801872074883
+Estimate of error: 		0.0161819827571722
+Actual error: 			0.257182025475263
+Function evaluations: 		12820
 
 
 The stratified Monte Carlo method gives a better estimated accuracy than the plain Monte Carlo method.
@@ -31,34 +31,34 @@ Integrating the function x^2+y^2+z^2 using strata.
 Lower integration limits:          0          0          0 
 Upper integration limits:          3          3          3 
 Analytic value: 		243
-Estimate of integral: 		243.007276021321
-Estimate of error: 		0.0799266361694018
-Actual error: 			0.00727602132099037
-Function evaluations: 		56140
+Estimate of integral: 		242.898556364004
+Estimate of error: 		0.0791036385085761
+Actual error: 			0.101443635995736
+Function evaluations: 		56660
 
 
 Integrating again using the plain Monte Carlo method:
 Lower integration limits:          0          0          0 
 Upper integration limits:          3          3          3 
 Analytic value: 		243
-Estimate of integral: 		243.267684710987
-Estimate of error: 		0.529587834758962
-Actual error: 			0.267684710986543
-Function evaluations: 		56140
+Estimate of integral: 		242.929412629931
+Estimate of error: 		0.527046962963037
+Actual error: 			0.0705873700685231
+Function evaluations: 		56660
 
 
 Generally we notice that the estimated error is a lot lower with the stratified Monte Carlo method.
 The error goes as 1/sqrt(N) so we need a lot more points to compensate the plain Monte Carlo method.
 Let's try to do it.
 
-Plain Monte Carlo method with ~43 times more points to compensate the error:
+Plain Monte Carlo method with ~44 times more points to compensate the error:
 Lower integration limits:          0          0          0 
 Upper integration limits:          3          3          3 
 Analytic value: 		243
-Estimate of integral: 		242.976066577347
-Estimate of error: 		0.0799424145862369
-Actual error: 			0.0239334226534424
-Function evaluations: 		2464707
+Estimate of integral: 		243.039270038125
+Estimate of error: 		0.079121966292
+Actual error: 			0.0392700381246982
+Function evaluations: 		2515257
 
 
 Of course the actual error may be better or worse than the estimated error, since the Monte Carlo methods are random.

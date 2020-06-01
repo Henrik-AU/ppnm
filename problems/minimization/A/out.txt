@@ -1,50 +1,73 @@
 Attempting to find the minimum for Rosenbrock's valley function.
-Analytic minima is located at x = 1, y = 1.
-Starting search at x = 4.84820, y = 0.78751
-Minimum found at x = 0.99997, y = 0.99994
-f(x_min) = 9.30661333013862E-10
-Accuracy goal for gradient: 0.0001
-Actual gradient norm: 	0.000022
-Search completed in 36 steps.
+The analytic minimum is located at:
+x = 1
+y = 1
+Starting search at:
+x = 				4.84820328818085
+y = 				0.787512215686735
+Minimum found at:
+x = 				0.999970
+y = 				0.999939
+f(x_min) = 			9.30661333013862E-10
+Accuracy goal for gradient: 	0.0001
+Actual gradient norm: 		0.000022
+Minimization steps: 		36
+
+
 
 ---------------------------------------------
 
 Attempting to find the minima for Himmelblau's function.
-Himmelblau's function has four local minima. These are located at:
-x = 3	 y = 2
-x = -2.805118	 y = 3.131312
-x = -3.77931	 y = -3.283186
-x = 3.584428	 y = -1.848126
 
-Looking for the first minimum.
-Starting search at x = 1, y = 1
-Minimum found at x = 3.000000, y = 2.000000
-f(x_min) = 2.73232907565148E-12
-Accuracy goal for gradient: 0.0001
-Actual gradient norm: 	0.000014
-Search completed in 7 steps.
+Looking for the first minimum (at x = 3, y = 2)
+Starting search at:
+x = 				1
+y = 				1
+Minimum found at:
+x = 				3.000000
+y = 				2.000000
+f(x_min) = 			2.73232907565148E-12
+Accuracy goal for gradient: 	0.0001
+Actual gradient norm: 		0.000014
+Minimization steps: 		7
 
-Looking for the second minimum.
-Starting search at x = -5, y = -5
-Minimum found at x = -2.805118, y = 3.131311
-f(x_min) = 4.40693779746192E-11
-Accuracy goal for gradient: 0.0001
-Actual gradient norm: 	0.000080
-Search completed in 9 steps.
 
-Looking for the third minimum.
-Starting search at x = -2, y = 4
-Minimum found at x = -3.779310, y = -3.283186
-f(x_min) = 1.20347263011002E-12
-Accuracy goal for gradient: 0.0001
-Actual gradient norm: 	0.000022
-Search completed in 7 steps.
+Looking for the second minimum (at x = -2.805118, y = 3.131312)
+Starting search at:
+x = 				-5
+y = 				-5
+Minimum found at:
+x = 				-2.805118
+y = 				3.131311
+f(x_min) = 			4.40693779746192E-11
+Accuracy goal for gradient: 	0.0001
+Actual gradient norm: 		0.000080
+Minimization steps: 		9
 
-Looking for the fourth minimum.
-Starting search at x = 4, y = -2
-Minimum found at x = 3.584429, y = -1.848129
-f(x_min) = 7.29892616430929E-11
-Accuracy goal for gradient: 0.0001
-Actual gradient norm: 	0.000070
-Search completed in 7 steps.
+
+Looking for the third minimum (at x = -3.77931, y = -3.283186)
+Starting search at:
+x = 				-2
+y = 				4
+Minimum found at:
+x = 				-3.779310
+y = 				-3.283186
+f(x_min) = 			1.20347263011002E-12
+Accuracy goal for gradient: 	0.0001
+Actual gradient norm: 		0.000022
+Minimization steps: 		7
+
+
+Looking for the fourth minimum (at x = 3.584428, y = -1.848126)
+Starting search at:
+x = 				4
+y = 				-2
+Minimum found at:
+x = 				3.584429
+y = 				-1.848129
+f(x_min) = 			7.29892616430929E-11
+Accuracy goal for gradient: 	0.0001
+Actual gradient norm: 		0.000070
+Minimization steps: 		7
+
 

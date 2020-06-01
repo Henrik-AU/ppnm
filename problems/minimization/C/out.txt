@@ -1,5 +1,8 @@
 Attempting to find the minimum for Rosenbrock's function.
-Starting at the three points:
+Analytic minimum at:
+x = 1
+y = 1
+Starting simplex at the three points:
 
 	P1	P2	P3
 x	20	8	4
@@ -13,8 +16,14 @@ Minimum found in 118 steps.
 
 ---------------------------------------------
 
+Himmelblau's function has four local minima. These are located at:
+x = 3	 y = 2
+x = -2.805118	 y = 3.131312
+x = -3.77931	 y = -3.283186
+x = 3.584428	 y = -1.848126
+
 Attempting to find a minimum for Himmelblau's function.
-Starting at the three points:
+Starting simplex at the three points:
 
 	P1	P2	P3
 x	20	8	4
@@ -27,8 +36,8 @@ f(x_min) = 3.44167867329284E-12
 Minimum found in 67 steps.
 
 
-Attempting to find a minimum for Himmelblau's function.
-Starting at the three points:
+Attempting to find a different minimum for Himmelblau's function.
+Starting simplex at the three points:
 
 	P1	P2	P3
 x	6	-8	4

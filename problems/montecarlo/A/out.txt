@@ -2,9 +2,9 @@ Integrating x^2 + y^2 + z^2 over x, y and z.
 Lower integration limits:          0          0          0 
 Upper integration limits:          3          3          3 
 Analytic value: 		243
-Estimate of integral: 		240.602931838494
-Estimate of error: 		1.02912947127232
-Actual error: 			2.39706816150618
+Estimate of integral: 		241.335272427476
+Estimate of error: 		1.02707687137655
+Actual error: 			1.66472757252447
 The function was sampled in 15000 points.
 
 
@@ -12,9 +12,9 @@ Integrating 4*x*y*z over x, y and z.
 Lower integration limits:          1          1          2 
 Upper integration limits:          6          3          4 
 Analytic value: 		1680
-Estimate of integral: 		1679.0256172356
-Estimate of error: 		7.62547782808408
-Actual error: 			0.974382764404709
+Estimate of integral: 		1688.70247906204
+Estimate of error: 		7.71101991650059
+Actual error: 			8.70247906204236
 The function was sampled in 15000 points.
 
 
@@ -22,7 +22,7 @@ Integrating 1/[1-cos(x)cos(y)cos(z)] * 1/(pi)^3 over x, y and z.
 Lower integration limits:          0          0          0 
 Upper integration limits:       3.14       3.14       3.14 
 Analytic value: 		1.39320392968568
-Estimate of integral: 		1.38313115542074
-Estimate of error: 		0.0242570953420625
-Actual error: 			0.0100727742649351
+Estimate of integral: 		1.38915841917903
+Estimate of error: 		0.0247614951832597
+Actual error: 			0.00404551050664681
 The function was sampled in 25000 points.

@@ -4,30 +4,33 @@ Looking for the first root
 The analytic root is x = -2.
 Starting search from x0 = -3.2.
 A root has been found at x = -2.00000003745036.
-The function value at this point is 1.87251786520903E-07.
+f(root) = 1.87251786520903E-07.
+Convergence criterium: ||f(x)|| < 1E-06
 
 Looking for the second root:
 The analytic root is x = 1/2.
 Starting search from x0 = 2.
 A root has been found at x = 0.500000000000073.
-The function value at this point is 3.66373598126302E-13.
+f(root) = 3.66373598126302E-13.
+Convergence criterium: ||f(x)|| < 1E-06
 ---------------------------------------------
 
-Attempting to find a root for the set of equations f(x) = x^2 and g(y) = y^2:
-The analytic roots are x = 0 and y = 0.
-Starting search from x0 = 2.28030198527514 and y0 = 4.95832053830769.
-A root has been found at x = 0.00027840716630537, y = 0.000605313730213081.
-f(x) = 7.75105502501861E-08
-g(y) = 3.66404711984474E-07
+Attempting to find a root for the 2D harmonic oscillator f(x,y) = x^2+y^2
+The analytic root is at x = 0 and y = 0.
+Starting search from x0 = 2.21256387858305 and y0 = 3.87271548717875.
+A root has been found at x = 0.000540226714375804, y = 0.000945537166130774.
+f(root) = 2.91844902925277E-07
+Convergence criterium: ||f(x,y)|| < 1E-06
 ---------------------------------------------
 
 Attempting to find extremums for Rosenbrocks function f(x,y) = (1-x)^2 + 100*(y-x^2)^2:
 The analytic extremum is at x = 1 and y = 1.
 
 Searching for roots of the gradient:
-Starting search from x0 = 3.21182017708748 and y0 = 4.6049525840231.
-A root has been found at x = 1.00000000371178, y = 1.00000000689271.
-The x-derivative of the Rosenbrock function at the root is 2.19760812114501E-07.
-The y-derivative of the Rosenbrock function at the root is -1.06168629443459E-07.
+Starting search from x0 = 3.05193386639093 and y0 = 4.10340786907049.
+A root has been found at x = 1.00000000512092, y = 1.00000000948732.
+The x-derivative of the Rosenbrock function at the root is 3.12047440545007E-07.
+The y-derivative of the Rosenbrock function at the root is -1.5090280136576E-07.
+Convergence criterium: ||grad f(x,y)|| < 1E-06
 The Rosenbrock function should be 0 at the extremum.
-The found function value is f(x,y) = 4.19567274000129E-17.
+f(root) = 8.31529411850394E-17.

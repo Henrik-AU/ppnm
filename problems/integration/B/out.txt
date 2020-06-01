@@ -1,42 +1,55 @@
 Calculating the integral from 0 to 1 of 1/sqrt(x):
-Relative tolerance: 0.001
-Absolute tolerance: 0.001
-Analytical result: 		2
-Result with o4ac: 		1.99999201046432 (deviation: 7.98953567748839E-06)
-Result with o4a: 		1.99996150007805 (deviation: 3.84999219518178E-05)
-Result with o8av: 		2.00002495541116 (deviation: -2.49554111615424E-05)
+Relative tolerance: 		0.001
+Absolute tolerance: 		0.001
+Tolerance goal: 		0.003
+Analytic result: 		2
+Result with o4ac: 		1.99999201046432
+Result with o4a: 		1.99996150007805
+Result with o8av: 		2.00002495541116
 Estimated error with o4ac: 	0.001187371917641
 Estimated error with o4a: 	0.000412012551873547
+Actual error with o4ac: 	7.98953567748839E-06
+Actual error with o4a: 		3.84999219518178E-05
+Actual error with o8av: 	2.49554111615424E-05
 Function evaluations with o4ac: 16
 Function evaluations with o4a: 	8572
 Function evaluations with o8av: 8
 
 Calculating the integral from 0 to 1 of ln(x)/sqrt(x):
-Relative tolerance: 0.001
-Absolute tolerance: 0.001
-Analytical result: 		-4
-Result with o4ac: 		-3.99987385646141 (deviation: -0.000126143538593304)
-Result with o4a: 		-3.99991705899915 (deviation: -8.29410008478249E-05)
-Result with o8av: 		-3.93932133686130 (deviation: -0.060678663138698)
-Estimated error with o4ac: 	0.00111272494904313
-Estimated error with o4a: 	0.000754016739921987
-Function evaluations with o4ac: 96
-Function evaluations with o4a: 	8604
-Function evaluations with o8av: 24
+Relative tolerance: 		0.0001
+Absolute tolerance: 		0.0001
+Tolerance goal: 		0.0005
+Analytic result: 		-4
+Result with o4ac: 		-3.99999813339603
+Result with o4a: 		-3.99999834899021
+Result with o8av: 		-3.99976355149072
+Estimated error with o4ac: 	8.7253070764661E-05
+Estimated error with o4a: 	8.09348853471139E-05
+Actual error with o4ac: 	1.86660397449856E-06
+Actual error with o4a: 		1.65100979154786E-06
+Actual error with o8av: 	0.000236448509279175
+Function evaluations with o4ac: 272
+Function evaluations with o4a: 	29972
+Function evaluations with o8av: 88
 
 Calculating the integral from 0 to 1 of 4*sqrt(1-x^2):
-Relative tolerance: 0
-Absolute tolerance: 1E-09
-Analytical result: 		3.14159265358979
-Result with o4ac: 		3.14159265358979 (deviation: 2.22044604925031E-15)
-Result with o4a: 		3.14159265358993 (deviation: -1.4122036873232E-13)
-Result with o8av: 		3.14159265358967 (deviation: 1.27009514017118E-13)
-Estimated error with o4ac: 	4.83765184471864E-10
-Estimated error with o4a: 	6.19612993076837E-10
-Function evaluations with o4ac: 14152
-Function evaluations with o4a: 	9968
-Function evaluations with o8av: 128
+Relative tolerance: 		1E-06
+Absolute tolerance: 		1E-06
+Tolerance goal: 		4.14159265358979E-06
+Analytic result: 		3.14159265358979
+Result with o4ac: 		3.14159265355524
+Result with o4a: 		3.14159265769177
+Result with o8av: 		3.14158779428139
+Estimated error with o4ac: 	5.69708014098446E-07
+Estimated error with o4a: 	8.43106021819808E-07
+Actual error with o4ac: 	3.45541373292235E-11
+Actual error with o4a: 		4.10197920075461E-09
+Actual error with o8av: 	4.85930840676829E-06
+Function evaluations with o4ac: 856
+Function evaluations with o4a: 	560
+Function evaluations with o8av: 24
 
 
 The o4ac routine is significantly more efficient than o4a for some of the specific integrands.
 The o8av routine is however still superior.
+Notice that o4a is allowed to run unrestricted, doing recursive calls until it deems that the error is low enough.

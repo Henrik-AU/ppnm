@@ -8,33 +8,36 @@ set title "Convergence of wavefunction with simple boundaries"
 set xlabel "r [a_{Bohr}]"
 set ylabel "F_{eps}(r)"
 set yrange [0:0.4]
-plot "out.txt" index 0 using 1:2 with lines lw 3 title "R_{max} = 2"\
-, "out.txt" index 1 using 1:2 with lines lw 3 title "R_{max} = 4"\
-, "out.txt" index 2 using 1:2 with lines lw 3 title "R_{max} = 6"\
-, "out.txt" index 3 using 1:2 with lines lw 3 title "R_{max} = 8"\
-, "out.txt" index 4 using 1:2 with lines lw 3 title "R_{max} = 10"\
-, "out.txt" index 5 using 1:2 with lines lw 3 title "R_{max} = 12"\
+plot "out.txt" index 0 using 1:2 with lines lw 3 title "r_{max} = 2"\
+, "out.txt" index 1 using 1:2 with lines lw 3 title "r_{max} = 4"\
+, "out.txt" index 2 using 1:2 with lines lw 3 title "r_{max} = 6"\
+, "out.txt" index 3 using 1:2 with lines lw 3 title "r_{max} = 8"\
+, "out.txt" index 4 using 1:2 with lines lw 3 title "r_{max} = 10"\
+, "out.txt" index 5 using 1:2 with lines lw 3 title "r_{max} = 12"\
 , "outAnalytic.txt" using 1:2 with lines dt 2 lw 3 title "Analytic solution"\
 
 set title "Convergence of energy with simple boundaries"
-set xlabel "r [a_{Bohr}]"
-set ylabel "Energy"
+set xlabel "r_{max} [a_{Bohr}]"
+set ylabel "Energy [Hartree]"
 set yrange [-0.6:0]
-plot "outRootData.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Found energy"
+plot "outRootData.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Found energy"\
+, -0.5 with lines dt 2 lw 2
 
 
 set title "Convergence of wavefunction with precise boundaries"
 set xlabel "r [a_{Bohr}]"
 set ylabel "F_{eps}(r)"
 set yrange [0:0.4]
-plot "outP.txt" index 0 using 1:2 with lines lw 3 title "R_{max} = 2"\
-, "outP.txt" index 1 using 1:2 with lines lw 3 title "R_{max} = 4"\
-, "outP.txt" index 2 using 1:2 with lines lw 3 title "R_{max} = 6"\
-, "outP.txt" index 3 using 1:2 with lines lw 3 title "R_{max} = 8"\
+plot "outP.txt" index 0 using 1:2 with lines lw 3 title "r_{max} = 2"\
+, "outP.txt" index 1 using 1:2 with lines lw 3 title "r_{max} = 4"\
+, "outP.txt" index 2 using 1:2 with lines lw 3 title "r_{max} = 6"\
+, "outP.txt" index 3 using 1:2 with lines lw 3 title "r_{max} = 8"\
 , "outAnalytic.txt" using 1:2 with lines dt 2 lw 3 lc 6 title "Analytic solution"\
 
 set title "Convergence of energy with precise boundaries"
-set xlabel "r [a_{Bohr}]"
-set ylabel "Energy"
+set key top left
+set xlabel "r_{max} [a_{Bohr}]"
+set ylabel "Energy [Hartree]"
 set yrange [-0.50001:-0.49998]
-plot "outRootDataP.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Found energy"
+plot "outRootDataP.txt" using 1:2 with points pt 7 ps 0.6 lt rgb "red" title "Found energy"\
+, -0.5 with lines dt 2 lw 2

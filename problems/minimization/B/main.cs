@@ -55,11 +55,11 @@ class main{
 		double A = x[2];
 
 		WriteLine("Fitting Higgs data to Breit-Wigner formula via chi^2.");
-		WriteLine("Found mass = \t\t\t{0}", m);
-		WriteLine("Found width = \t\t\t{0}", w);
-		WriteLine("Found A-constant = \t\t{0}", A);
-		WriteLine("The reduced chi^2 value is = \t{0}", chi2(x)/energy.Count);
-		WriteLine("Minimization steps used = \t{0}", nsteps);
+		WriteLine("Found mass: \t\t\t{0}", m);
+		WriteLine("Found width: \t\t\t{0}", w);
+		WriteLine("Found A-constant: \t\t{0}", A);
+		WriteLine("Reduced chi^2 value: \t\t{0}", chi2(x)/energy.Count);
+		WriteLine("Minimization steps: \t\t{0}", nsteps);
 		WriteLine("\nA reduced chi^2 value below 1 indicates that it is a good fit.");
 
 		// Write out data for the fitted curve, such that it can be plotted

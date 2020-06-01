@@ -15,21 +15,37 @@ class main{
 		double acc = 1e-6; 
 
 		vector result = integration.o4a(sqrt, a, b, acc, eps);
+		double exact = 2.0/3;
 	
 		WriteLine("Calculating the integral from 0 to 1 of sqrt(x):");
-		WriteLine("Using relative tolerance {0} and absolute tolerance {1}.", eps, acc);
-		WriteLine("The o4a routine estimates the integral to be {0}", result[0]); 
-		WriteLine("The analytical value for this integral is {0}.", 2.0/3);
+		printResults(result, exact, eps, acc);
+
 
 		// Let's try another function on the same interval
 		Func<double, double> f = (x) => 4*Sqrt(1-x*x);
 
 		result = integration.o4a(f, a, b, acc, eps);
-
+		exact = PI;
+		
 		WriteLine();
 		WriteLine("Calculating the integral from 0 to 1 of 4*sqrt(1-x^2):");	
-		WriteLine("Using relative tolerance {0} and absolute tolerance {1}.", eps, acc);
-		WriteLine("The o4a routine estimates the integral to be {0}", result[0]); 
-		WriteLine("The analytical value for this integral is {0}.", PI);
+		printResults(result, exact, eps, acc);
 	}
+
+	// Small function to print results, just to avoid too much code repetition, and to make it
+	// easier to fix all formatting.
+	static void printResults(vector result, double exact, double eps, double acc){
+		double tolGoal = acc + exact*eps;
+
+		WriteLine("Relative tolerance: \t\t{0}", eps);
+		WriteLine("Absolute tolerance: \t\t{0}", acc);
+		WriteLine("Tolerance goal: \t\t{0}", tolGoal);
+		WriteLine("Numeric integral (o4a): \t{0}", result[0]); 
+		WriteLine("Analytic integral: \t\t{0}", exact);
+		WriteLine("Estimated error: \t\t{0}", result[1]);
+		WriteLine("Actual error: \t\t\t{0}", exact-result[0]);
+		WriteLine("Function evaluations: \t\t{0}", result[2]);
+	}
+
+
 }

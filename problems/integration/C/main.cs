@@ -79,14 +79,16 @@ class main{
 	}
 
 	public static void printResults(vector result_o4av, vector result_o8av, 
-		double resultAnalytical, double eps, double acc){
+		double exact, double eps, double acc){
+			double tolGoal = acc + exact*eps;
 			WriteLine("Relative tolerance: \t\t{0}", eps);
 			WriteLine("Absolute tolerance: \t\t{0}", acc);
-			WriteLine("Analytical result: \t\t{0}", resultAnalytical);
+			WriteLine("Tolerance goal: \t\t{0}", tolGoal);
+			WriteLine("Analytic result: \t\t{0}", exact);
 			WriteLine("Result with o4av: \t\t{0:f14}", result_o4av[0]); 
 			WriteLine("Result with o8av: \t\t{0:f14}", result_o8av[0]);
-			WriteLine("Actual error with o4av: \t{0}", resultAnalytical-result_o4av[0]);
-			WriteLine("Actual error with o8av: \t{0}", resultAnalytical-result_o8av[0]);
+			WriteLine("Actual error with o4av: \t{0}", exact-result_o4av[0]);
+			WriteLine("Actual error with o8av: \t{0}", exact-result_o8av[0]);
 			WriteLine("Estimated error with o4av: \t{0}", result_o4av[1]);
 			WriteLine("Function evaluations with o4av: {0}", result_o4av[2]);	
 			WriteLine("Function evaluations with o8av: {0}", result_o8av[1]);

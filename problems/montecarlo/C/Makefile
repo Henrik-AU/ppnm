@@ -1,4 +1,5 @@
 all: out.txt PlotDistribution.svg
+	cat out.txt
 
 PlotDistribution.svg: plot.gpi stratPoints.txt
 	gnuplot $<

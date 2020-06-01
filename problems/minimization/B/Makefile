@@ -1,4 +1,5 @@
 all: PlotHiggs.svg
+	cat out.txt
 
 PlotHiggs.svg: plot.gpi higgsFit.txt higgsData.txt
 	gnuplot $<
