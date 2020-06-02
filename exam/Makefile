@@ -1,7 +1,10 @@
-all: out.txt
+all: Plot.svg
 
-out.txt: main.exe
-	mono $< >$@ 2>Log
+Plot.svg: plot.gpi out.txt tabVal.txt
+	gnuplot $<
+
+out.txt tabVal.txt: main.exe
+	mono $< >out.txt 2>Log
 
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll

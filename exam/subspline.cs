@@ -1,5 +1,5 @@
 using System;
-using static System.Console
+using static System.Console;
 using System.Diagnostics;
 
 
@@ -22,6 +22,7 @@ public class subspline{
 		Trace.Assert(ys.Length == n, "The amount of x and y values are not identical.");
 		Trace.Assert(yps.Length == n, "The amount of x and y-prime values are not identical.");
 
+
 		// Prepare the arrays that will hold the x, y and y-prime values in the class.
 		x = new double[n];
 		y = new double[n];
@@ -40,9 +41,9 @@ public class subspline{
 		double[] p = new double[n-1];	
 		double[] q = new double[n-1];
 		for(int i=0; i<n-1; i++){
-			h[i] = h[i+1]-h[i];
+			h[i] = x[i+1]-x[i];
 			// The x-values should be ordered. If not, then this Trace.Assert statement
-			// will spot it and throw an error.
+			// will spot it and throw an error
 			Trace.Assert(h[i] > 0);
 		}
 
@@ -55,7 +56,7 @@ public class subspline{
 		}
 		
 		// Set up the arrays for the coefficients
-		b = new double[n-1];
+		b = new double[n];
 		c = new double[n-1];
 		d = new double[n-1];
 
@@ -65,12 +66,12 @@ public class subspline{
 		}
 
 		// Calculate the c-coefficients
-		for(int i=0; i<n; i++){
-			c[i] = 3*(p[i]-yp[i])/h[i] - q[i];
+		for(int i=0; i<n-1; i++){
+			c[i] = 3*(p[i]-b[i])/h[i] - q[i];
 		}
 		
 		// Calculate the d-coefficients via the c-coefficients
-		for(int i=0; i<n; i++){
+		for(int i=0; i<n-1; i++){
 			d[i] = (q[i] - 2*c[i]) / (3*h[i]);
 		}
 		
@@ -86,9 +87,10 @@ public class subspline{
 			int mid=(i+j)/2;
 			if(z>x[mid]){
 				i=mid;
-			else{
+			}else{
 				j=mid;
 			}
+		}
 		return i;
 	}
 
@@ -113,6 +115,7 @@ public class subspline{
 
 	// Function that evaluates the integral of the splined function from x[0] to the point z
 	// (z must lie in the splined domain).
+	// The integrate function returns the integral from x[0] to z.
 	public double integrate(double z){
 		Trace.Assert(z>=x[0] && z<=x[x.Length-1]);
 		int iz=binsearch(x,z);
