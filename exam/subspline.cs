@@ -6,9 +6,9 @@ using System.Diagnostics;
 public class subspline{
 
 	// The coefficients for the interpolated polynomial should be accessible for the whole class,
-	// and so should the x and y values used for the spline.
-	double[] x, y, yp;
-	double [] b, c, d;
+	// and so should the x and y values used for the spline. Let's keep them private to keep
+	// the user from changing them by accident.
+	private double[] x, y, yp, b, c, d;
 
 
 	/*
@@ -37,9 +37,10 @@ public class subspline{
 
 
 		double[] h = new double[n-1];
-		double[] p = new double[n-1];
+		double[] p = new double[n-1];	
+		double[] q = new double[n-1];
 		for(int i=0; i<n-1; i++){
-			h[i] = x[i+1]-x[i];
+			h[i] = h[i+1]-h[i];
 			// The x-values should be ordered. If not, then this Trace.Assert statement
 			// will spot it and throw an error.
 			Trace.Assert(h[i] > 0);
@@ -49,8 +50,30 @@ public class subspline{
 			p[i] = (y[i+1]-y[i])/h[i];
 		 }
 
+		for(int i=0;i<n-1;i++){
+			q[i] = (yp[i+1]-yp[i])/h[i];
+		}
+		
+		// Set up the arrays for the coefficients
+		b = new double[n-1];
+		c = new double[n-1];
+		d = new double[n-1];
 
+		// The b-coefficients are equal to the y-prime values
+		for(int i=0; i<n; i++){
+			b[i] = yp[i];
+		}
 
+		// Calculate the c-coefficients
+		for(int i=0; i<n; i++){
+			c[i] = 3*(p[i]-yp[i])/h[i] - q[i];
+		}
+		
+		// Calculate the d-coefficients via the c-coefficients
+		for(int i=0; i<n; i++){
+			d[i] = (q[i] - 2*c[i]) / (3*h[i]);
+		}
+		
 	} // end constructor
 
 	// We use the binary search strategy (also used previously in the course), to locate the
@@ -84,8 +107,8 @@ public class subspline{
 	public double deriv(double z){
 		Trace.Assert(z>=x[0] && z<=x[x.Length-1]);
 		int i=binsearch(x,z);
-		//double dx=z-x[i];
-		//return b[i]+dx*(2*c[i]+dx*3*d[i]);
+		double dx=z-x[i];
+		return b[i]+dx*(2*c[i]+dx*3*d[i]);
 	}
 
 	// Function that evaluates the integral of the splined function from x[0] to the point z
@@ -98,12 +121,12 @@ public class subspline{
 		// Add up the integrals for all the intervals before the interval z lies in
 		for(int i=0;i<iz;i++){
 			dx=x[i+1]-x[i];
-			//sum+=dx*(y[i]+dx*(b[i]/2+dx*(c[i]/3+dx*d[i]/4)));
+			sum+=dx*(y[i]+dx*(b[i]/2+dx*(c[i]/3+dx*d[i]/4)));
 		}
 		// Add the remaining part of the integral (the remaining bit between the point z,
 		// and the start of the interval that z lies in).
 		dx=z-x[iz];
-		//sum+=dx*(y[iz]+dx*(b[iz]/2+dx*(c[iz]/3+dx*d[iz]/4)));
+		sum+=dx*(y[iz]+dx*(b[iz]/2+dx*(c[iz]/3+dx*d[iz]/4)));
 	return sum;
 	}
 
