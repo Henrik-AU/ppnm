@@ -6,7 +6,7 @@ out.txt: main.exe
 main.exe: main.cs math.dll
 	mcs $< -reference:math.dll
 
-math.dll: #Enter here
+math.dll: subspline.cs
 	mcs $^ -target:library -out:$@
 
 clean:
