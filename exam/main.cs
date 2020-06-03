@@ -36,7 +36,9 @@ class main{
 			double splineVal = subspline.eval(z);
 			double splineDeriv = subspline.deriv(z);
 			double splineInteg = subspline.integrate(z);
-			WriteLine("{0}\t{1}\t{2}\t{3}", z, splineVal, splineDeriv, splineInteg);
+			double splineDeriv2 = subspline.deriv2(z);
+			WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", z, splineVal, splineDeriv, splineInteg,
+			splineDeriv2);
 		}
 
 	} // Main
