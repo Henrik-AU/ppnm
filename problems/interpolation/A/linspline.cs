@@ -4,13 +4,18 @@ public class linspline{
 
 	double[] x, y, p; 
 
-	public static int binsearch(double[] x, double z)
-		{/* locates the interval for z by bisection */ 
-		int i=0, j=x.Length-1;
+	//locates the interval for z via binary search 
+	public static int binsearch(double[] x, double z){
+		int i=0;
+		int j=x.Length-1;
 		while(j-i>1){
 			int mid=(i+j)/2;
-			if(z>x[mid]) i=mid; else j=mid;
+			if(z>x[mid]){
+				i=mid;
+			}else{
+				j=mid;
 			}
+		}
 		return i;
 	}
 
@@ -44,23 +49,27 @@ public class linspline{
 	}
 
 	public double eval(double z){
-		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		Trace.Assert(z >= x[0] && z<=x[x.Length-1],
+		"The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
 		double dx = z - x[i];
 		return y[i] + p[i]*dx;
 	}
 
 	public double integrate(double z){
-		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		Trace.Assert(z >= x[0] && z <= x[x.Length-1],
+		"The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
 		double sum = 0;
+		double dx;
 		// We integrate S_i between each set of points individually and add the results
 		for(int k=0; k<i; k++){
-			double dx = x[k+1] - x[k];
+			dx = x[k+1] - x[k];
 			sum+=y[k]*dx + p[k]*dx*dx/2;
 		}
 		// At last we add the part from the interval which z lies in.
-		sum+= y[i]*(z-x[i]) + p[i]*(z - x[i])*(z - x[i])/2;
+		dx = z-x[i];
+		sum+= y[i]*dx + p[i]*dx*dx/2;
 		return sum;
 	}
 

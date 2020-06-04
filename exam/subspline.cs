@@ -37,18 +37,18 @@ public class subspline{
 			yp[i] = yps[i];
 		}
 
-		double[] h = new double[n-1];
+		double[] dx = new double[n-1];
 		double[] p = new double[n-1];	
 		double[] q = new double[n-1];
 		for(int i=0; i<n-1; i++){
-			h[i] = x[i+1]-x[i];
+			dx[i] = x[i+1]-x[i];
 			// The x-values should be ordered. If not, then this Trace.Assert statement
 			// will spot it and throw an error
-			Trace.Assert(h[i] > 0);
+			Trace.Assert(dx[i] > 0);
 
-			// Calculate p[i] and q[i] via the just-found h[i]	
-			p[i] = (y[i+1]-y[i])/h[i];
-			q[i] = (yp[i+1]-yp[i])/h[i];
+			// Calculate p[i] and q[i] via the just-found dx[i]	
+			p[i] = (y[i+1]-y[i])/dx[i];
+			q[i] = (yp[i+1]-yp[i])/dx[i];
 		}
 
 
@@ -66,21 +66,21 @@ public class subspline{
 
 		// Calculate the c- and d-coefficients
 		for(int i=0; i<n-1; i++){
-			c[i] = 3*(p[i]-b[i])/h[i] - q[i];
-			d[i] = (q[i] - 2*c[i]) / (3*h[i]);
+			c[i] = 3*(p[i]-b[i])/dx[i] - q[i];
+			d[i] = (q[i] - 2*c[i]) / (3*dx[i]);
 		}
 		
 		// At last we calculate the e-coefficients recursively, at first in one direction,
 		// and then in the other direction
 		e[0] = 0;
 		for(int i=0; i<n-2; i++){
-			e[i+1] = ((c[i]-c[i+1]) + 3*d[i]*h[i] + e[i]*h[i]*h[i])/h[i+1]/h[i+1];
+			e[i+1] = ((c[i]-c[i+1]) + 3*d[i]*dx[i] + e[i]*dx[i]*dx[i])/dx[i+1]/dx[i+1];
 		}
 	
 			
 		e[n-2] = e[n-2]/2;
 		for(int i=n-3; i>=0; i--){
-			e[i] = ((c[i+1]-c[i]) - 3*d[i]*h[i] + e[i+1]*h[i+1]*h[i+1])/h[i]/h[i];
+			e[i] = ((c[i+1]-c[i]) - 3*d[i]*dx[i] + e[i+1]*dx[i+1]*dx[i+1])/dx[i]/dx[i];
 		}
 		
 	 
@@ -107,30 +107,30 @@ public class subspline{
 	// defined for (that is, between the x_min and x_max values used for the splining).
 	public double eval(double z){
 		Trace.Assert(z>=x[0] && z<=x[x.Length-1]);
-		int i = binsearch(x,z);
+		int iz = binsearch(x,z);
 		// Calculate the spline value
-		double dx = z - x[i];
-		double dxe = z - x[i+1];
-		return y[i]+dx*(b[i]+dx*(c[i] + e[i]*dxe*dxe + dx*d[i]));
+		double dx = z - x[iz];
+		double dxe = z - x[iz+1];
+		return y[iz]+dx*(b[iz]+dx*(c[iz] + dx*d[iz] + e[iz]*dxe*dxe));
 	}
 	
 	// Function that evaluates the derivative of the splined function at the point z
 	// (z must lie in the splined domain).
 	public double deriv(double z){
-		Trace.Assert(z>=x[0] && z<=x[x.Length-1]);
-		int i=binsearch(x,z);
-		double dx=z-x[i];
-		double dxe = z - x[i+1];
-		return b[i]+dx*(2*c[i]+dx*3*d[i]) + 2*e[i]*(dx*dxe*dxe + dx*dx*dxe);
+		Trace.Assert(z >= x[0] && z <= x[x.Length-1]);
+		int iz = binsearch(x,z);
+		double dx = z-x[iz];
+		double dxe = z - x[iz+1];
+		return b[iz]+dx*(2*c[iz]+dx*3*d[iz]) + 2*e[iz]*(dx*dxe*dxe + dx*dx*dxe);
 		}
 	
 	// Function that evaluates the second derivative of the splined function at the point z
 	public double deriv2(double z){
 		Trace.Assert(z >= x[0] && z <= x[x.Length-1]);
-		int i=binsearch(x,z);
-		double dx=z-x[i];
-		double dxe = z - x[i+1];
-		return 2*c[i]+6*d[i]*dx +2*e[i]*(dxe*dxe + dx*dx + 4*dx*dxe);
+		int iz = binsearch(x,z);
+		double dx = z-x[iz];
+		double dxe = z-x[iz+1];
+		return 2*c[iz]+6*d[iz]*dx +2*e[iz]*(dxe*dxe + dx*dx + 4*dx*dxe);
 		}
 
 	// Function that evaluates the integral of the splined function from x[0] to the point z
@@ -138,7 +138,7 @@ public class subspline{
 	// The integrate function returns the integral from x[0] to z.
 	public double integrate(double z){
 		Trace.Assert(z >= x[0] && z <= x[x.Length-1]);
-		int iz=binsearch(x,z);
+		int iz = binsearch(x,z);
 		double sum = 0;
 		double dx, dxe;
 		// Add up the integrals for all the intervals before the interval z lies in
@@ -146,7 +146,7 @@ public class subspline{
 			dx = x[i+1]-x[i];
 			dxe = -dx;
 			sum += dx*(y[i]+dx*(b[i]/2+dx*(c[i]/3+dx*d[i]/4)))
-			   + e[i]*dx*dx*dx*(dxe*dxe/3 + dx*dxe/2 + dx*dx/5);
+			    + e[i]*dx*dx*dx*(dxe*dxe/3 + dx*dxe/2 + dx*dx/5);
 		}
 		// Add the remaining part of the integral (the remaining bit between the point z,
 		// and the start of the interval that z lies in).
