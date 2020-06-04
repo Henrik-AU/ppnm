@@ -17,4 +17,4 @@ math.dll: vector.cs ode.cs
 	mcs $^ -target:library -out:$@ 
 
 clean:
-	rm -f *.txt *.dll *.exe *.svg *.log *.aux *.pdf *.eps out Sqrt.tex log *.bbl *.blg
+	rm -f *.txt *.dll *.exe *.svg *.log *.aux *.pdf *.eps *.out Sqrt.tex log *.bbl *.blg
