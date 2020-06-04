@@ -5,3 +5,41 @@ The last two digits are X = 45.
 The index of my exam assignment is thus i = X mod N = 45 mod 22 = 1.
 
 This is the assignment titled "Cubic (sub-)spline for data with derivatives".
+
+STRUCTURE:
+
+	subspline.cs:
+	My implemented subspline routine is found in the file subspline.cs. This file contains the
+	entire routine, which has been expanded to allow for continuous second derivatives as
+	suggested in the 'extra' assignment, and it can also return the 1st and 2nd derivative as
+	well as the integral (from x0 to x).
+
+	main.cs:
+	The main.cs file creates (almost) all the table values used to test the subspline routine,
+	and prints it in two .txt files ("tabValSin.txt and "tabValBessel.txt").
+	main.cs also calls the subspline routine and prints out the subspline results to two other
+	.txt files ("splineSin.txt" and "splineBessel.txt").
+	The data used to test the subspline is from the sine function and the zeroth spherical
+	Bessel function.
+
+	tabValJ0Int.txt: This small .txt file is created by echo'ing a few lines directly in the
+	Makefile. This file contains a few tabulated data points for the so-called Sine integral,
+	and is used as comparision points for the subspline integral of the zeroth spherical Bessel
+	function. The tabulated data points have been looked up on wolframalpha.com.
+	
+	SinPlot.svg: This .svg file shows 4 figures that demonstrate the results of the subspline,
+	including the 1st and 2nd derivatives and the integral, when applied to a set of tabulated
+	sin(x) and sin'(x) values.
+	
+	BesselPlot.svg: This .svg file shows 4 figures that demonstrate the results of the subspline,
+	including the 1st and 2nd derivatives and the integral, when applied to a set of tabulated
+	j0(x) and j0'(x) values.
+
+	report.pdf:
+	In report.pdf (via "report.tex") I've written slightly more than a page about how the
+	subspline coefficients have been determined, and a few general remarks to BesselPlot.svg.
+
+
+Remark:
+There is nothing but data in the .txt files. The demonstration lies entirely in the two .svg
+files, and any extra comments are in the report.
