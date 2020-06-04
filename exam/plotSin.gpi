@@ -1,0 +1,27 @@
+set term svg font ",16" background rgb "white" size 1200, 960
+set out "SinPlot.svg"
+set multiplot layout 2,2
+set xlabel "x"
+set ylabel "y"
+set xrange [0:2*pi]
+
+set title "Subspline on tabulated sin(x) and sin'(x) values"
+plot sin(x) lw 2 lt rgb "red" title "sin(x)"\
+, "splineSin.txt" using 1:2 with lines dt 2 lw 2 lt rgb "blue" title "Subspline"\
+,"tabValSin.txt" using 1:2 with points ps 0.7 pt 7 lt rgb "black" title "Tabulated sin(x) values"
+
+set title "Subspline 1st derivative"
+set key top left
+plot cos(x) lw 2 lt rgb "red" title "cos(x)"\
+, "splineSin.txt" using 1:3 with lines lw 2 dt 2 lt rgb "blue" title "Subspline 1st deriv."\
+,"tabValSin.txt" using 1:3 with points ps 0.7 pt 7 lt rgb "black" title "Tabulated sin'(x) values"
+
+set title "Subspline integral (from 0 to x)"
+set key bottom center
+plot 1-cos(x) lw 2 lt rgb "red" title "1-cos(x)"\
+, "splineSin.txt" using 1:4 with lines dt 2 lw 2 lt rgb "blue" title "Subspline integral"
+
+set title "Subspline 2nd derivative"
+set key bottom right
+plot -sin(x) lw 2 lt rgb "red" title "-sin(x)"\
+, "splineSin.txt" using 1:5 with lines lw 2 dt 2 lt rgb "blue" title "Subspline 2nd deriv."\

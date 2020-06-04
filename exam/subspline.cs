@@ -76,12 +76,13 @@ public class subspline{
 		for(int i=0; i<n-2; i++){
 			e[i+1] = ((c[i]-c[i+1]) + 3*d[i]*h[i] + e[i]*h[i]*h[i])/h[i+1]/h[i+1];
 		}
-		
+	
+			
 		e[n-2] = e[n-2]/2;
 		for(int i=n-3; i>=0; i--){
 			e[i] = ((c[i+1]-c[i]) - 3*d[i]*h[i] + e[i+1]*h[i+1]*h[i+1])/h[i]/h[i];
 		}
-
+		
 	 
 	} // end constructor
 
