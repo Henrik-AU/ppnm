@@ -1,0 +1,24 @@
+Let's test that the matrix diagonalization algorithm works.
+Printing random symmetric matrix A:
+     -0.96      -1.38       1.67      0.909 
+     -1.38     -0.643       1.33      0.463 
+      1.67       1.33      -0.21       1.33 
+     0.909      0.463       1.33      0.588 
+
+Printing matrix V found from the decomposition:
+     0.645      0.297      0.586      0.391 
+     0.552      0.138     -0.801      0.186 
+    -0.528      0.555     -0.122      0.631 
+   -0.0335     -0.764   -0.00607      0.644 
+
+Printing the found eigenvalues from the decomposition:
+     -3.56     -0.814      0.572       2.58 
+
+Printing V^T*A*V:
+     -3.56   -1.3e-11   1.48e-16  -2.64e-16 
+  -1.3e-11     -0.814   2.83e-16  -3.48e-09 
+  1.24e-16    2.9e-16      0.572   2.27e-12 
+ -4.65e-16  -3.48e-09   2.27e-12       2.58 
+This matrix should now be diagonal with the eigenvalues along the diagonal entries.
+
+The decomposition was done in 5 sweeps.
