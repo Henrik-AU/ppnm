@@ -4,13 +4,18 @@ public class cubicspline{
 
 	double[] x, y, b, c, d; 
 
-	public static int binsearch(double[] x, double z)
-		{/* locates the interval for z by bisection */ 
-		int i=0, j=x.Length-1;
+	// locates the interval for z via binary search
+	public static int binsearch(double[] x, double z){
+		int i=0;
+		int j=x.Length-1;
 		while(j-i>1){
 			int mid=(i+j)/2;
-			if(z>x[mid]) i=mid; else j=mid;
+			if(z>x[mid]){
+				i=mid;
+			}else{
+				j=mid;
 			}
+		}
 		return i;
 	}
 
@@ -40,13 +45,11 @@ public class cubicspline{
 		for(int i=0; i<n-1; i++){
 			dx[i] = x[i+1] - x[i];
 			Trace.Assert(dx[i] > 0, "The x-array is not ordered from lowest to highest.");
-		}
-
-		for(int i=0; i<n-1; i++){
+			
 			p[i] = (y[i+1] - y[i])/dx[i];
 		}
 
-		// Calculation of the triagonal system
+		// Calculation of the tridiagonal system
 		// Values for intial components, as specified in the lecture PDF
 		D[0] = 2;
 		Q[0] = 1;
@@ -59,7 +62,7 @@ public class cubicspline{
 			B[i+1] = 3*(p[i]+p[i+1]*Q[i+1]);
 		}		
 		
-		// Gaussian elemination
+		// Gaussian elimination
 		for(int i=1; i<n; i++){
 			D[i] -= Q[i-1]/D[i-1];		
 			B[i] -= B[i-1]/D[i-1];
@@ -79,31 +82,35 @@ public class cubicspline{
 	}
 
 	public double eval(double z){
-		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		Trace.Assert(z >= x[0] && z <=x [x.Length-1],
+		"The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
 		double dx = z - x[i];
 		return y[i] + b[i]*dx + c[i]*dx*dx + d[i]*dx*dx*dx;
 	}
 
 	public double integrate(double z){
-		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		Trace.Assert(z >= x[0] && z <= x[x.Length-1],
+		"The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
 		double sum = 0;
+		double dx;
 		// We integrate S_i between each set of points individually and add the results
 		for(int k=0; k<i; k++){
-			double dx = x[k+1] - x[k];
-			sum+= dx*(y[k] + b[k]*dx/2 + c[k]*dx*dx/3 + c[k]*dx*dx*dx/4);
+			dx = x[k+1] - x[k];
+			sum+= dx*(y[k] + b[k]*dx/2 + c[k]*dx*dx/3 + d[k]*dx*dx*dx/4);
 		}
 		// At last we add the part from the interval which z lies in.
-		double dxi = z - x[i];
-		sum+= dxi*(y[i] + b[i]*dxi/2 + c[i]*dxi*dxi/3 + d[i]*dxi*dxi*dxi/4);
+		dx = z - x[i];
+		sum+= dx*(y[i] + b[i]*dx/2 + c[i]*dx*dx/3 + d[i]*dx*dx*dx/4);
 		
 		return sum;
 	}
 
 
 	public double deriv(double z){
-		Trace.Assert(z >= x[0] && z<=x[x.Length-1], "The z-value is outside the valid x region.");
+		Trace.Assert(z >= x[0] && z <= x[x.Length-1],
+		"The z-value is outside the valid x region.");
 		int i = binsearch(x, z);
 		double dx = z - x[i];
 		double deriv = b[i] + 2*c[i]*dx + 3*d[i]*dx*dx;

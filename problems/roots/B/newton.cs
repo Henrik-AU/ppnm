@@ -15,8 +15,8 @@ public class roots{
 			matrix J = jacobian(f, x, fx);
 			
 			// Run a QR-decomposition algorithm on J, and find it's inverse
-			var qrJ = new qrDecompositionGS(J);
-			matrix B = qrJ.inverse();
+			var qr = new qrDecompositionGS(J);
+			matrix B = qr.inverse();
 			
 			// Find the Newton stepsize
 			vector deltaX = -B*fx;

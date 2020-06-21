@@ -20,8 +20,8 @@ public class lsfit{
 
 		for(int i=0; i<n; i++){
 			b[i] = y[i]/dy[i];
-			for(int k=0; k<m; k++){
-				A[i,k] = f[k](x[i])/dy[i];
+			for(int j=0; j<m; j++){
+				A[i,j] = f[j](x[i])/dy[i];
 			}
 		}
 		

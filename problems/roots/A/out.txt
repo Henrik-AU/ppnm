@@ -18,12 +18,12 @@ Convergence criterium: ||f(x)|| < 1E-06
 Attempting to find a root for the 2D harmonic oscillator f(x,y) = x^2+y^2
 The analytic root is at x = 0, y = 0.
 Starting search from:
-x0 = 2.22867954607526
-y0 = 4.34104899789256
+x0 = 2.18298822966543
+y0 = 4.48526095630846
 A root has been found at:
-x = 0.000272105599160945
-y = 0.000529963201385734
-f(root) = 7.4041457094737E-08
+x = 0.000266528045878066
+y = 0.00054756719847874
+f(root) = 7.10371992395805E-08
 Convergence criterium: ||f(x,y)|| < 1E-06
 ---------------------------------------------
 
@@ -32,13 +32,13 @@ The analytic extremum is at x = 1 and y = 1.
 
 Searching for roots of the gradient:
 Starting search from:
-x0 = 3.5985611191944
-y0 = 4.69025135584653
+x0 = 3.43233394261093
+y0 = 4.54204956793322
 A root has been found at:
-x = 1.00000000450162
-y = 1.00000000834881
-The x-derivative of the Rosenbrock function at the root is 2.70771620082701E-07.
-The y-derivative of the Rosenbrock function at the root is -1.3088419237306E-07.
+x = 1.00000000385731
+y = 1.0000000071612
+The x-derivative of the Rosenbrock function at the root is 2.29085901325557E-07.
+The y-derivative of the Rosenbrock function at the root is -1.10685638432528E-07.
 Convergence criterium: ||grad f(x,y)|| < 1E-06
 The Rosenbrock function should be 0 at the extremum.
-f(root) = 6.30912358597162E-17.
+f(root) = 4.55071307359293E-17.

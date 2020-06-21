@@ -1,100 +1,100 @@
 Log entry for root finding for the rmax = 2, print = True, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 2
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.125050842172567
-The deviation from the analytic root is: -0.374949157827433
+A root has been found at energy: 	 -0.125050750026734
+The deviation from the analytic root is: -0.374949249973266
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 4, print = False, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 4
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.483272736496185
-The deviation from the analytic root is: -0.0167272635038148
+A root has been found at energy: 	 -0.483272362132241
+The deviation from the analytic root is: -0.0167276378677592
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 6, print = False, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 6
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.499262357259117
-The deviation from the analytic root is: -0.000737642740883393
+A root has been found at energy: 	 -0.499262355831826
+The deviation from the analytic root is: -0.000737644168173845
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 8, print = False, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 8
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.499977830316405
-The deviation from the analytic root is: -2.21696835948082E-05
+A root has been found at energy: 	 -0.499977802690334
+The deviation from the analytic root is: -2.21973096657391E-05
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 10, print = False, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 10
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.500003084885247
-The deviation from the analytic root is: 3.08488524669581E-06
+A root has been found at energy: 	 -0.500003084884884
+The deviation from the analytic root is: 3.08488488354186E-06
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 12, print = False, precise = False inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 12
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.500003606991135
-The deviation from the analytic root is: 3.60699113532981E-06
+A root has been found at energy: 	 -0.500003606987593
+The deviation from the analytic root is: 3.60698759249711E-06
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 2, print = False, precise = True inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.01581827821947.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 2
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.499996490566456
-The deviation from the analytic root is: -3.5094335443242E-06
+A root has been found at energy: 	 -0.499996495818761
+The deviation from the analytic root is: -3.50418123895579E-06
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 4, print = False, precise = True inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.10088111604605.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 4
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.50000250485143
-The deviation from the analytic root is: 2.5048514302739E-06
+A root has been found at energy: 	 -0.500002774320379
+The deviation from the analytic root is: 2.77432037876224E-06
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 6, print = False, precise = True inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.10088111604605.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 6
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.499985788315159
-The deviation from the analytic root is: -1.4211684841392E-05
+A root has been found at energy: 	 -0.49998551821905
+The deviation from the analytic root is: -1.44817809497044E-05
 Convergence criterium: ||M(root)|| < 1E-05
 
 
 Log entry for root finding for the rmax = 8, print = False, precise = True inputs to the Main function.
 Trying to find a root for the auxiliary function, M:
-Starting the search from energy: 	 -1.10088111604605.
+Starting the search from energy: 	 -1.00845540808907.
 Used rmax: 				 8
 The analytic root is at energy: 	 -1/2.
-A root has been found at energy: 	 -0.500002664871504
-The deviation from the analytic root is: 2.66487150424322E-06
+A root has been found at energy: 	 -0.500002707668337
+The deviation from the analytic root is: 2.70766833732061E-06
 Convergence criterium: ||M(root)|| < 1E-05
 
 

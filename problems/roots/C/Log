@@ -1,114 +1,94 @@
-Bad step at 2.33995894653282. Step rejected.
-Bad step at 2.98017548668032. Step rejected.
-Bad step at 3.50986987881671. Step rejected.
-Bad step at 3.95237761970551. Step rejected.
-Bad step at 4.33552773052677. Step rejected.
-Bad step at 4.67516575182822. Step rejected.
-Bad step at 4.98121194030439. Step rejected.
-Bad step at 5.26041299641249. Step rejected.
-Bad step at 5.51761717852553. Step rejected.
-Bad step at 5.75645376409505. Step rejected.
-Bad step at 5.97972850105667. Step rejected.
-Bad step at 6.18966952118057. Step rejected.
-Bad step at 6.38808871552506. Step rejected.
-Bad step at 6.5764928818479. Step rejected.
-ODE solved in 34 steps.
-Bad step at 2.33995900066552. Step rejected.
-Bad step at 2.98017560525184. Step rejected.
-Bad step at 3.50987004607359. Step rejected.
-Bad step at 3.9523778320699. Step rejected.
-Bad step at 4.33552797858262. Step rejected.
-Bad step at 4.67516602991277. Step rejected.
-Bad step at 4.98121224447764. Step rejected.
-Bad step at 5.26041332379883. Step rejected.
-Bad step at 5.51761752695645. Step rejected.
-Bad step at 5.75645413190998. Step rejected.
-Bad step at 5.97972888699013. Step rejected.
-Bad step at 6.18966992426371. Step rejected.
-Bad step at 6.38808913505654. Step rejected.
-Bad step at 6.57649331736099. Step rejected.
-ODE solved in 34 steps.
-Bad step at 2.4107002985552. Step rejected.
-Bad step at 3.1749289618721. Step rejected.
-Bad step at 3.79692363493847. Step rejected.
-Bad step at 4.32200985038106. Step rejected.
-Bad step at 4.77206846914183. Step rejected.
-Bad step at 5.16751095242498. Step rejected.
-Bad step at 5.5218928555291. Step rejected.
-Bad step at 5.84411636893851. Step rejected.
-Bad step at 6.1404731069614. Step rejected.
-Bad step at 6.41564449565025. Step rejected.
-Bad step at 6.67327392075962. Step rejected.
-Bad step at 6.91633009925079. Step rejected.
-ODE solved in 28 steps.
-Bad step at 2.41070033150476. Step rejected.
-Bad step at 3.17492909655948. Step rejected.
-Bad step at 3.79692384445578. Step rejected.
-Bad step at 4.32201011806279. Step rejected.
-Bad step at 4.77206879166767. Step rejected.
-Bad step at 5.16751131980799. Step rejected.
-Bad step at 5.52189326161923. Step rejected.
-Bad step at 5.84411680949273. Step rejected.
-Bad step at 6.14047357901969. Step rejected.
-Bad step at 6.41564499722585. Step rejected.
-Bad step at 6.6732744506859. Step rejected.
-Bad step at 6.91633065719725. Step rejected.
-ODE solved in 28 steps.
-Bad step at 3.4318946898372. Step rejected.
-Bad step at 4.16872451945124. Step rejected.
-Bad step at 4.78262110842554. Step rejected.
-Bad step at 5.31128657715355. Step rejected.
-Bad step at 5.77709839789814. Step rejected.
-Bad step at 6.19239248487666. Step rejected.
-Bad step at 6.56967118478625. Step rejected.
-Bad step at 6.91761738951264. Step rejected.
-Bad step at 7.24311280586763. Step rejected.
-ODE solved in 24 steps.
-Bad step at 3.43189480383332. Step rejected.
-Bad step at 4.16872476148571. Step rejected.
-Bad step at 4.78262144519347. Step rejected.
-Bad step at 5.31128698994127. Step rejected.
-Bad step at 5.77709888371474. Step rejected.
-Bad step at 6.19239303289675. Step rejected.
-Bad step at 6.56967178904344. Step rejected.
-Bad step at 6.91761804723671. Step rejected.
-Bad step at 7.2431135177823. Step rejected.
-ODE solved in 24 steps.
-Bad step at 3.55626856892938. Step rejected.
-Bad step at 4.48657919879836. Step rejected.
-Bad step at 5.23774534361872. Step rejected.
-Bad step at 5.87500242711405. Step rejected.
-Bad step at 6.43301329249312. Step rejected.
-Bad step at 6.93415406068645. Step rejected.
-Bad step at 7.39524710912517. Step rejected.
-ODE solved in 21 steps.
-Bad step at 3.55626867393645. Step rejected.
-Bad step at 4.48657953566367. Step rejected.
-Bad step at 5.23774583730792. Step rejected.
-Bad step at 5.87500304315042. Step rejected.
-Bad step at 6.43301401209339. Step rejected.
-Bad step at 6.93415487526191. Step rejected.
-Bad step at 7.3952480209578. Step rejected.
-ODE solved in 21 steps.
-Bad step at 3.64701909192566. Step rejected.
-Bad step at 4.88123922890236. Step rejected.
-Bad step at 5.81822489105907. Step rejected.
-Bad step at 6.5981947337346. Step rejected.
-Bad step at 7.2798325142558. Step rejected.
+Bad step at 2.3902810494047. Step rejected.
+Bad step at 3.09765353052041. Step rejected.
+Bad step at 3.6776518359927. Step rejected.
+Bad step at 4.16674457263585. Step rejected.
+Bad step at 4.5865225506066. Step rejected.
+Bad step at 4.95688485244114. Step rejected.
+Bad step at 5.28959973312065. Step rejected.
+Bad step at 5.59254617575347. Step rejected.
+Bad step at 5.87133015052011. Step rejected.
+Bad step at 6.13012691953029. Step rejected.
+Bad step at 6.37216441478184. Step rejected.
+Bad step at 6.60002329128689. Step rejected.
+Bad step at 6.81583782929648. Step rejected.
+ODE solved in 31 steps.
+Bad step at 2.39028108328911. Step rejected.
+Bad step at 3.09765365018498. Step rejected.
+Bad step at 3.67765201930979. Step rejected.
+Bad step at 4.16674481449564. Step rejected.
+Bad step at 4.58652283799801. Step rejected.
+Bad step at 4.95688517777918. Step rejected.
+Bad step at 5.28960009127697. Step rejected.
+Bad step at 5.59254656308638. Step rejected.
+Bad step at 5.87133056438291. Step rejected.
+Bad step at 6.13012735799904. Step rejected.
+Bad step at 6.37216487650189. Step rejected.
+Bad step at 6.60002377540595. Step rejected.
+Bad step at 6.81583833544381. Step rejected.
+ODE solved in 31 steps.
+Bad step at 2.43595513325857. Step rejected.
+Bad step at 3.29387836171407. Step rejected.
+Bad step at 3.98445517241359. Step rejected.
+Bad step at 4.56234278159031. Step rejected.
+Bad step at 5.06121754172358. Step rejected.
+Bad step at 5.49739581251692. Step rejected.
+Bad step at 5.88693528809273. Step rejected.
+Bad step at 6.24059367175793. Step rejected.
+Bad step at 6.56593444274585. Step rejected.
+Bad step at 6.8686627119442. Step rejected.
+Bad step at 7.15342473910692. Step rejected.
+ODE solved in 26 steps.
+Bad step at 2.43595516192564. Step rejected.
+Bad step at 3.29387852183467. Step rejected.
+Bad step at 3.98445542845398. Step rejected.
+Bad step at 4.56234311073949. Step rejected.
+Bad step at 5.06121793037438. Step rejected.
+Bad step at 5.49739625889628. Step rejected.
+Bad step at 5.8869357837469. Step rejected.
+Bad step at 6.24059421164777. Step rejected.
+Bad step at 6.56593502381086. Step rejected.
+Bad step at 6.86866333284517. Step rejected.
+Bad step at 7.1534254004504. Step rejected.
+ODE solved in 26 steps.
+Bad step at 3.50918663959467. Step rejected.
+Bad step at 4.3502467010585. Step rejected.
+Bad step at 5.03961939295883. Step rejected.
+Bad step at 5.62837161297287. Step rejected.
+Bad step at 6.14540863608487. Step rejected.
+Bad step at 6.60946668106095. Step rejected.
+Bad step at 7.03285791641066. Step rejected.
+Bad step at 7.42612845683624. Step rejected.
+ODE solved in 22 steps.
+Bad step at 3.50918674908637. Step rejected.
+Bad step at 4.35024698942007. Step rejected.
+Bad step at 5.03961980790518. Step rejected.
+Bad step at 5.62837212790343. Step rejected.
+Bad step at 6.14540923537458. Step rejected.
+Bad step at 6.60946735587851. Step rejected.
+Bad step at 7.03285867123052. Step rejected.
+Bad step at 7.42612929371335. Step rejected.
+ODE solved in 22 steps.
+Bad step at 3.6132785078428. Step rejected.
+Bad step at 4.70294404719374. Step rejected.
+Bad step at 5.55679129263063. Step rejected.
+Bad step at 6.27340619423705. Step rejected.
+Bad step at 6.89916438225387. Step rejected.
 ODE solved in 19 steps.
-Bad step at 3.64701919050198. Step rejected.
-Bad step at 4.88123983762963. Step rejected.
-Bad step at 5.81822577457477. Step rejected.
-Bad step at 6.59819582578338. Step rejected.
-Bad step at 7.27983379508163. Step rejected.
+Bad step at 3.61327860752038. Step rejected.
+Bad step at 4.70294450175025. Step rejected.
+Bad step at 5.55679196367594. Step rejected.
+Bad step at 6.27340703114314. Step rejected.
+Bad step at 6.89916536257946. Step rejected.
 ODE solved in 19 steps.
-Bad step at 5.36137488319396. Step rejected.
-Bad step at 6.57809400255096. Step rejected.
+Bad step at 5.25508958220988. Step rejected.
+Bad step at 6.3165063723636. Step rejected.
 ODE solved in 17 steps.
-Bad step at 5.36137534157628. Step rejected.
-Bad step at 6.57809533493124. Step rejected.
+Bad step at 5.25509004470966. Step rejected.
+Bad step at 6.31650736147117. Step rejected.
 ODE solved in 17 steps.
+Bad step at 5.47005480781536. Step rejected.
 ODE solved in 16 steps.
+Bad step at 5.47005524168299. Step rejected.
 ODE solved in 16 steps.
 ODE solved in 16 steps.
 ODE solved in 16 steps.

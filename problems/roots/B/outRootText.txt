@@ -1,6 +1,6 @@
 Trying to find a root for the auxiliary function, M:
 The analytic root is at energy: 	 -1/2.
-Starting the search from energy: 	 -1.11817706456323.
-A root has been found at energy: 	 -0.499977760530098
-The deviation from the analytic root is: -2.22394699015971E-05
+Starting the search from energy: 	 -1.09426896967658.
+A root has been found at energy: 	 -0.499977759448384
+The deviation from the analytic root is: -2.22405516160928E-05
 Convergence criterium: ||M(root)|| < 1E-05
